@@ -11,7 +11,7 @@ function Home() {
         {/* About Image Section */}
         <div className="about-col-1 flex justify-center">
           <img
-            src="/src/components/Images/MY photo.jpg"
+            src="/Images/MY photo.jpg"
             alt="About Me"
             className="rounded-xl shadow-xl w-72 md:w-96 transform hover:scale-105 transition-transform duration-500 ease-in-out"
           />
