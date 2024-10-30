@@ -52,15 +52,15 @@ function Home() {
             )}
             {activeSection === 'experience' && (
               <ul className="list-disc pl-5 text-gray-700">
-                <li><span className="font-semibold">DrMudhiwalla (Research Intern):</span> April 2024 - August 2024, New Delhi, India - Conducted secondary research, analysis, and data visualization.</li>
-                <li><span className="font-semibold">The WE Foundation (Intern):</span> November 2023 - January 2024, Kolkata, India - Worked on market research, data analysis, and basic SEO and web development.</li>
+                <li><span className="font-semibold">DrMudhiwalla (Research Intern):</span> [April 2024 - August 2024], New Delhi, India(Remote) - Conducted secondary research, analysis, and data visualization.</li>
+                <li><span className="font-semibold">The WE Foundation (Intern):</span> [November 2023 - January 2024], Kolkata, India - Worked on market research, data analysis, and basic SEO and web development.</li>
               </ul>
             )}
             {activeSection === 'education' && (
               <ul className="list-disc pl-5 text-gray-700">
-                <li><span className="font-semibold">B.Tech in Computer Science (YGPA : almost 7.5):</span> Dr. Sudhir Chandra Sur Degree Engineering College, 2022-2026</li>
-                <li><span className="font-semibold">Uccha Madhyamik (percentage : 80%):</span> Kodalia Agapur High School (H.S.), 2020-2022</li>
-                <li><span className="font-semibold">Madhyamik (percentage : 87%):</span> Kodalia Agapur High School (H.S.), 2014-2020</li>
+                <li><span className="font-semibold">B.Tech in Computer Science (YGPA : Almost 7.5):</span> Dr. Sudhir Chandra Sur Degree Engineering College, 2022-2026</li>
+                <li><span className="font-semibold">Uccha Madhyamik (Percentage : 80%):</span> Kodalia Agapur High School (H.S.), 2020-2022</li>
+                <li><span className="font-semibold">Madhyamik (Percentage : 87%):</span> Kodalia Agapur High School (H.S.), 2014-2020</li>
               </ul>
             )}
           </div>
