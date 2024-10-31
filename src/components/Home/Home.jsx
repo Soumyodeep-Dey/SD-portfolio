@@ -19,7 +19,7 @@ function Home() {
 
         {/* About Text Section */}
         <div className="about-col-2 text-gray-800 px-6 md:px-0">
-          <h1 className="text-5xl font-extrabold mb-6 text-indigo-700">ABOUT ME</h1>
+          <h1 className="text-5xl font-extrabold mb-6 text-indigo-700 animate-fadeInLeft">ABOUT ME</h1>
           <p className="text-lg leading-relaxed mb-4">
             I am Soumyodeep Dey, currently pursuing my B.Tech in Computer Science & Engineering in Kolkata, India.
             I actively seek practical experiences to complement my theoretical understanding, with a strong belief in
@@ -84,7 +84,7 @@ function Home() {
               <span>Email</span>
             </a>
             <a href="tel:09836545284" className="text-center">
-              <FaPhone className="text-green-500 text-3xl mx-auto" />
+              <FaPhone className="text-green-500 text-3xl mx-auto transform rotate-90" />  {/* Rotated Phone Icon */}
               <span>Phone</span>
             </a>
           </div>
