@@ -7,7 +7,7 @@ function Blogs() {
       <div className="container mx-auto">
         <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden dark:bg-gray-800">
           <img
-            src="/public/Images/Add a heading.png" 
+            src="/Images/Add a heading.png" 
             alt="Blog Thumbnail"
             className="w-full h-full object-cover"
           />
