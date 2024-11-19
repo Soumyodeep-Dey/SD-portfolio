@@ -1,6 +1,6 @@
 function Blogs() {
   return (
-    <section className="py-16 min-h-screen bg-gray-100 dark:bg-gray-800">
+    <section className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 py-16 min-h-screen">
       <h1 className="text-5xl font-bold text-center mb-12 text-indigo-700 dark:text-indigo-400 animate-fadeInLeft">
         BLOG
       </h1>
