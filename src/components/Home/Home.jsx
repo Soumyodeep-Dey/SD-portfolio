@@ -38,7 +38,7 @@ function Home() {
           Based in Kolkata, India, I&apos;m actively seeking opportunities to contribute my
             skills to innovative teams and projects. Whether it&apos;s solving challenges through
             code, conducting insightful research, or enhancing user experiences, I thrive in
-            creating value.
+            creating value. <a className= "bg-red-500" href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link">Here&apos;s my resume</a>
           </p>
 
           {/* Section Tabs */}
