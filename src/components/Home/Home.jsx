@@ -31,14 +31,14 @@ function Home() {
             <span className="text-indigo-500 dark:text-indigo-300">Soumyodeep Dey</span>
           </h1>
           <p className="text-lg leading-relaxed mb-4">
-          A 3rd-year B.Tech Computer Science student, passionate about building impactful
+            A 3rd-year B.Tech Computer Science student, passionate about building impactful
             digital solutions. With hands-on experience in <strong>data analysis, web development,</strong> and <strong>UI/UX design</strong>, I aim to craft user-centered applications that drive engagement and growth.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-          Based in Kolkata, India, I&apos;m actively seeking opportunities to contribute my
+            Based in Kolkata, India, I&apos;m actively seeking opportunities to contribute my
             skills to innovative teams and projects. Whether it&apos;s solving challenges through
             code, conducting insightful research, or enhancing user experiences, I thrive in
-            creating value. <a className= "bg-red-500" href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link">Here&apos;s my resume</a>
+            creating value. <a className="bg-red-500" href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link">Here&apos;s my resume</a>
           </p>
 
           {/* Section Tabs */}
@@ -47,8 +47,8 @@ function Home() {
               <span
                 key={section}
                 className={`text-xl font-semibold cursor-pointer transition-colors ${activeSection === section
-                    ? 'text-indigo-500 dark:text-indigo-400'
-                    : 'hover:text-indigo-500 dark:hover:text-indigo-300'
+                  ? 'text-indigo-500 dark:text-indigo-400'
+                  : 'hover:text-indigo-500 dark:hover:text-indigo-300'
                   }`}
                 onClick={() => setActiveSection(section)}
               >
@@ -82,12 +82,14 @@ function Home() {
             {activeSection === 'experience' && (
               <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
                 <li className="pb-2">
-                  <span className="font-semibold">DrMudhiwalla (Research Intern):</span> Conducted
-                  data visualization and analysis for actionable insights.
+                  <span className="font-semibold">Team Leader of Smart India Hackathon 2024 (E-Scholar):</span> Developed a secure, paperless React-based platform for PMSSS scholarship disbursement, enabling real-time application tracking and instant updates while reducing administrative burden and promoting environmental sustainability.
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">The WE Foundation (Intern):</span> Designed
-                  engaging presentations, conducted market research, and optimized SEO strategies.
+                  <span className="font-semibold">DrMudhiwalla (Research Intern):</span> 
+                  Compiled and summarized key insights from 10+ scientific and business reports into strategic PowerPoint presentations, while designing an impactful logo and cover on Canva that boosted user engagement by 25% and enhanced brand recognition.
+                </li>
+                <li className="pb-2">
+                  <span className="font-semibold">The WE Foundation (Intern):</span> Conducted market research and analysis on 25+ topics through secondary research, while creating 10+ visual data representations to facilitate clear communication of trends and enhance executive strategic planning.
                 </li>
               </ul>
             )}
