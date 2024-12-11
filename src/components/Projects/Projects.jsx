@@ -2,24 +2,32 @@
 function Projects() {
   const projectList = [
     {
-      title: "ABC Project",
-      description: "A comprehensive web development project showcasing front-end and back-end skills.",
-      link: "https://yourprojectlink.com",
-      image: "/path/to/project1.jpg", // replace with actual image path or remove if unnecessary
-      video: "/path/to/project1.mp4", // replace with actual video path if available
+      title: "Watchly",
+      description: "Watchly is a large-scale e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system. My contribution included designing the frontend architecture and implementing key interactive features like personalized recommendations and an AI-powered style advisor.",
+      link: "https://github.com/Soumyodeep-Dey/Watchly",
+      image: "", // Replace with actual image path or remove if unnecessary
+      video: "/WatchlyDemo.mp4", // Replace with actual video path
     },
     {
-      title: "XYZ Research Project",
-      description: "A data analysis project involving machine learning and research methods.",
+      title: "Prime Minister Special Scholarship Scheme",
+      description: "Developed as part of Smart India Hackathon 2024, this project aims to create a paperless scholarship disbursement system for PMSSS. My primary role in this group project was designing and implementing the frontend using React and Tailwind CSS.",
+      link: "https://github.com/Soumyodeep-Dey/Scholarship",
+      image: "", // Replace with actual image path or remove if unnecessary
+      video: "/PMSSS.mp4", // Replace with actual video path if available
+    },
+    {
+      title: "MemEconomy",
+      description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface.",
       link: "https://yourresearchprojectlink.com",
-      image: "/path/to/project2.jpg", // replace with actual image path or remove if unnecessary
-      video: "/path/to/project2.mp4", // replace with actual video path
+      image: "", // Replace with actual image path or remove if unnecessary
+      video: "memeconomy.mp4", // Replace with actual video path
     },
     // Add more projects as needed
   ];
 
+
   return (
-    <section id="projects" className= "bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 py-16 min-h-screen">
+    <section id="projects" className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 py-16 min-h-screen">
       <div className="container mx-auto">
         <h1 className="text-5xl font-bold text-center mb-12 text-indigo-700 dark:text-indigo-400 animate-fadeInLeft">PROJECTS</h1>
 
