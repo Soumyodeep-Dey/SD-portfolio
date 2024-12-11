@@ -1,30 +1,34 @@
-
 function Projects() {
   const projectList = [
     {
       title: "Watchly",
-      description: "Watchly is a large-scale e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system. My contribution included designing the frontend architecture and implementing key interactive features like personalized recommendations and an AI-powered style advisor.",
+      description: "Watchly is an e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system (developing).",
       link: "https://github.com/Soumyodeep-Dey/Watchly",
       image: "", // Replace with actual image path or remove if unnecessary
-      video: "/WatchlyDemo.mp4", // Replace with actual video path
+      video: "/Videos/WatchLy.mp4", // Replace with actual video path
     },
     {
       title: "Prime Minister Special Scholarship Scheme",
       description: "Developed as part of Smart India Hackathon 2024, this project aims to create a paperless scholarship disbursement system for PMSSS. My primary role in this group project was designing and implementing the frontend using React and Tailwind CSS.",
       link: "https://github.com/Soumyodeep-Dey/Scholarship",
       image: "", // Replace with actual image path or remove if unnecessary
-      video: "/PMSSS.mp4", // Replace with actual video path if available
+      video: "/Videos/PMSSS.mp4", // Replace with actual video path if available
     },
     {
       title: "MemEconomy",
       description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface.",
-      link: "https://yourresearchprojectlink.com",
+      link: "https://github.com/Soumyodeep-Dey/memeconomy",
       image: "", // Replace with actual image path or remove if unnecessary
-      video: "memeconomy.mp4", // Replace with actual video path
+      video: "/Videos/memeconomy.mp4", // Replace with actual video path
     },
-    // Add more projects as needed
+    {
+      title: "Coming Soon...",
+      description: "This project is under development. Stay tuned for more updates!",
+      link: "https://github.com/Soumyodeep-Dey", // No link for this project
+      image: "", // No image needed for "Coming Soon"
+      video: "/Videos/XYZ.mp4", // No video for "Coming Soon"
+    },
   ];
-
 
   return (
     <section id="projects" className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 py-16 min-h-screen">
@@ -38,14 +42,16 @@ function Projects() {
               <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
 
               {/* Project Link */}
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
-              >
-                View Project
-              </a>
+              {project.link !== "#" && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
+                >
+                  View Project
+                </a>
+              )}
 
               {/* Project Media */}
               {project.image && (
@@ -68,6 +74,11 @@ function Projects() {
             </div>
           ))}
         </div>
+
+        {/* Footnote */}
+        <footer className="text-center text-gray-600 dark:text-gray-400 mt-12">
+          <p>All the projects are developing for more features and updates.</p>
+        </footer>
       </div>
     </section>
   );
