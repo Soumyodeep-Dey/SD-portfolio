@@ -77,7 +77,7 @@ function Projects() {
 
         {/* Footnote */}
         <footer className="text-center text-gray-600 dark:text-gray-400 mt-12">
-          <p>All the projects are developing for more features and updates.</p>
+          <p>*All the projects are under development phase...new features will be added and updated.*</p>
         </footer>
       </div>
     </section>
