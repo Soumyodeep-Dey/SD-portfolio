@@ -7,6 +7,7 @@ This is my personal portfolio website built using **React**, **Vite**, and **Tai
 - **About Me:** A section that introduces who I am, my journey, and my professional background.
 - **Skills:** Highlights my technical skills and areas of expertise.
 - **Education:** Provides information about my educational background.
+- **Experience:** Displays my professional experience, including internships, projects, and other relevant work.
 - **Projects:** Showcases the projects I've worked on, including detailed descriptions, links, and visuals.
 - **Blogs:** Contains my blogs where I share insights, knowledge, and experiences.
 - **Contact and Socials:** Includes my contact details and links to my social media profiles, making it easy to connect with me.
@@ -14,6 +15,10 @@ This is my personal portfolio website built using **React**, **Vite**, and **Tai
 ## Live Demo
 
 The website is live and can be accessed at: [soumyodeep-dey.vercel.app](https://soumyodeep-dey.vercel.app/)
+
+## Repository Inclusion
+
+I’m excited to share that my portfolio has been included in the **DevPortfolioHub** repository, a collection of inspiring developer portfolios. Check out the repository here: [DevPortfolioHub](https://github.com/Asin-Junior-Honore/DevPortfolioHub)
 
 ## Technologies Used
 
