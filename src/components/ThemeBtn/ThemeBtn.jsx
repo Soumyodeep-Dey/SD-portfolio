@@ -2,7 +2,7 @@
 import { useTheme } from '../contexts/Theme';
 
 export default function ThemeBtn() {
-    const { themeMode, lightTheme, darkTheme } = useTheme();
+    const { themeMode, lightTheme, darkTheme } = useTheme() || {};
 
     const handleToggle = (e) => {
         e.currentTarget.checked ? darkTheme() : lightTheme();
