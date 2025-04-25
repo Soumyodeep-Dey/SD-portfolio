@@ -55,7 +55,7 @@ function Home() {
           {/* Displayed Section Content */}
           <div className="mt-6 space-y-2">
             {activeSection === 'skills' && (
-              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-200">
                 <li className="pb-2">
                   <span className="font-semibold">Web Development:</span> Proficient in building responsive web apps using HTML, CSS, JavaScript, React, and Tailwind CSS. Familiar with knowledge of Node.js, Express, and MongoDB , currently expanding into full-stack MERN development. 
                 </li>
@@ -72,7 +72,7 @@ function Home() {
             )}
 
             {activeSection === 'experience' && (
-              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-200">
                 <li className="pb-2">
                   <span className="font-semibold">Web Content Writer | NaukriSafar (Jan 2025 - March 2025):</span> Published 100+ job-related blogs on WordPress, all SEO-optimized with scores above 70/100.
                 </li>
@@ -90,7 +90,7 @@ function Home() {
             )}
 
             {activeSection === 'education' && (
-              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-200">
                 <li className="pb-2">
                   <span className="font-semibold">B.Tech in Computer Science (YGPA: 7.6):</span> Pursuing undergraduate studies at Dr. Sudhir Chandra Sur Degree Engineering College (2022-2026), focusing on programming, data structures, algorithms, and software development practices.
                 </li>
