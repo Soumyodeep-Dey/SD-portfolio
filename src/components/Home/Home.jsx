@@ -31,14 +31,9 @@ function Home() {
             <span className="text-indigo-500 dark:text-indigo-300">Soumyodeep Dey</span>
           </h1>
           <p className="text-lg leading-relaxed mb-4">
-            A 3rd-year B.Tech Computer Science student, passionate about building impactful
-            digital solutions. With hands-on experience in <strong>data analysis, web development,</strong> and <strong>UI/UX design</strong>, I aim to craft user-centered applications that drive engagement and growth.
-          </p>
-          <p className="text-lg leading-relaxed mb-6">
-            Based in Kolkata, India, I&apos;m actively seeking opportunities to contribute my
-            skills to innovative teams and projects. Whether it&apos;s solving challenges through
-            code, conducting insightful research, or enhancing user experiences, I thrive in
-            creating value. <a className="bg-red-500" href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link">Here&apos;s my resume</a>
+            Passionate 3rd-year CSE student with hands-on experience in <strong>Web Development</strong>, <strong>UI/UX design</strong>, <strong>web content writing</strong>, <strong>market research</strong>, and <strong>data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern
+            technologies. Successfully led a six-member team in Smart India Hackathon 2024 seeking a front-end development
+            internship to leverage skills in React, Tailwind CSS, and UI/UX design.<a className="bg-red-500" href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link">Here&apos;s my resume</a>
           </p>
 
           {/* Section Tabs */}
@@ -94,7 +89,7 @@ function Home() {
             {activeSection === 'education' && (
               <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
                 <li className="pb-2">
-                  <span className="font-semibold">B.Tech in Computer Science (YGPA: 7.5):</span> Pursuing undergraduate studies at Dr. Sudhir Chandra Sur Degree Engineering College (2022-2026). Acquiring in-depth knowledge of programming, data structures, algorithms, and software development practices.
+                  <span className="font-semibold">B.Tech in Computer Science (YGPA: 7.6):</span> Pursuing undergraduate studies at Dr. Sudhir Chandra Sur Degree Engineering College (2022-2026). Acquiring in-depth knowledge of programming, data structures, algorithms, and software development practices.
                 </li>
                 <li className="pb-2">
                   <span className="font-semibold">Uccha Madhyamik (Percentage: 80%):</span> Completed higher secondary education at Kodalia Agapur High School (H.S.) (2020-2022).
