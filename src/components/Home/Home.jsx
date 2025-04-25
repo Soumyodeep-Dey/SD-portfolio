@@ -57,16 +57,16 @@ function Home() {
             {activeSection === 'skills' && (
               <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
                 <li className="pb-2">
-                  <span className="font-semibold">Web Development:</span> Proficient in building responsive web apps using HTML, CSS, JavaScript, React, and Tailwind CSS, with expertise in reusable components, state management, and performance optimization.
+                  <span className="font-semibold">Web Development:</span> Proficient in building responsive web apps using HTML, CSS, JavaScript, React, and Tailwind CSS. Familiar with knowledge of Node.js, Express, and MongoDB , currently expanding into full-stack MERN development. 
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">Research Skills:</span> Experienced in data analysis and secondary research, with the ability to generate insights and actionable reports from large datasets.
+                  <span className="font-semibold">Research Skills:</span> Experienced in data analysis and secondary research, capable of generating insights and actionable reports from large datasets.
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">Communication:</span> Fluent in multiple languages, skilled in delivering presentations, and experienced in collaborating effectively in team environments.
+                  <span className="font-semibold">Communication:</span> Fluent in multiple languages, skilled in delivering presentations, and effective in collaborative team environments.
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">Version Control:</span> Proficient in Git and GitHub, with experience in managing repositories, resolving conflicts, and following best practices for version control.
+                  <span className="font-semibold">Version Control:</span> Proficient in Git and GitHub, with experience managing repositories, resolving conflicts, and following best practices.
                 </li>
               </ul>
             )}
@@ -74,30 +74,34 @@ function Home() {
             {activeSection === 'experience' && (
               <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
                 <li className="pb-2">
-                  <span className="font-semibold">Team Leader of Smart India Hackathon 2024 (E-Scholar):</span> Developed a secure, paperless React-based platform for PMSSS scholarship disbursement, enabling real-time application tracking and instant updates while reducing administrative burden and promoting environmental sustainability.
+                  <span className="font-semibold">Web Content Writer | NaukriSafar (Jan 2025 - March 2025):</span> Published 100+ job-related blogs on WordPress, all SEO-optimized with scores above 70/100.
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">DrMudhiwalla (Research Intern):</span>
-                  Compiled and summarized key insights from 10+ scientific and business reports into strategic PowerPoint presentations, while designing an impactful logo and cover on Canva that boosted user engagement by 25% and enhanced brand recognition.
+                  <span className="font-semibold">Team Leader | Smart India Hackathon 2024 (Sep 2024 - Nov 2024):</span> Led a six-member team to develop &quot;E-Scholar,&quot; a centralized React-based platform for paperless scholarship disbursement. Designed and refined UI/UX based on user feedback, enhancing accessibility and engagement.
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">The WE Foundation (Intern):</span> Conducted market research and analysis on 25+ topics through secondary research, while creating 10+ visual data representations to facilitate clear communication of trends and enhance executive strategic planning.
+                  <span className="font-semibold">Research Intern | DrMudhiwalla (Apr 2024 - Aug 2024):</span> Conducted in-depth market research, compiling data from 10+ reports into actionable insights. Designed branding materials, improving engagement by 25%.
+                </li>
+                <li className="pb-2">
+                  <span className="font-semibold">Intern | The We Foundation (Nov 2023 - Jan 2024):</span> Performed secondary research on 25+ topics, visualizing key insights for strategic decision-making.
                 </li>
               </ul>
+
             )}
 
             {activeSection === 'education' && (
               <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
                 <li className="pb-2">
-                  <span className="font-semibold">B.Tech in Computer Science (YGPA: 7.6):</span> Pursuing undergraduate studies at Dr. Sudhir Chandra Sur Degree Engineering College (2022-2026). Acquiring in-depth knowledge of programming, data structures, algorithms, and software development practices.
+                  <span className="font-semibold">B.Tech in Computer Science (YGPA: 7.6):</span> Pursuing undergraduate studies at Dr. Sudhir Chandra Sur Degree Engineering College (2022-2026), focusing on programming, data structures, algorithms, and software development practices.
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">Uccha Madhyamik (Percentage: 80%):</span> Completed higher secondary education at Kodalia Agapur High School (H.S.) (2020-2022).
+                  <span className="font-semibold">Uccha Madhyamik (Percentage: 80%):</span> Completed higher secondary education (Science - PCMC) at Kodalia Agapur High School (H.S.) (2020-2022).
                 </li>
                 <li className="pb-2">
-                  <span className="font-semibold">Madhyamik (Percentage: 87%):</span> Successfully completed secondary education at Kodalia Agapur High School (H.S.) (2014-2020).
+                  <span className="font-semibold">Madhyamik (Percentage: 87%):</span> Completed secondary education at Kodalia Agapur High School (H.S.) (2014-2020).
                 </li>
               </ul>
+
             )}
           </div>
 
