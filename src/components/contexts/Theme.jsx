@@ -13,6 +13,11 @@ export const ThemeProvider = ({ children }) => {
         localStorage.setItem('theme', themeMode);
     }, [themeMode]);
 
+    useEffect(() => {
+        const favicon = document.getElementById('favicon');
+        favicon.href = themeMode === 'dark' ? '/public/Images/dark-icon.jpg' : '/public/Images/light-icon.jpg';
+    }, [themeMode]);
+
     const lightTheme = () => setThemeMode('light');
     const darkTheme = () => setThemeMode('dark');
 
