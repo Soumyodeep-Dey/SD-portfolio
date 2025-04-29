@@ -22,6 +22,13 @@ function Projects() {
       video: "/Videos/memeconomy.mp4", // Replace with actual video path
     },
     {
+      title: "TO DO App",
+      description: "A simple and efficient TODO list application built with HTML , CSS, and JavaScript. It allows users to add and delete tasks, providing a clean and user-friendly interface , and it's using loacl storage to save the tasks so that the tasks are not lost on page refresh.",
+      link: "https://github.com/Soumyodeep-Dey/TO-DO-LIST",
+      image: "", // Replace with actual image path or remove if unnecessary
+      video: "/Videos/ToDoApp.mp4", // Replace with actual video path
+    },
+    {
       title: "Coming Soon...",
       description: "This project is under development. Stay tuned for more updates!",
       link: "https://github.com/Soumyodeep-Dey", // No link for this project
