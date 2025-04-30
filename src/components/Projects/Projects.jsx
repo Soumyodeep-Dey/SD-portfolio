@@ -48,8 +48,19 @@ function Projects() {
               <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">{project.title}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
 
-              {/* Project Link */}
+              {/* Project Code Link */}
               {project.link !== "#" && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
+                >
+                  View Project
+                </a>
+              )}
+               {/* Project Live Link */}
+               {project.link !== "#" && (
                 <a
                   href={project.link}
                   target="_blank"
