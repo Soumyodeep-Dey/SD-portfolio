@@ -4,6 +4,7 @@ function Projects() {
       title: "Watchly",
       description: "Watchly is an e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system (developing).",
       link: "https://github.com/Soumyodeep-Dey/Watchly",
+      live: "https://watchly-frontend.onrender.com/",
       image: "", // Replace with actual image path or remove if unnecessary
       video: "/Videos/WatchLy.mp4", // Replace with actual video path
     },
@@ -11,6 +12,7 @@ function Projects() {
       title: "Prime Minister Special Scholarship Scheme",
       description: "Developed as part of Smart India Hackathon 2024, this project aims to create a paperless scholarship disbursement system for PMSSS. My primary role in this group project was designing and implementing the frontend using React and Tailwind CSS.",
       link: "https://github.com/Soumyodeep-Dey/Scholarship",
+      live: "https://pmsss-scholarship.vercel.app/",
       image: "", // Replace with actual image path or remove if unnecessary
       video: "/Videos/PMSSS.mp4", // Replace with actual video path if available
     },
@@ -18,6 +20,7 @@ function Projects() {
       title: "MemEconomy",
       description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface.",
       link: "https://github.com/Soumyodeep-Dey/memeconomy",
+      live: "https://meme-economy-black.vercel.app/",
       image: "", // Replace with actual image path or remove if unnecessary
       video: "/Videos/memeconomy.mp4", // Replace with actual video path
     },
@@ -25,6 +28,7 @@ function Projects() {
       title: "TO DO App",
       description: "A simple and efficient TODO list application built with HTML , CSS, and JavaScript. It allows users to add and delete tasks, providing a clean and user-friendly interface , and it's using loacl storage to save the tasks so that the tasks are not lost on page refresh.",
       link: "https://github.com/Soumyodeep-Dey/TO-DO-LIST",
+      live: "https://soumyodeep-dey.github.io/TO-DO-LIST/",
       image: "", // Replace with actual image path or remove if unnecessary
       video: "/Videos/ToDoApp.mp4", // Replace with actual video path
     },
@@ -32,6 +36,7 @@ function Projects() {
       title: "Coming Soon...",
       description: "This project is under development. Stay tuned for more updates!",
       link: "https://github.com/Soumyodeep-Dey", // No link for this project
+      live: "https://github.com/Soumyodeep-Dey", // No live link for this project
       image: "", // No image needed for "Coming Soon"
       video: "/Videos/XYZ.mp4", // No video for "Coming Soon"
     },
@@ -56,13 +61,14 @@ function Projects() {
                   rel="noopener noreferrer"
                   className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
                 >
-                  View Project
+                  View Code
                 </a>
               )}
-               {/* Project Live Link */}
-               {project.link !== "#" && (
+
+              {/* Project Live Link */}
+              {project.live !== "#" && (
                 <a
-                  href={project.link}
+                  href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
