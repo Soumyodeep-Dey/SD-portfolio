@@ -52,30 +52,30 @@ function Projects() {
             <div key={index} className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
               <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">{project.title}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
-
-              {/* Project Code Link */}
-              {project.link !== "#" && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
-                >
-                  View Code
-                </a>
-              )}
-
-              {/* Project Live Link */}
-              {project.live !== "#" && (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 font-semibold hover:underline mb-4 inline-block dark:text-indigo-400"
-                >
-                  View Project
-                </a>
-              )}
+              <div className="flex flex-wrap gap-4 mb-4">
+                {/* Project Code Link */}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700 transition-all duration-300 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+                  >
+                    View Code
+                  </a>
+                )}
+                {/* Project Live Link */}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl bg-green-600 text-white font-medium shadow hover:bg-green-700 transition-all duration-300 dark:bg-green-500 dark:hover:bg-green-600"
+                  >
+                    View Project
+                  </a>
+                )}
+              </div>
 
               {/* Project Media */}
               {project.image && (
