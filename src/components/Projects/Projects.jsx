@@ -18,7 +18,7 @@ function Projects() {
     },
     {
       title: "MemEconomy",
-      description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface.",
+      description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface. For login use email: sdey@gmail.com || password: 1234",
       link: "https://github.com/Soumyodeep-Dey/memeconomy",
       live: "https://meme-economy-black.vercel.app/",
       image: "", // Replace with actual image path or remove if unnecessary
