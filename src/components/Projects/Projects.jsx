@@ -26,7 +26,7 @@ function Projects() {
     },
     {
       title: "TO DO App",
-      description: "A simple and efficient TODO list application built with HTML , CSS, and JavaScript. It allows users to add and delete tasks, providing a clean and user-friendly interface , and it's using loacl storage to save the tasks so that the tasks are not lost on page refresh.",
+      description: "A modern and feature-rich TODO list application built with HTML, CSS, and JavaScript. It offers a sleek user interface with enhanced CSS styling, inline editing capabilities, and local storage persistence. Users can add, edit, and delete tasks seamlessly, with smooth animations and responsive design. The app ensures tasks are preserved across page refreshes using local storage.",
       link: "https://github.com/Soumyodeep-Dey/TO-DO-LIST",
       live: "https://soumyodeep-dey.github.io/TO-DO-LIST/",
       image: "", // Replace with actual image path or remove if unnecessary
