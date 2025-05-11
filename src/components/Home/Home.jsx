@@ -11,14 +11,14 @@ function Home() {
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* About Image Section */}
-        <div className="about-col-1 flex justify-center">
-          <div className="relative group">
+        <div className="about-col-1 flex justify-center mb-8 md:mb-0">
+          <div className="relative group w-full max-w-sm md:max-w-md lg:max-w-lg">
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative">
               <img
                 src="/Images/MY photo.jpg"
                 alt="My pic"
-                className="rounded-2xl shadow-2xl w-2/3 transform group-hover:scale-105 transition-all duration-500 ease-in-out"
+                className="rounded-2xl shadow-2xl w-full transform group-hover:scale-105 transition-all duration-500 ease-in-out"
               />
               <span className="absolute bottom-4 left-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 px-6 text-sm rounded-full shadow-lg animate-pulse">
                 #OpenToWork
@@ -28,14 +28,14 @@ function Home() {
         </div>
 
         {/* About Text Section */}
-        <div className="about-col-2 text-gray-800 dark:text-gray-200 px-6 md:px-0">
-          <h1 className="text-5xl font-extrabold mb-6 text-indigo-700 dark:text-indigo-400 animate-fadeInLeft">
+        <div className="about-col-2 text-gray-800 dark:text-gray-200 px-4 md:px-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6 text-indigo-700 dark:text-indigo-400 animate-fadeInLeft">
             Hi, I&apos;m{' '}
             <span className="text-indigo-500 dark:text-indigo-300">Soumyodeep Dey</span>
           </h1>
-          <p className="text-lg leading-relaxed mb-4">
+          <p className="text-base md:text-lg leading-relaxed mb-4">
             <span className="block text-gray-600 dark:text-gray-400 mb-2">Kolkata, West Bengal, India</span>
-            <span className="block text-gray-600 dark:text-gray-400 mb-4">Email: soumyodeepdey2003@gmail.com | Phone: +91 9836545284</span>
+            <span className="block text-gray-600 dark:text-gray-400 mb-4 text-sm md:text-base">Email: soumyodeepdey2003@gmail.com | Phone: +91 9836545284</span>
             Passionate 3rd-year CSE student with hands-on experience in <strong className="text-indigo-600 dark:text-indigo-400">front-end web development</strong>, <strong className="text-indigo-600 dark:text-indigo-400">content writing</strong>, <strong className="text-indigo-600 dark:text-indigo-400">market research</strong>, and <strong className="text-indigo-600 dark:text-indigo-400">data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern
             technologies. Successfully led a six-member team in Smart India Hackathon 2024 seeking a front-end development
             internship to leverage skills in React, Tailwind CSS, and UI/UX design.
@@ -51,12 +51,12 @@ function Home() {
           </p>
 
           {/* Section Tabs */}
-          <div className="flex space-x-6 mb-8">
+          <div className="flex flex-wrap gap-4 md:gap-6 mb-6 md:mb-8">
             {['skills', 'experience', 'education', 'projects'].map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
-                className={`text-xl font-semibold relative transition-all duration-300 ${
+                className={`text-lg md:text-xl font-semibold relative transition-all duration-300 ${
                   activeSection === section
                     ? 'text-indigo-500 dark:text-indigo-400'
                     : 'text-gray-500 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400'
@@ -71,7 +71,7 @@ function Home() {
           </div>
 
           {/* Displayed Section Content */}
-          <div className="mt-8 space-y-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
+          <div className="mt-6 md:mt-8 space-y-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-lg border border-gray-100 dark:border-gray-700">
             {activeSection === 'skills' && (
               <ul className="space-y-4 text-gray-700 dark:text-gray-200">
                 <li className="flex items-start group">
@@ -184,53 +184,53 @@ function Home() {
           </div>
 
           {/* Social Links Section */}
-          <div className="mt-16">
-            <h2 className="text-3xl font-bold text-center mb-8 text-indigo-600 dark:text-indigo-400">
+          <div className="mt-12 md:mt-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-indigo-600 dark:text-indigo-400">
               Connect With Me
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
               <a
                 href="https://www.linkedin.com/in/soumyodeep-dey-s-d-2a125b1a7/"
-                className="group flex flex-col items-center p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
+                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
               >
-                <FaLinkedin className="text-indigo-600 text-3xl mb-2 group-hover:scale-110 group-hover:text-indigo-800 dark:text-indigo-400 dark:group-hover:text-indigo-300 transition-all duration-300" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-indigo-800 dark:group-hover:text-indigo-300 transition-colors duration-300">
+                <FaLinkedin className="text-indigo-600 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-indigo-800 dark:text-indigo-400 dark:group-hover:text-indigo-300 transition-all duration-300" />
+                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-indigo-800 dark:group-hover:text-indigo-300 transition-colors duration-300">
                   LinkedIn
                 </span>
               </a>
               <a
                 href="https://twitter.com/Soumyodeep2003"
-                className="group flex flex-col items-center p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
+                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
               >
-                <FaTwitter className="text-blue-500 text-3xl mb-2 group-hover:scale-110 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300 transition-all duration-300" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
+                <FaTwitter className="text-blue-500 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300 transition-all duration-300" />
+                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                   Twitter
                 </span>
               </a>
               <a
                 href="https://github.com/Soumyodeep-Dey"
-                className="group flex flex-col items-center p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
+                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
               >
-                <FaGithub className="text-gray-700 text-3xl mb-2 group-hover:scale-110 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-200 transition-all duration-300" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors duration-300">
+                <FaGithub className="text-gray-700 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-200 transition-all duration-300" />
+                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors duration-300">
                   GitHub
                 </span>
               </a>
               <a
                 href="mailto:soumyodeepdey2003@gmail.com"
-                className="group flex flex-col items-center p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
+                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
               >
-                <FaEnvelope className="text-red-500 text-3xl mb-2 group-hover:scale-110 group-hover:text-red-700 dark:text-red-400 dark:group-hover:text-red-300 transition-all duration-300" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-red-700 dark:group-hover:text-red-300 transition-colors duration-300">
+                <FaEnvelope className="text-red-500 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-red-700 dark:text-red-400 dark:group-hover:text-red-300 transition-all duration-300" />
+                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-red-700 dark:group-hover:text-red-300 transition-colors duration-300">
                   Email
                 </span>
               </a>
               <a
                 href="tel:09836545284"
-                className="group flex flex-col items-center p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
+                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
               >
-                <FaPhone className="text-green-500 text-3xl mb-2 transform rotate-90 group-hover:scale-110 group-hover:text-green-700 dark:text-green-400 dark:group-hover:text-green-300 transition-all duration-300" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors duration-300">
+                <FaPhone className="text-green-500 text-2xl md:text-3xl mb-2 transform rotate-90 group-hover:scale-110 group-hover:text-green-700 dark:text-green-400 dark:group-hover:text-green-300 transition-all duration-300" />
+                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors duration-300">
                   Phone
                 </span>
               </a>
