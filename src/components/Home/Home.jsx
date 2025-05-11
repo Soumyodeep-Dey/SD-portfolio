@@ -34,7 +34,7 @@ function Home() {
             <span className="text-indigo-500 dark:text-indigo-300">Soumyodeep Dey</span>
           </h1>
           <p className="text-lg leading-relaxed mb-4">
-            <span className="block text-gray-600 dark:text-gray-400 mb-2">New Barrackpore, Kolkata, West Bengal, India</span>
+            <span className="block text-gray-600 dark:text-gray-400 mb-2">Kolkata, West Bengal, India</span>
             <span className="block text-gray-600 dark:text-gray-400 mb-4">Email: soumyodeepdey2003@gmail.com | Phone: +91 9836545284</span>
             Passionate 3rd-year CSE student with hands-on experience in <strong className="text-indigo-600 dark:text-indigo-400">front-end web development</strong>, <strong className="text-indigo-600 dark:text-indigo-400">content writing</strong>, <strong className="text-indigo-600 dark:text-indigo-400">market research</strong>, and <strong className="text-indigo-600 dark:text-indigo-400">data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern
             technologies. Successfully led a six-member team in Smart India Hackathon 2024 seeking a front-end development
