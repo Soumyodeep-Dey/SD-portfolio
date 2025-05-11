@@ -23,7 +23,7 @@ function Header() {
         <div className="flex items-center justify-between">
           {/* Logo or Brand Name */}
           <div className="text-xl font-bold text-white">
-            Portfolio
+            Soumyodeep Dey (S D)
           </div>
 
           {/* Mobile Menu Button */}
