@@ -34,9 +34,13 @@ function Footer() {
           {/* Back to Top Button */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="mt-2 px-4 py-2 rounded-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm text-gray-800 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+            className="group mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-sky-500 dark:from-indigo-600 dark:to-sky-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+            aria-label="Back to top"
           >
-            Back to Top ↑
+            <span className="flex items-center gap-2">
+              <span className="transform group-hover:-translate-y-0.5 transition-transform duration-300">↑</span>
+              <span>Back to Top</span>
+            </span>
           </button>
         </div>
       </div>
