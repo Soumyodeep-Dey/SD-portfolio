@@ -2,8 +2,14 @@ const blogList = [
   {
     title: "A Beginners Guide to LinkedIn",
     description: "Effective Strategies for Expanding Your LinkedIn Network (most useful for Beginners)",
-    link: "https://hashnode.com/edit/cm02l0eje000408mhbmv61h6f",
-    image: "/Images/Add a heading.png",
+    link: "https://hashnode.com/post/cm02l0eje000408mhbmv61h6f",
+    image: "public/Images/LinkedIn Blog.png",
+  },
+  {
+    title: "Step-by-Step Guide to Creating a ToDo App with Complete CRUD Functionality",
+    description: "Building a ToDo App with HTML, CSS, JavaScript, and Local Storage",
+    link: "https://hashnode.com/post/cmas1h2tg000509lbe8flaetj",
+    image: "public/Images/ToDo App Blog.png",  
   },
   {
     title: "More on the way...",
