@@ -15,7 +15,7 @@ export const ThemeProvider = ({ children }) => {
 
     useEffect(() => {
         const favicon = document.getElementById('favicon');
-        favicon.href = themeMode === 'dark' ? '/public/Images/dark-icon.jpg' : '/public/Images/light-icon.jpg';
+        favicon.href = themeMode === 'dark' ? '/Images/dark-icon.jpg' : '/Images/light-icon.jpg';
     }, [themeMode]);
 
     const lightTheme = () => setThemeMode('light');
