@@ -42,9 +42,9 @@ function Blogs() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Blogs I'm Reading Section */}
-          <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
             <div className="flex items-center gap-4 mb-8">
               <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200">
                 Currently Reading
@@ -55,7 +55,7 @@ function Blogs() {
               {readingBlogs.map((blog, index) => (
                 <div
                   key={index}
-                  className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
                 >
                   <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between mb-4">
@@ -99,7 +99,7 @@ function Blogs() {
           </div>
 
           {/* My Blog Posts Section */}
-          <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
             <div className="flex items-center gap-4 mb-8">
               <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200">
                 My Writings
@@ -110,10 +110,10 @@ function Blogs() {
               {myBlogs.map((blog, index) => (
                 <div
                   key={index}
-                  className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
                 >
                   {blog.image && (
-                    <div className="relative overflow-hidden aspect-video">
+                    <div className="relative overflow-hidden aspect-video bg-gray-100 dark:bg-gray-700">
                       <img
                         src={blog.image}
                         alt="Blog Thumbnail"
@@ -123,14 +123,6 @@ function Blogs() {
                     </div>
                   )}
                   <div className="p-6">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {blog.date}
-                      </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {blog.readTime}
-                      </span>
-                    </div>
                     <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                       {blog.title}
                     </h3>
