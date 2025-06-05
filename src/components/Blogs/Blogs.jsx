@@ -19,20 +19,16 @@ const myBlogs = [
 
 const readingBlogs = [
   {
-    title: "The Future of Web Development",
-    author: "John Doe",
-    description: "Exploring upcoming trends and technologies in web development",
-    link: "https://example.com/blog1",
-    category: "Web Development",
-    date: "March 18, 2024"
+    title: "Don't Let Your Best Ideas Die in Silence",
+    author: "Arpit Bhayani",
+    link: "https://arpitbhayani.me/blogs/dont-let-your-best-ideas-die-in-silenc",
+    date: "June 5, 2025"
   },
   {
-    title: "Mastering React Hooks",
-    author: "Jane Smith",
-    description: "A comprehensive guide to React Hooks and their best practices",
-    link: "https://example.com/blog2",
-    category: "React",
-    date: "March 17, 2024"
+    title: "I Built an MCP Server for DevTo (100% Open Source)🎉",
+    author: "Arindam Majumdar",
+    link: "https://dev.to/arindam_1729/i-built-an-mcp-server-for-devto-100-open-source-4f6n",
+    date: "June 3, 2025"
   }
 ];
 
