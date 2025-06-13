@@ -61,7 +61,7 @@ function Home() {
 
           {/* Section Tabs */}
           <div className="flex flex-wrap gap-4 md:gap-6 mb-6 md:mb-8">
-            {['skills', 'experience', 'education',].map((section) => (
+            {['skills', 'experience', 'education'].map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
