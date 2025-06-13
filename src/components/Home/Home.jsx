@@ -66,8 +66,8 @@ function Home() {
                 key={section}
                 onClick={() => setActiveSection(section)}
                 className={`text-lg md:text-xl font-semibold relative transition-all duration-300 hover:scale-105 ${activeSection === section
-                    ? 'text-indigo-500 dark:text-indigo-400'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400'
+                  ? 'text-indigo-500 dark:text-indigo-400'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400'
                   }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -116,17 +116,42 @@ function Home() {
             )}
 
             {activeSection === 'experience' && (
-              <ul className="space-y-4 text-gray-700 dark:text-gray-200">
+              <ul className="space-y-6 text-gray-700 dark:text-gray-200">
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Web Content Writer Internship | NaukriSafar (Jan 2025 – Mar 2025):</span> Delivered 100+ optimized job-related blogs on WordPress, achieving 70+ SEO scores consistently. Applied SEO best practices and content optimization strategies, improving organic reach by 40%.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">Web Content Writer Internship | NaukriSafar</span>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Jan 2025 - Mar 2025 | Remote</div>
+                    <div className="space-y-2">
+                      <p>• Delivered 100+ optimized job-related blogs on WordPress, achieving 70+ SEO scores consistently</p>
+                      <p>• Applied SEO best practices and content optimization strategies, improving organic reach by 40%</p>
+                    </div>
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Research Intern | DrMudhiwalla & The We Foundation (Nov 2023 – Aug 2024):</span> Analyzed 35+ comprehensive market research reports across diverse sectors, generating actionable insights for strategic decisions. Created data visualizations and comprehensive reports using Excel and PowerPoint, increasing client engagement by 25%.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">Research Intern | DrMudhiwalla & The We Foundation</span>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">November 2023 - August 2024 | Remote & Kolkata</div>
+                    <div className="space-y-2">
+                      <p>• Analyzed 35+ comprehensive market research reports across diverse sectors, generating actionable insights for strategic decisions</p>
+                      <p>• Created data visualizations and comprehensive reports using Excel and PowerPoint, increasing client engagement by 25%</p>
+                      <p>• Conducted in-depth secondary research on various industry topics and market trends</p>
+                    </div>
+                  </div>
+                </li>
+                <li className="flex items-start group">
+                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
+                  <div>
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">Team Leader | Smart India Hackathon 2024</span>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">September 2024 - November 2024</div>
+                    <div className="space-y-2">
+                      <p>• Successfully led a six-member software development team implementing Agile methodology and complete development lifecycle</p>
+                      <p>• Developed "E-Scholar" - a paperless scholarship disbursement system for PMSSS using React.js and Tailwind CSS</p>
+                      <p>• Coordinated team activities, managed project timeline, and ensured deliverable quality</p>
+                      <p>• Implemented responsive UI design accessible to 100+ viewers with seamless user experience</p>
+                      <p>• Applied software engineering principles and modern web development best practices</p>
+                    </div>
                   </div>
                 </li>
               </ul>
