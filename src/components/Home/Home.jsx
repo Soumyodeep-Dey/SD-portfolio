@@ -134,9 +134,8 @@ function Home() {
                     <span className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">Research Intern | DrMudhiwalla & The We Foundation</span>
                     <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">November 2023 - August 2024 | Remote & Kolkata</div>
                     <div className="space-y-2">
-                      <p>• Analyzed 35+ comprehensive market research reports across diverse sectors, generating actionable insights for strategic decisions</p>
-                      <p>• Created data visualizations and comprehensive reports using Excel and PowerPoint, increasing client engagement by 25%</p>
-                      <p>• Conducted in-depth secondary research on various industry topics and market trends</p>
+                      <p>• Analyzed 35+ market research reports across diverse sectors, generating actionable insights</p>
+                      <p>• Created data visualizations and reports using Excel and PowerPoint, increasing client engagement by 25%</p>
                     </div>
                   </div>
                 </li>
@@ -147,9 +146,7 @@ function Home() {
                     <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">September 2024 - November 2024</div>
                     <div className="space-y-2">
                       <p>• Led 6-member team implementing Agile methodology and full development lifecycle</p>
-                      <p>• Built "E-Scholar" - PMSSS scholarship system using React.js and Tailwind CSS</p>
-                      <p>• Managed project timeline and deliverables for 100+ users</p>
-                      <p>• Implemented responsive UI with modern web development practices</p>
+                      <p>• Built "E-Scholar" - PMSSS scholarship system using React.js and Tailwind CSS for 100+ users</p>
                     </div>
                   </div>
                 </li>
