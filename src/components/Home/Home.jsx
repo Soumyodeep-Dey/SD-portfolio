@@ -43,14 +43,12 @@ function Home() {
             </span>
           </h1>
           <p className="text-base md:text-lg leading-relaxed mb-4">
-            <span className="block text-gray-600 dark:text-gray-400 mb-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Kolkata, West Bengal, India</span>
+            <span className="block text-gray-600 dark:text-gray-400 mb-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">New Barrackpore, Kolkata, West Bengal, India</span>
             <span className="block text-gray-600 dark:text-gray-300 mb-4 text-sm md:text-base hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 p-2 rounded-lg bg-transparent dark:bg-gray-700/30 hover:bg-gray-100 dark:hover:bg-gray-700/50 backdrop-blur-sm">
               <span className="font-medium">Email:</span> <a href="mailto:soumyodeepdey2003@gmail.com" className="text-indigo-600 dark:text-indigo-300 hover:underline">soumyodeepdey2003@gmail.com</a> | <span className="font-medium">Phone:</span> <a href="tel:+919836545284" className="text-indigo-600 dark:text-indigo-300 hover:underline">+91 9836545284</a>
             </span>
-            Passionate 3rd-year CSE student with hands-on experience in <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">front-end web development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">content writing</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">market research</strong>, and <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern
-            technologies. Successfully led a six-member team in Smart India Hackathon 2024 seeking a front-end development
-            internship to leverage skills in React, Tailwind CSS, and UI/UX design.
-            <a 
+            Final year Computer Science Engineering student with hands-on experience in <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">software development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">web development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">content writing</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">market research</strong>, and <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern web frameworks and software engineering principles. Successfully led a six-member software development team in Smart India Hackathon 2024, implementing Agile methodology and complete development lifecycle. Seeking Software Development internship to leverage expertise in modern web technologies, coding best practices, and team leadership.
+            <a
               href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link"
               className="inline-flex items-center ml-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300 group"
             >
@@ -67,11 +65,10 @@ function Home() {
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
-                className={`text-lg md:text-xl font-semibold relative transition-all duration-300 hover:scale-105 ${
-                  activeSection === section
+                className={`text-lg md:text-xl font-semibold relative transition-all duration-300 hover:scale-105 ${activeSection === section
                     ? 'text-indigo-500 dark:text-indigo-400'
                     : 'text-gray-500 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400'
-                }`}
+                  }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
                 {activeSection === section && (
@@ -88,25 +85,31 @@ function Home() {
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Web Development:</span> HTML, CSS, JavaScript, React, Tailwind CSS, Canva, GitHub, Node.js, Express.js, MongoDB.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Programming Languages:</span> JavaScript, TypeScript, C++, HTML, CSS
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Web Content Writing:</span> WordPress, Blog writing, SEO optimization.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Web Development:</span> React.js, Next.js, Tailwind CSS, Responsive Design, Node.js, Express.js, MongoDB, REST APIs
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Data Analysis:</span> Market Research, Secondary Research, Data Representation.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Development Tools & Methods:</span> Git, GitHub, Version Control, Testing, Debugging, Agile
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Languages:</span> English (Intermediate), Hindi (Spoken Only), Bengali (Native).
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Content & SEO:</span> WordPress, Technical Writing, Blog Writing, SEO Optimization
+                  </div>
+                </li>
+                <li className="flex items-start group">
+                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
+                  <div>
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Research & Analytics:</span> Market Research, Data Analysis, Data Visualization, PowerPoint, Excel
                   </div>
                 </li>
               </ul>
@@ -117,25 +120,13 @@ function Home() {
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Web Content Writer | NaukriSafar (Jan 2025 - March 2025):</span> Published Job related blogs (100+) on WordPress with best practices and SEO of all my blogs are equal or more than 70 out of 100.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Web Content Writer Internship | NaukriSafar (Jan 2025 – Mar 2025):</span> Delivered 100+ optimized job-related blogs on WordPress, achieving 70+ SEO scores consistently. Applied SEO best practices and content optimization strategies, improving organic reach by 40%.
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Team Leader | Smart India Hackathon 2024 (Sep 2024 - Nov 2024):</span> Led a six-member team to develop "E-Scholar," a centralized React-based platform for paperless scholarship disbursement. Designed and refined UI/UX based on user feedback, enhancing accessibility and engagement.
-                  </div>
-                </li>
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Research Intern | DrMudhiwalla (Apr 2024 - Aug 2024):</span> Conducted in-depth market research, compiling data from 10+ reports into actionable insights. Designed branding materials, improving engagement by 25%.
-                  </div>
-                </li>
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Intern | The We Foundation (Nov 2023 - Jan 2024):</span> Performed secondary research on 25+ topics, visualizing key insights for strategic decision-making.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Research Intern | DrMudhiwalla & The We Foundation (Nov 2023 – Aug 2024):</span> Analyzed 35+ comprehensive market research reports across diverse sectors, generating actionable insights for strategic decisions. Created data visualizations and comprehensive reports using Excel and PowerPoint, increasing client engagement by 25%.
                   </div>
                 </li>
               </ul>
@@ -146,19 +137,18 @@ function Home() {
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">B.Tech. in Computer Science:</span> Dr. Sudhir Chandra Sur Institute of Technology & Sports Complex, MAKAUT (2022-2026).
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">B.Tech. in Computer Science and Engineering:</span> Dr. Sudhir Chandra Sur Institute of Technology & Sports Complex, MAKAUT (2022-2026)
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Higher Secondary (12th):</span> Completed with 80% marks.
-                  </div>
-                </li>
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Secondary (10th):</span> Completed with 87% marks.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Certifications:</span>
+                    <ul className="mt-2 ml-4 space-y-1">
+                      <li>• Delta (Full Stack Web Development) | APNA COLLEGE</li>
+                      <li>• Foundations of User Experience (UX) Design | Coursera (Google)</li>
+                      <li>• Develop Soft Skills that Industry Demands | TCS ION</li>
+                    </ul>
                   </div>
                 </li>
               </ul>
@@ -169,25 +159,19 @@ function Home() {
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Watchly (In Development):</span> A dynamic E-commerce end to end web app designed for selling watches.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Watchly | React.js, E-commerce:</span> Developing specialized wristwatch e-commerce platform with advanced search, sorting, filtering, and infinite scroll features, supporting up to 5 concurrent users. Implementing sophisticated recommendation system and seamless shopping experience using modern web technologies.
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">E-Scholar:</span> Led development of a paperless scholarship system for SIH 2024.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">E-Scholar | React.js, Tailwind CSS, PMSSS:</span> Designed and developed frontend for paperless scholarship disbursement system as part of Smart India Hackathon 2024, accessible to 100+ viewers. Created responsive UI using React.js and Tailwind CSS for PMSSS scholarship management platform.
                   </div>
                 </li>
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Memeconomy:</span> Designed an intuitive UI for a meme-based trading platform for a hackathon.
-                  </div>
-                </li>
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Amazon UI Clone:</span> Developed Amazon UI clone with HTML and CSS.
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">TODO App | HTML, CSS, JavaScript:</span> Built a responsive TODO App with inline editing, and modern UI/UX design, supporting 10+ simultaneous users. Implemented local storage ensuring 100% data retention across all device sizes.
                   </div>
                 </li>
               </ul>
