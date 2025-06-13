@@ -61,7 +61,7 @@ function Home() {
 
           {/* Section Tabs */}
           <div className="flex flex-wrap gap-4 md:gap-6 mb-6 md:mb-8">
-            {['skills', 'experience', 'education', 'projects'].map((section) => (
+            {['skills', 'experience', 'education',].map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
@@ -146,11 +146,10 @@ function Home() {
                     <span className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">Team Leader | Smart India Hackathon 2024</span>
                     <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">September 2024 - November 2024</div>
                     <div className="space-y-2">
-                      <p>• Successfully led a six-member software development team implementing Agile methodology and complete development lifecycle</p>
-                      <p>• Developed "E-Scholar" - a paperless scholarship disbursement system for PMSSS using React.js and Tailwind CSS</p>
-                      <p>• Coordinated team activities, managed project timeline, and ensured deliverable quality</p>
-                      <p>• Implemented responsive UI design accessible to 100+ viewers with seamless user experience</p>
-                      <p>• Applied software engineering principles and modern web development best practices</p>
+                      <p>• Led 6-member team implementing Agile methodology and full development lifecycle</p>
+                      <p>• Built "E-Scholar" - PMSSS scholarship system using React.js and Tailwind CSS</p>
+                      <p>• Managed project timeline and deliverables for 100+ users</p>
+                      <p>• Implemented responsive UI with modern web development practices</p>
                     </div>
                   </div>
                 </li>
@@ -174,29 +173,6 @@ function Home() {
                       <li>• Foundations of User Experience (UX) Design | Coursera (Google)</li>
                       <li>• Develop Soft Skills that Industry Demands | TCS ION</li>
                     </ul>
-                  </div>
-                </li>
-              </ul>
-            )}
-
-            {activeSection === 'projects' && (
-              <ul className="space-y-4 text-gray-700 dark:text-gray-200">
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Watchly | React.js, E-commerce:</span> Developing specialized wristwatch e-commerce platform with advanced search, sorting, filtering, and infinite scroll features, supporting up to 5 concurrent users. Implementing sophisticated recommendation system and seamless shopping experience using modern web technologies.
-                  </div>
-                </li>
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">E-Scholar | React.js, Tailwind CSS, PMSSS:</span> Designed and developed frontend for paperless scholarship disbursement system as part of Smart India Hackathon 2024, accessible to 100+ viewers. Created responsive UI using React.js and Tailwind CSS for PMSSS scholarship management platform.
-                  </div>
-                </li>
-                <li className="flex items-start group">
-                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
-                  <div>
-                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">TODO App | HTML, CSS, JavaScript:</span> Built a responsive TODO App with inline editing, and modern UI/UX design, supporting 10+ simultaneous users. Implemented local storage ensuring 100% data retention across all device sizes.
                   </div>
                 </li>
               </ul>
