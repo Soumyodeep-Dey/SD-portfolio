@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 
+const RESUME_LINK = import.meta.env.VITE_RESUME_LINK;
+
 function Home() {
   const [activeSection, setActiveSection] = useState('skills');
 
@@ -49,7 +51,7 @@ function Home() {
             </span>
             Final year Computer Science Engineering student with hands-on experience in <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">software development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">web development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">content writing</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">market research</strong>, and <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern web frameworks and software engineering principles. Successfully led a six-member software development team in Smart India Hackathon 2024, implementing Agile methodology and complete development lifecycle. Seeking Software Development internship to leverage expertise in modern web technologies, coding best practices, and team leadership.
             <a
-              href="https://drive.google.com/file/d/1fHSCn7OesX4uDFF9IHBtAWqbDz5OVndW/view?usp=drive_link"
+              href={RESUME_LINK}
               className="inline-flex items-center ml-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300 group"
             >
               Here&apos;s my resume
