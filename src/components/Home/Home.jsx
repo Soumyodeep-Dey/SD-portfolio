@@ -164,6 +164,18 @@ function Home() {
                 <li className="flex items-start group">
                   <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
                   <div>
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Higher Secondary Examination:</span> Kodalia Agapur High School (H.S) (passed out - 2022)
+                  </div>
+                </li>
+                <li className="flex items-start group">
+                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
+                  <div>
+                    <span className="font-semibold text-indigo-600 dark:text-indigo-400">Secondary Examination:</span> Kodalia Agapur High School (H.S) (passed out - 2020)
+                  </div>
+                </li>
+                <li className="flex items-start group">
+                  <span className="text-indigo-500 dark:text-indigo-400 mr-2 group-hover:scale-110 transition-transform duration-300">•</span>
+                  <div>
                     <span className="font-semibold text-indigo-600 dark:text-indigo-400">Certifications:</span>
                     <ul className="mt-2 ml-4 space-y-1">
                       <li>• Delta (Full Stack Web Development) | APNA COLLEGE</li>
