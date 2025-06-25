@@ -19,7 +19,7 @@ function Projects() {
     
     {
       title: "AI Job Recommender",
-      description: "A smart job recommendation system built using React and the OpenAI API. It allows users to input their profile and preferences, and then generates personalized job suggestions powered by AI. It includes category-based filtering and role-specific insights.",
+      description: "A smart job recommendation system built using React and the Google AI API. It allows users to input their profile and preferences, and then generates personalized job suggestions powered by AI. It includes category-based filtering and role-specific insights.",
       link: "https://github.com/Soumyodeep-Dey/Ai_Job_Recommendation_System",
       live: "https://ai-job-recommendation-system-eight.vercel.app/",
       image: "", // Add image path if available
