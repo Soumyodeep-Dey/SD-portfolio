@@ -20,16 +20,16 @@ function Projects() {
     {
       title: "AI Job Recommender",
       description: "A smart job recommendation system built using React and the OpenAI API. It allows users to input their profile and preferences, and then generates personalized job suggestions powered by AI. It includes category-based filtering and role-specific insights.",
-      link: "https://github.com/Soumyodeep-Dey/ai-job-recommender",
-      live: "https://ai-job-recommender.vercel.app/",
+      link: "https://github.com/Soumyodeep-Dey/Ai_Job_Recommendation_System",
+      live: "https://ai-job-recommendation-system-eight.vercel.app/",
       image: "", // Add image path if available
       video: "/Videos/AIJobRecommender.mp4", // Replace with actual video path
     },
     {
       title: "Next.js Authentication System",
       description: "A production-ready authentication app built with Next.js, TypeScript, MongoDB, and Tailwind CSS. It includes features like JWT-based auth, protected routes, and a clean, responsive UI. Built as a hands-on project after learning advanced authentication patterns.",
-      link: "https://github.com/Soumyodeep-Dey/next-auth-app",
-      live: "https://next-auth-app-soumyodeep.vercel.app/",
+      link: "https://github.com/Soumyodeep-Dey/auth_next_js",
+      live: "https://auth-next-js-zeta.vercel.app/login",
       image: "", // Add image path if available
       video: "/Videos/NextAuthApp.mp4", // Replace with actual video path
     },    
