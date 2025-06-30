@@ -15,6 +15,12 @@ const myBlogs = [
 
 const readingBlogs = [
   {
+    title: "Everything I know about good system design",
+    author: "sean goedecke",
+    link: "https://www.seangoedecke.com/good-system-design/?ref=dailydev",
+    date: "June 30, 2025"
+  },
+  {
     title: "Don't Let Your Best Ideas Die in Silence",
     author: "Arpit Bhayani",
     link: "https://arpitbhayani.me/blogs/dont-let-your-best-ideas-die-in-silenc",
