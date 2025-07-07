@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si'; // Add this line
+import { SiLeetcode } from 'react-icons/si';
+import { MdEmail, MdPhone } from 'react-icons/md';
 
 const RESUME_LINK = import.meta.env.VITE_RESUME_LINK;
 
@@ -47,8 +48,18 @@ function Home() {
           </h1>
           <p className="text-base md:text-lg leading-relaxed mb-4">
             <span className="block text-gray-600 dark:text-gray-400 mb-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">New Barrackpore, Kolkata, West Bengal, India</span>
-            <span className="block text-gray-600 dark:text-gray-300 mb-4 text-sm md:text-base hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 p-2 rounded-lg bg-transparent dark:bg-gray-700/30 hover:bg-gray-100 dark:hover:bg-gray-700/50 backdrop-blur-sm">
-              <span className="font-medium">Email:</span> <a href="mailto:soumyodeepdey2003@gmail.com" className="text-indigo-600 dark:text-indigo-300 hover:underline">soumyodeepdey2003@gmail.com</a> | <span className="font-medium">Phone:</span> <a href="tel:+919836545284" className="text-indigo-600 dark:text-indigo-300 hover:underline">+91 9836545284</a>
+            <span className="block w-fit mx-auto text-gray-700 dark:text-gray-200 mb-4 text-sm md:text-base p-3 rounded-xl bg-white/80 dark:bg-gray-800/70 shadow-md border border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 backdrop-blur-md">
+              <span className="flex items-center gap-1">
+                <MdEmail className="w-5 h-5 text-indigo-500 dark:text-indigo-300 mr-1" />
+                <span className="font-medium">Email:</span>
+                <a href="mailto:soumyodeepdey2003@gmail.com" className="ml-1 text-indigo-600 dark:text-indigo-300 hover:underline">soumyodeepdey2003@gmail.com</a>
+              </span>
+              <span className="hidden sm:inline-block text-gray-400">|</span>
+              <span className="flex items-center gap-1">
+                <MdPhone className="w-5 h-5 text-indigo-500 dark:text-indigo-300 mr-1" />
+                <span className="font-medium">Phone:</span>
+                <a href="tel:+919836545284" className="ml-1 text-indigo-600 dark:text-indigo-300 hover:underline">+91 9836545284</a>
+              </span>
             </span>
             Final year Computer Science Engineering student with hands-on experience in <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">software development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">web development</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">content writing</strong>, <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">market research</strong>, and <strong className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300">data analysis</strong>. Adept at creating intuitive, engaging, and scalable web applications using modern web frameworks and software engineering principles. Successfully led a six-member software development team in Smart India Hackathon 2024, implementing Agile methodology and complete development lifecycle. Seeking Software Development internship to leverage expertise in modern web technologies, coding best practices, and team leadership.
             <a
@@ -196,42 +207,48 @@ function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
               My Profiles
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               <a
                 href="https://www.linkedin.com/in/soumyodeep-dey-s-d-2a125b1a7/"
-                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
+                className="group flex flex-col items-center p-4 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-indigo-400 dark:hover:border-indigo-400 hover:bg-white/90 dark:hover:bg-gray-800/80 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaLinkedin className="text-indigo-600 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-indigo-800 dark:text-indigo-400 dark:group-hover:text-indigo-300 transition-all duration-300" />
-                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-indigo-800 dark:group-hover:text-indigo-300 transition-colors duration-300">
+                <FaLinkedin className="text-indigo-600 text-3xl mb-2 group-hover:scale-125 group-hover:text-indigo-800 dark:text-indigo-400 dark:group-hover:text-indigo-300 transition-all duration-300" />
+                <span className="text-base font-medium text-gray-800 dark:text-gray-200 group-hover:text-indigo-800 dark:group-hover:text-indigo-300 transition-colors duration-300">
                   LinkedIn
                 </span>
               </a>
               <a
                 href="https://twitter.com/Soumyodeep2003"
-                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
+                className="group flex flex-col items-center p-4 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-400 dark:hover:border-blue-400 hover:bg-white/90 dark:hover:bg-gray-800/80 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaTwitter className="text-blue-500 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300 transition-all duration-300" />
-                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
+                <FaTwitter className="text-blue-500 text-3xl mb-2 group-hover:scale-125 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300 transition-all duration-300" />
+                <span className="text-base font-medium text-gray-800 dark:text-gray-200 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                   Twitter
                 </span>
               </a>
               <a
                 href="https://github.com/Soumyodeep-Dey"
-                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
+                className="group flex flex-col items-center p-4 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-gray-500 dark:hover:border-gray-400 hover:bg-white/90 dark:hover:bg-gray-800/80 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaGithub className="text-gray-700 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-200 transition-all duration-300" />
-                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors duration-300">
+                <FaGithub className="text-gray-700 text-3xl mb-2 group-hover:scale-125 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-200 transition-all duration-300" />
+                <span className="text-base font-medium text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors duration-300">
                   GitHub
                 </span>
               </a>
               <a
                 href="https://leetcode.com/u/SOUMYODEEP_DEY/"
-                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-yellow-200 dark:hover:border-yellow-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
+                className="group flex flex-col items-center p-4 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white/90 dark:hover:bg-gray-800/80 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <SiLeetcode className="text-yellow-500 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-yellow-600 dark:text-yellow-400 dark:group-hover:text-yellow-300 transition-all duration-300" />
-                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-yellow-600 dark:group-hover:text-yellow-300 transition-colors duration-300">
+                <SiLeetcode className="text-yellow-500 text-3xl mb-2 group-hover:scale-125 group-hover:text-yellow-600 dark:text-yellow-400 dark:group-hover:text-yellow-300 transition-all duration-300" />
+                <span className="text-base font-medium text-gray-800 dark:text-gray-200 group-hover:text-yellow-600 dark:group-hover:text-yellow-300 transition-colors duration-300">
                   LeetCode
                 </span>
               </a>
