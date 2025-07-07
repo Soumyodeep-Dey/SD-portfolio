@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si'; // Add this line
 
 const RESUME_LINK = import.meta.env.VITE_RESUME_LINK;
 
@@ -193,7 +194,7 @@ function Home() {
           {/* Social Links Section */}
           <div className="mt-12 md:mt-16">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              Connect With Me
+              My Profiles
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
               <a
@@ -224,21 +225,14 @@ function Home() {
                 </span>
               </a>
               <a
-                href="mailto:soumyodeepdey2003@gmail.com"
-                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
+                href="https://leetcode.com/u/SOUMYODEEP_DEY/"
+                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-yellow-200 dark:hover:border-yellow-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaEnvelope className="text-red-500 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-red-700 dark:text-red-400 dark:group-hover:text-red-300 transition-all duration-300" />
-                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-red-700 dark:group-hover:text-red-300 transition-colors duration-300">
-                  Email
-                </span>
-              </a>
-              <a
-                href="tel:09836545284"
-                className="group flex flex-col items-center p-3 md:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-white/80 dark:hover:bg-gray-800/80"
-              >
-                <FaPhone className="text-green-500 text-2xl md:text-3xl mb-2 transform rotate-90 group-hover:scale-110 group-hover:text-green-700 dark:text-green-400 dark:group-hover:text-green-300 transition-all duration-300" />
-                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors duration-300">
-                  Phone
+                <SiLeetcode className="text-yellow-500 text-2xl md:text-3xl mb-2 group-hover:scale-110 group-hover:text-yellow-600 dark:text-yellow-400 dark:group-hover:text-yellow-300 transition-all duration-300" />
+                <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-yellow-600 dark:group-hover:text-yellow-300 transition-colors duration-300">
+                  LeetCode
                 </span>
               </a>
             </div>
