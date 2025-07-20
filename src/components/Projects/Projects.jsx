@@ -32,7 +32,15 @@ function Projects() {
       live: "https://auth-next-js-zeta.vercel.app/login",
       image: "", // Add image path if available
       video: "/Videos/NextAuthApp.mp4", // Replace with actual video path
-    },    
+    }, 
+    {
+      title: "Movie App Demo (v0.1)",
+      description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design, recorded to document progress and learning. Special thanks to JavaScript Mastery for guidance. Key lessons: Building > planning, small wins compound, and just start—even if it’s messy.",
+      link: "https://github.com/Soumyodeep-Dey/Mobile_Movie_App", // Add GitHub repo link if available
+      live: "https://www.linkedin.com/posts/soumyodeep-dey-s-d-2a125b1a7_100daysofcode-buildinpublic-appdevelopment-activity-7352362240777322503-VppU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBE6NkB_MbTR3A7lSe3SSF8osCWqxPsViA", // Add Expo or APK demo link if available
+      image: "", // Add a screenshot or poster path
+      video: "/Videos/MovieAppDemo.mp4" // Replace with actual video path if needed
+    },   
     {
       title: "MemEconomy",
       description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface. For login use email: sdey@gmail.com || password: 1234",
