@@ -1,7 +1,7 @@
 function Projects() {
   const projectList = [
     {
-      title: "Watchly",
+      title: "Watchly (Developing)",
       description: "Watchly is an e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system (developing).",
       link: "https://github.com/Soumyodeep-Dey/Watchly",
       live: "https://watchly-frontend.onrender.com/",
@@ -16,7 +16,7 @@ function Projects() {
       image: "", // Replace with actual image path or remove if unnecessary
       video: "/Videos/PMSSS.mp4", // Replace with actual video path if available
     },
-    
+
     {
       title: "AI Job Recommender",
       description: "A smart job recommendation system built using React and the Google AI API. It allows users to input their profile and preferences, and then generates personalized job suggestions powered by AI. It includes category-based filtering and role-specific insights.",
@@ -32,15 +32,15 @@ function Projects() {
       live: "https://auth-next-js-zeta.vercel.app/login",
       image: "", // Add image path if available
       video: "/Videos/NextAuthApp.mp4", // Replace with actual video path
-    }, 
+    },
     {
-      title: "Movie App Demo (v0.1)",
+      title: "Movie App Demo (v0.1) (For better viewing use live and watch the video on LinkedIn)",
       description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design, recorded to document progress and learning. Special thanks to JavaScript Mastery for guidance. Key lessons: Building > planning, small wins compound, and just start—even if it’s messy.",
       link: "https://github.com/Soumyodeep-Dey/Mobile_Movie_App", // Add GitHub repo link if available
       live: "https://www.linkedin.com/posts/soumyodeep-dey-s-d-2a125b1a7_100daysofcode-buildinpublic-appdevelopment-activity-7352362240777322503-VppU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBE6NkB_MbTR3A7lSe3SSF8osCWqxPsViA", // Add Expo or APK demo link if available
       image: "", // Add a screenshot or poster path
       video: "/Videos/MovieAppDemo.mp4" // Replace with actual video path if needed
-    },   
+    },
     {
       title: "MemEconomy",
       description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon to create an engaging and functional platform. I was responsible for developing the frontend, ensuring a seamless and responsive user interface. For login use email: sdey@gmail.com || password: 1234",
@@ -111,14 +111,17 @@ function Projects() {
                 />
               )}
               {project.video && (
-                <video
-                  src={project.video}
-                  controls
-                  className="rounded-lg shadow-md mb-4 w-full object-cover"
-                  preload="metadata"
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <div className="w-full aspect-video mb-4 rounded-lg overflow-hidden shadow-md bg-black flex items-center justify-center">
+                  <video
+                    src={project.video}
+                    controls
+                    className="w-full h-full object-cover"
+                    preload="metadata"
+                    style={{ maxHeight: '100%', maxWidth: '100%' }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               )}
             </div>
           ))}
