@@ -57,6 +57,11 @@ function Header() {
                   Blogs
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/support" className={navLinkClasses}>
+                  Support
+                </NavLink>
+              </li>
             </ul>
           </nav>
 

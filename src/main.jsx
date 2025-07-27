@@ -7,6 +7,7 @@ import NotFound from './components/NotFound/NotFound.jsx'
 import Home from './components/Home/Home.jsx'
 import Projects from './components/Projects/Projects.jsx'
 import Blogs from './components/Blogs/Blogs.jsx'
+import Support from './components/Support/Support.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,7 +15,10 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='projects' element={<Projects />} />
       <Route path='blogs' element={<Blogs />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path='support' element={<Support />} />
+
+      {/* Catch-all route for 404 Not Found */}
+      <Route path='*' element={<NotFound />} />
     </Route>
   )
 )
