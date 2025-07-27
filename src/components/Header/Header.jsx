@@ -102,6 +102,15 @@ function Header() {
                   Blogs
                 </NavLink>
               </li>
+              <li>
+                <NavLink 
+                  to="/support" 
+                  className={navLinkClasses}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Support
+                </NavLink>
+              </li>
               <li className="pt-2">
                 <ThemeBtn />
               </li>
