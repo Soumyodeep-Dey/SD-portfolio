@@ -35,7 +35,7 @@ function Projects() {
     },
     {
       title: "Movie App Demo (v0.1) (For better viewing use live and watch the video on LinkedIn)",
-      description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design, recorded to document progress and learning. Special thanks to JavaScript Mastery for guidance. Key lessons: Building > planning, small wins compound, and just start—even if it’s messy.",
+      description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design, recorded to document progress and learning. Special thanks to JavaScript Mastery for guidance. Key lessons: Building > planning, small wins compound, and just startâ€”even if itâ€™s messy.",
       link: "https://github.com/Soumyodeep-Dey/Mobile_Movie_App", // Add GitHub repo link if available
       live: "https://www.linkedin.com/posts/soumyodeep-dey-s-d-2a125b1a7_100daysofcode-buildinpublic-appdevelopment-activity-7352362240777322503-VppU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBE6NkB_MbTR3A7lSe3SSF8osCWqxPsViA", // Add Expo or APK demo link if available
       image: "", // Add a screenshot or poster path
