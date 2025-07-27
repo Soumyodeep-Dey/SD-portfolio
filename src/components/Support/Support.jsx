@@ -16,7 +16,7 @@ function Support() {
             Buy Me a Coffee
           </h2>
           <a
-            href="https://www.buymeacoffee.com/yourusername"
+            href="https://coff.ee/soumyodeepdey"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300"
@@ -31,11 +31,11 @@ function Support() {
           </h2>
           <div className="flex justify-center space-x-4">
             <div>
-              <img src="/path/to/your/qr-code1.png" alt="QR Code 1" className="w-32 h-32" />
+              <img src="/QR/bmc_qr.png" alt="QR Code 1" className="w-32 h-32" />
               <p className="mt-2 text-gray-600 dark:text-gray-400">Scan to support</p>
             </div>
             <div>
-              <img src="/path/to/your/qr-code2.png" alt="QR Code 2" className="w-32 h-32" />
+              <img src="/QR/Gpay_QR.jpg" alt="QR Code 2" className="w-32 h-32" />
               <p className="mt-2 text-gray-600 dark:text-gray-400">Scan for more info</p>
             </div>
           </div>
