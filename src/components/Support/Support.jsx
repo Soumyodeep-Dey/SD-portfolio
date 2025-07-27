@@ -219,9 +219,9 @@ export default function Support() {
 
   // Configuration - Replace with your actual URLs and images
   const config = {
-    buyMeCoffeeUrl: "https://buymeacoffee.com/yourusername",
-    buyMeCoffeeQrImg: "/path/to/your/bmac-qr.png",
-    gpayQrImg: "/path/to/your/gpay-qr.png"
+    buyMeCoffeeUrl: "https://coff.ee/soumyodeepdey",
+    buyMeCoffeeQrImg: "/QR/bmc_qr.png",
+    gpayQrImg: "/QR/Gpay_QR.jpg"
   };
 
   useEffect(() => {
