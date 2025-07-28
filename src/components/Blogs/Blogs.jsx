@@ -2,18 +2,28 @@
 import { useState } from 'react';
 
 const myBlogs = [
+  
   {
-    title: "A Beginners Guide to LinkedIn",
-    description: "Effective Strategies for Expanding Your LinkedIn Network (most useful for Beginners)",
-    link: "https://hashnode.com/post/cm02l0eje000408mhbmv61h6f",
-    image: "/Images/LinkedIn Blog.png",
+    title: "BeautyMatch: A Privacy‑First Chrome Extension for Skincare",
+    description: "Smart skincare verdicts on Amazon, Nykaa, and Sephora with zero tracking.",
+    link: "https://dev.to/soumyodeepdey/beautymatch-a-privacyfirst-chrome-extension-for-smarter-skincare-1b45", // update with your actual URL
+    image: "/Images/BeautyMatch Blog.png", // make sure this image is in your public/Images folder
   },
+ 
   {
     title: "Step-by-Step Guide to Creating a ToDo App with Complete CRUD Functionality",
     description: "Building a ToDo App with HTML, CSS, JavaScript, and Local Storage",
     link: "https://hashnode.com/post/cmas1h2tg000509lbe8flaetj",
     image: "/Images/ToDo App Blog.png",
   },
+
+  {
+    title: "A Beginners Guide to LinkedIn",
+    description: "Effective Strategies for Expanding Your LinkedIn Network (most useful for Beginners)",
+    link: "https://hashnode.com/post/cm02l0eje000408mhbmv61h6f",
+    image: "/Images/LinkedIn Blog.png",
+  },
+  
 ];
 
 const readingBlogs = [
