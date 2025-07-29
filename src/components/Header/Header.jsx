@@ -62,6 +62,11 @@ function Header() {
                   Support
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/privacy-policy" className={navLinkClasses}>
+                  Privacy Policy
+                </NavLink>
+              </li>
             </ul>
           </nav>
 
@@ -109,6 +114,15 @@ function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Support
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/privacy-policy" 
+                  className={navLinkClasses}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Privacy Policy
                 </NavLink>
               </li>
               <li className="pt-2">
