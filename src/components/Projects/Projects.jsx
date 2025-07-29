@@ -11,6 +11,15 @@ const projectList = [
     video: "/Videos/WatchLy.mp4", // Replace with actual video path
   },
   {
+    title: "BeautyMatch (Published on Chrome Store)",
+    description:
+      "BeautyMatch is a privacy-first Chrome extension that shows whether a beauty product is suitable for your skin tone, type, and allergies while browsing Nykaa, Amazon.in, or Sephora. It works 100% locally, with no tracking or data sharing. Built with React, Tailwind, and CRXJS.",
+    link: "https://github.com/Soumyodeep-Dey/BeautyMatch",
+    live: "https://chromewebstore.google.com/detail/beautymatch/[your-extension-id]", // Replace [your-extension-id] after publishing
+    image: "", // You can add a screenshot path here if available
+    video: "/Videos/BeautyMatch.mp4" // Replace with your demo video path if any
+  },
+  {
     title: "Prime Minister Special Scholarship Scheme",
     description: "Developed as part of Smart India Hackathon 2024, this project aims to create a paperless scholarship disbursement system for PMSSS. My primary role in this group project was designing and implementing the frontend using React and Tailwind CSS.",
     link: "https://github.com/Soumyodeep-Dey/Scholarship",
