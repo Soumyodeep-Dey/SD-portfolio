@@ -131,7 +131,7 @@ function Projects() {
           {projectList.map((project, index) => (
             <article
               key={index}
-              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:border-indigo-300 dark:hover:border-indigo-600 transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden"
+              className="group relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:border-indigo-300 dark:hover:border-indigo-600 transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden"
             >
               {/* Project content */}
               <div className="p-6 md:p-8">
