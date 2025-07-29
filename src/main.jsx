@@ -8,7 +8,6 @@ import Home from './components/Home/Home.jsx'
 import Projects from './components/Projects/Projects.jsx'
 import Blogs from './components/Blogs/Blogs.jsx'
 import Support from './components/Support/Support.jsx'
-import PrivacyPolicy from './components/Privacy/privacy-policy.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +16,6 @@ const router = createBrowserRouter(
       <Route path='projects' element={<Projects />} />
       <Route path='blogs' element={<Blogs />} />
       <Route path='support' element={<Support />} />
-      <Route path='privacy-policy' element={<PrivacyPolicy />} />
       {/* Add other routes as needed */}
 
       {/* Catch-all route for 404 Not Found */}
