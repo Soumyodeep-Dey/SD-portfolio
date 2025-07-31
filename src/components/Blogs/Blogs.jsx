@@ -28,6 +28,12 @@ const myBlogs = [
 
 const readingBlogs = [
   {
+    title: "Mastering Git Commit Types: A Comprehensive Example in Convention",
+    author: "Tanmoy Ganguly",
+    link: "https://xanmoy.hashnode.dev/mastering-git-commit-types-a-comprehensive-example-in-convention",
+    date: "July 27, 2025"
+  },
+  {
     title: "Everything I know about good system design",
     author: "sean goedecke",
     link: "https://www.seangoedecke.com/good-system-design/?ref=dailydev",
