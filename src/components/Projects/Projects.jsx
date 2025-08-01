@@ -15,7 +15,7 @@ const projectList = [
     description:
       "BeautyMatch is a privacy-first Chrome extension that shows whether a beauty product is suitable for your skin tone, type, and allergies while browsing Nykaa, Amazon.in, or Sephora. It works 100% locally, with no tracking or data sharing. Built with React, Tailwind, and CRXJS.",
     link: "https://github.com/Soumyodeep-Dey/BeautyMatch",
-    live: "https://chromewebstore.google.com/detail/beautymatch/[your-extension-id]", // Replace [your-extension-id] after publishing
+    live: "https://chromewebstore.google.com/detail/beautymatch/kongfkfcoganehdeiiaffpmmedmkbjho", // Actual link to the Chrome Store
     image: "", // You can add a screenshot path here if available
     video: "/Videos/BeautyMatch.mp4" // Replace with your demo video path if any
   },
