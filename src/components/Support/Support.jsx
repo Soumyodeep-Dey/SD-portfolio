@@ -117,10 +117,10 @@ const PaymentCard = ({
 
         <div className="relative z-10 flex flex-col items-center text-center">
           <div className="mb-4 text-5xl">{icon}</div>
-          <h3 className="text-xl font-bold text-dark-950 dark:text-light-950 mb-2">
+          <h3 className="text-xl font-bold text-dark-350 dark:text-light-350 mb-2">
             {title}
           </h3>
-          <p className="text-dark-800 dark:text-light-300 text-sm mb-6 leading-relaxed">
+          <p className="text-dark-700 dark:text-light-700 text-sm mb-6 leading-relaxed">
             {description}
           </p>
           <motion.button
@@ -230,11 +230,11 @@ export default function Support() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-primary-700 animate-ping opacity-20" />
           </motion.div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-950 dark:text-light-950 mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-550 dark:text-light-550 mb-4">
             Support My Work
           </h1>
           <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
-          <p className="text-lg md:text-xl text-dark-800 dark:text-light-800 max-w-3xl mx-auto leading-relaxed pt-4">
+          <p className="text-lg md:text-xl text-dark-750 dark:text-light-750 max-w-3xl mx-auto leading-relaxed pt-4">
             Your contribution helps me build open-source projects, write in-depth tech articles,
             and share knowledge with the developer community. Every support counts!
           </p>
@@ -281,7 +281,7 @@ export default function Support() {
         >
           <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-light-150 dark:bg-dark-150 border border-light-300 dark:border-dark-300">
             <HiSparkles className="text-primary-500" />
-            <span className="text-dark-950 dark:text-light-950 font-medium">
+            <span className="text-dark-550 dark:text-light-550 font-medium">
               Every contribution keeps the creativity flowing!
             </span>
             <HiSparkles className="text-primary-500" />

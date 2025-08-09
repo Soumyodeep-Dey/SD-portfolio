@@ -113,7 +113,7 @@ function Blogs() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Header section */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-900 dark:text-light-950 animate-fadeInLeft mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-500 dark:text-light-550 animate-fadeInLeft mb-4">
             Blogs & Articles
           </h1>
           <p className="text-lg text-dark-700 dark:text-light-700 max-w-2xl mx-auto leading-relaxed">
@@ -149,7 +149,7 @@ function Blogs() {
           {activeTab === 'my-blogs' && (
             <div className="space-y-8">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-dark-950 dark:text-light-950 mb-2">
+                <h2 className="text-2xl md:text-3xl font-bold text-dark-550 dark:text-light-550 mb-2">
                   My Published Articles
                 </h2>
                 <p className="text-dark-700 dark:text-light-700">
@@ -191,7 +191,7 @@ function Blogs() {
                       {/* Blog content */}
                       <div className="lg:w-2/3 p-8">
                         <header className="mb-6">
-                          <h3 className="text-xl md:text-2xl font-bold text-dark-950 dark:text-light-950 mb-3 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                          <h3 className="text-xl md:text-2xl font-bold text-dark-650 dark:text-light-650 mb-3 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                             {blog.title}
                           </h3>
 
@@ -247,7 +247,7 @@ function Blogs() {
           {activeTab === 'reading-list' && (
             <div className="space-y-8">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-dark-950 dark:text-light-950 mb-2">
+                <h2 className="text-2xl md:text-3xl font-bold text-dark-550 dark:text-light-550 mb-2">
                   Currently Reading
                 </h2>
                 <p className="text-dark-700 dark:text-light-700">
@@ -272,7 +272,7 @@ function Blogs() {
                     </div>
 
                     <header className="mb-4">
-                      <h3 className="text-lg font-bold text-dark-950 dark:text-light-950 mb-2 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-dark-650 dark:text-light-650 mb-2 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                         {blog.title}
                       </h3>
                       <p className="text-sm text-dark-700 dark:text-light-700 flex items-center gap-2">
@@ -307,7 +307,7 @@ function Blogs() {
         {/* Call to action */}
         <footer className="text-center mt-16">
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-12 shadow-sm border border-light-300 dark:border-dark-300">
-            <h2 className="text-2xl md:text-3xl font-bold text-dark-950 dark:text-light-950 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-650 dark:text-light-650 mb-4">
               Stay Updated
             </h2>
             <p className="text-dark-700 dark:text-light-700 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
