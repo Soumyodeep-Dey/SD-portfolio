@@ -132,7 +132,7 @@ function Projects() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Header section */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-900 dark:text-light-950 animate-fadeInLeft mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-600 dark:text-light-650 animate-fadeInLeft mb-4">
             My Projects
           </h1>
           <p className="text-lg text-dark-700 dark:text-light-700 max-w-2xl mx-auto leading-relaxed">
@@ -153,7 +153,7 @@ function Projects() {
               onClick={() => setFilter(key)}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg ${filter === key
                 ? 'bg-primary-600 text-light-50 shadow-lg'
-                : 'bg-light-100 dark:bg-dark-100 text-dark-800 dark:text-light-800 hover:bg-light-200 dark:hover:bg-dark-200 border border-light-300 dark:border-dark-300'
+                : 'bg-light-100 dark:bg-dark-100 text-dark-500 dark:text-light-500 hover:bg-light-200 dark:hover:bg-dark-200 border border-light-300 dark:border-dark-300'
                 }`}
             >
               {label}
@@ -166,7 +166,7 @@ function Projects() {
           {filteredProjects.map((project, index) => (
             <article
               key={index}
-              className="group relative bg-light-100 dark:bg-dark-100 rounded-3xl p-8 shadow-sm border border-light-300 dark:border-dark-300 hover:shadow-lg hover:scale-[1.02] transition-all duration-500 overflow-hidden"
+              className="group relative bg-light-100 dark:bg-dark-100 rounded-3xl p-8 shadow-sm border border-light-500 dark:border-dark-500 hover:shadow-lg hover:scale-[1.02] transition-all duration-500 overflow-hidden"
             >
               {/* Status badge */}
               {project.status !== 'published' && (
@@ -180,7 +180,7 @@ function Projects() {
               {/* Project content */}
               <div className="relative z-10">
                 <header className="mb-6">
-                  <h2 className="text-xl md:text-2xl font-bold text-dark-950 dark:text-light-950 mb-3 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                  <h2 className="text-xl md:text-2xl font-bold text-dark-550 dark:text-light-550 mb-3 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                     {project.title}
                   </h2>
 
@@ -208,7 +208,7 @@ function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-light-200 dark:bg-dark-200 text-dark-900 dark:text-light-900 text-sm font-semibold rounded-lg hover:bg-light-300 dark:hover:bg-dark-300 hover:scale-105 transition-all duration-300 border border-light-300 dark:border-dark-300"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-light-200 dark:bg-dark-200 text-dark-300 dark:text-light-300 text-sm font-semibold rounded-lg hover:bg-light-300 dark:hover:bg-dark-300 hover:scale-105 transition-all duration-300 border border-light-300 dark:border-dark-300"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m-4 4l-4 4 4 4m8-8l4 4-4 4" />
@@ -268,7 +268,7 @@ function Projects() {
         {/* Call to action */}
         <footer className="text-center">
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-12 shadow-sm border border-light-300 dark:border-dark-300">
-            <h2 className="text-2xl md:text-3xl font-bold text-dark-950 dark:text-light-950 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-550 dark:text-light-550 mb-4">
               Interested in collaborating?
             </h2>
             <p className="text-dark-700 dark:text-light-700 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
