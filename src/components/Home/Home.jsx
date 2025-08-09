@@ -139,7 +139,6 @@ function Home() {
                   { category: 'Web Development', items: 'React.js | Next.js | Tailwind CSS | Node.js | Express.js | MongoDB | REST APIs' },
                   { category: 'Development Tools & Methods', items: 'Git | GitHub | Testing | Debugging | Agile' },
                   { category: 'Content & SEO', items: 'WordPress | Technical Writing | SEO Optimization' },
-                  { category: 'Research & Analytics', items: 'Market Research | Data Analysis | Visualization | Excel' }
                 ].map(({ category, items }) => (
                   <div key={category} className="flex flex-col lg:flex-row lg:items-start gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200">
                     <strong className="text-dark-950 dark:text-light-950 font-bold min-w-fit lg:w-56 text-base">
