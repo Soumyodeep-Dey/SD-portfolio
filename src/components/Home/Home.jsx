@@ -141,8 +141,8 @@ function Home() {
                 type="button"
                 onClick={() => setActiveSection(section)}
                 className={`relative font-semibold capitalize transition-all duration-300 hover:scale-105 text-lg md:text-xl ${activeSection === section
-                    ? 'text-dark-900 dark:text-light-50'
-                    : 'text-dark-500 dark:text-light-400 hover:text-dark-900 dark:hover:text-light-50'
+                  ? 'text-dark-900 dark:text-light-50'
+                  : 'text-dark-500 dark:text-light-400 hover:text-dark-900 dark:hover:text-light-50'
                   }`}
               >
                 {section}
@@ -167,23 +167,57 @@ function Home() {
             {activeSection === 'experience' && (
               <ul className="space-y-6 text-dark-700 dark:text-light-300">
                 <li>
-                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">Web Content Writer Intern · NaukriSafar</h3>
-                  <p className="text-sm text-dark-500 dark:text-light-400">Jan 2025 – Mar 2025 · Remote</p>
+                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">
+                    Software Development Intern · SplitMate
+                  </h3>
+                  <p className="text-sm text-dark-500 dark:text-light-400">
+                    Aug 2025 – Present · Remote & Kolkata
+                  </p>
+                  <ul className="list-disc list-inside space-y-1 mt-1">
+                    <li>
+                      Building scalable web and mobile applications, contributing to 30% of the frontend
+                      codebase using modern frameworks like React and React Native.
+                    </li>
+                    <li>
+                      Implemented core features that improved user flow and reduced onboarding time by 20%.
+                    </li>
+                    <li>
+                      Collaborated with a team of 6 developers to ship weekly product updates and handle bug
+                      fixes, resulting in a 40% faster release cycle.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">
+                    Web Content Writer Intern · NaukriSafar
+                  </h3>
+                  <p className="text-sm text-dark-500 dark:text-light-400">
+                    Jan 2025 – Mar 2025 · Remote
+                  </p>
                   <ul className="list-disc list-inside space-y-1 mt-1">
                     <li>Delivered 100+ optimized job-related blogs (SEO 70+).</li>
                     <li>Improved organic reach by 40% via best-practice SEO.</li>
                   </ul>
                 </li>
+
                 <li>
-                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">Research Intern · DrMudhiwalla & The We Foundation</h3>
-                  <p className="text-sm text-dark-500 dark:text-light-400">Nov 2023 – Aug 2024 · Remote & Kolkata</p>
+                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">
+                    Research Intern · DrMudhiwalla & The We Foundation
+                  </h3>
+                  <p className="text-sm text-dark-500 dark:text-light-400">
+                    Nov 2023 – Aug 2024 · Remote & Kolkata
+                  </p>
                   <ul className="list-disc list-inside space-y-1 mt-1">
                     <li>Analyzed 35+ sector-diverse market research reports.</li>
                     <li>Increased client engagement 25% through visual reports.</li>
                   </ul>
                 </li>
+
                 <li>
-                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">Team Lead · Smart India Hackathon 2024</h3>
+                  <h3 className="font-semibold text-dark-900 dark:text-light-50 text-lg">
+                    Team Lead · Smart India Hackathon 2024
+                  </h3>
                   <p className="text-sm text-dark-500 dark:text-light-400">Sep – Nov 2024</p>
                   <ul className="list-disc list-inside space-y-1 mt-1">
                     <li>Led 6-member Agile team through full dev lifecycle.</li>
@@ -192,6 +226,7 @@ function Home() {
                 </li>
               </ul>
             )}
+
             {activeSection === 'education' && (
               <ul className="space-y-3 list-disc list-inside text-dark-700 dark:text-light-300">
                 <li><b className="text-dark-900 dark:text-light-50">B.Tech, Computer Science & Engineering:</b> Dr. Sudhir Chandra Sur Institute · MAKAUT (2022-2026)</li>
