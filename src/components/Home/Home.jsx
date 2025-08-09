@@ -1,4 +1,4 @@
-/* Home.jsx – UI/UX-refined, info + theme unchanged */
+/* Home.jsx â€“ UI/UX-refined, info + theme unchanged */
 import { useState } from 'react';
 import {
   FaLinkedin,
@@ -70,7 +70,7 @@ function Home() {
             id="intro-heading"
             className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-fadeInLeft"
           >
-            Hi,&nbsp;I’m&nbsp;
+            Hi,&nbsp;Iâ€™m&nbsp;
             <span className="text-indigo-500 dark:text-indigo-300 relative inline-block">
               Soumyodeep&nbsp;Dey
             </span>
@@ -118,7 +118,7 @@ function Home() {
               href={RESUME_LINK}
               className="inline-flex items-center ml-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
-              Here’s&nbsp;my&nbsp;resume
+              Hereâ€™s&nbsp;my&nbsp;resume
               <svg
                 className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
@@ -204,10 +204,10 @@ function Home() {
                 {/* Internship */}
                 <li>
                   <h3 className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">
-                    Web Content Writer Intern · NaukriSafar
+                    Web Content Writer Intern Â· NaukriSafar
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Jan&nbsp;2025–Mar&nbsp;2025 · Remote
+                    Jan&nbsp;2025â€“Mar&nbsp;2025 Â· Remote
                   </p>
                   <ul className="list-disc list-inside space-y-1 mt-1">
                     <li>Delivered 100+ optimized job-related blogs (SEO&nbsp;70+).</li>
@@ -218,10 +218,10 @@ function Home() {
                 {/* Research */}
                 <li>
                   <h3 className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">
-                    Research Intern · DrMudhiwalla&nbsp;&amp;&nbsp;The&nbsp;We&nbsp;Foundation
+                    Research Intern Â· DrMudhiwalla&nbsp;&amp;&nbsp;The&nbsp;We&nbsp;Foundation
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Nov&nbsp;2023–Aug&nbsp;2024 · Remote&nbsp;&amp;&nbsp;Kolkata
+                    Nov&nbsp;2023â€“Aug&nbsp;2024 Â· Remote&nbsp;&amp;&nbsp;Kolkata
                   </p>
                   <ul className="list-disc list-inside space-y-1 mt-1">
                     <li>Analyzed 35+ sector-diverse market research reports.</li>
@@ -232,15 +232,15 @@ function Home() {
                 {/* SIH */}
                 <li>
                   <h3 className="font-semibold text-indigo-600 dark:text-indigo-400 text-lg">
-                    Team&nbsp;Lead · Smart&nbsp;India&nbsp;Hackathon&nbsp;2024
+                    Team&nbsp;Lead Â· Smart&nbsp;India&nbsp;Hackathon&nbsp;2024
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Sep–Nov&nbsp;2024
+                    Sepâ€“Nov&nbsp;2024
                   </p>
                   <ul className="list-disc list-inside space-y-1 mt-1">
                     <li>Led 6-member Agile team through full dev lifecycle.</li>
                     <li>
-                      Built “E-Scholar” PMSSS scholarship system for 100+ users (React +
+                      Built â€œE-Scholarâ€ PMSSS scholarship system for 100+ users (React +
                       Tailwind).
                     </li>
                   </ul>
@@ -255,26 +255,26 @@ function Home() {
                   <b className="text-indigo-600 dark:text-indigo-400">
                     B.Tech, Computer Science &amp; Engineering:
                   </b>{' '}
-                  Dr.&nbsp;Sudhir&nbsp;Chandra&nbsp;Sur Institute · MAKAUT
+                  Dr.&nbsp;Sudhir&nbsp;Chandra&nbsp;Sur Institute Â· MAKAUT
                   (2022-2026)
                 </li>
                 <li>
                   <b className="text-indigo-600 dark:text-indigo-400">
                     Higher&nbsp;Secondary&nbsp;Exam:
                   </b>{' '}
-                  Kodalia&nbsp;Agapur&nbsp;H.S. · 2022
+                  Kodalia&nbsp;Agapur&nbsp;H.S. Â· 2022
                 </li>
                 <li>
                   <b className="text-indigo-600 dark:text-indigo-400">
                     Secondary&nbsp;Exam:
                   </b>{' '}
-                  Kodalia&nbsp;Agapur&nbsp;H.S. · 2020
+                  Kodalia&nbsp;Agapur&nbsp;H.S. Â· 2020
                 </li>
                 <li>
                   <b className="text-indigo-600 dark:text-indigo-400">
                     Certifications:
                   </b>{' '}
-                  Delta Full-Stack (Apna College) · Google UX Design · TCS&nbsp;ION Soft
+                  Delta Full-Stack (Apna College) Â· Google UX Design Â· TCS&nbsp;ION Soft
                   Skills
                 </li>
               </ul>

@@ -9,13 +9,20 @@ export const ThemeProvider = ({ children }) => {
 
     useEffect(() => {
         // Apply the theme mode to the document root
-        document.documentElement.classList.toggle('dark', themeMode === 'dark');
+        const root = document.documentElement;
+        if (themeMode === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
         localStorage.setItem('theme', themeMode);
     }, [themeMode]);
 
     useEffect(() => {
         const favicon = document.getElementById('favicon');
-        favicon.href = themeMode === 'dark' ? '/Images/dark-icon.jpg' : '/Images/light-icon.jpg';
+        if (favicon) {
+            favicon.href = themeMode === 'dark' ? '/Images/dark-icon.jpg' : '/Images/light-icon.jpg';
+        }
     }, [themeMode]);
 
     const lightTheme = () => setThemeMode('light');
