@@ -1,5 +1,28 @@
+import { useState, useEffect } from "react";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Show button after scrolling down
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <footer className="relative bg-light-100 dark:bg-dark-100 border-t border-light-300 dark:border-dark-300 mt-auto overflow-hidden">
@@ -53,11 +76,7 @@ function Footer() {
                            text-dark-600 dark:text-light-400 hover:text-dark-900 dark:hover:text-light-50 
                            hover:shadow-lg hover:border-dark-400 dark:hover:border-light-400 transform hover:-translate-y-1 transition-all duration-300"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d={social.svgPath} />
                 </svg>
               </a>
@@ -73,6 +92,26 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Go to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 p-3 rounded-full bg-primary-500 text-white shadow-lg hover:bg-primary-600 dark:bg-primary-400 dark:hover:bg-primary-500 transition-all duration-300 transform hover:-translate-y-1"
+          aria-label="Go to top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+      )}
     </footer>
   );
 }
