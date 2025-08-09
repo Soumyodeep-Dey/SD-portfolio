@@ -1,12 +1,12 @@
-/* Blogs.jsx â€“ Clean white/black theme implementation */
+/* Blogs.jsx – Pure black dark mode + correct contrast colors */
 
 import { useState } from 'react';
 
 const myBlogs = [
   {
-    title: "BeautyMatch: A Privacyâ€‘First Chrome Extension for Skincare",
+    title: "BeautyMatch: A Privacy-First Chrome Extension for Skincare",
     description: "Smart skincare verdicts on Amazon, Nykaa, and Sephora with zero tracking.",
-    link: "https://dev.to/soumyodeepdey/beautymatch-a-privacyfirst-chrome-extension-for-smarter-skincare-1b45",
+    link: "https://dev.to/soumyodeep_dey_c6cb5e8c97/beautymatch-smart-skin-compatibility-for-beauty-products-2fbg",
     image: "/Images/BeautyMatch Blog.png",
   },
   {
@@ -43,7 +43,7 @@ const readingBlogs = [
     date: "June 5, 2025"
   },
   {
-    title: "I Built an MCP Server for DevTo (100% Open Source)ðŸŽ‰",
+    title: "I Built an MCP Server for DevTo (100% Open Source)🎉",
     author: "Arindam Majumdar",
     link: "https://dev.to/arindam_1729/i-built-an-mcp-server-for-devto-100-open-source-4f6n",
     date: "June 3, 2025"
@@ -69,7 +69,7 @@ function Blogs() {
 
   return (
     <div className="min-h-screen bg-light-50 dark:bg-dark-50 relative overflow-hidden">
-      {/* Decorative background elements */}
+      {/* Decorative background blobs */}
       {[
         'top-10 right-10 animate-blob',
         'top-32 left-10 animate-blob animation-delay-2000',
@@ -77,7 +77,7 @@ function Blogs() {
       ].map((pos, i) => (
         <div
           key={i}
-          className={`absolute w-72 h-72 bg-light-300 dark:bg-dark-300 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-20 ${pos}`}
+          className={`absolute w-72 h-72 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-20 g-gradient-to-br from-light-300 to-light-200 dark:from-dark-300 dark:to-dark-200 ${pos}`}
         />
       ))}
 
@@ -85,10 +85,12 @@ function Blogs() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main heading */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-dark-900 dark:text-light-50 mb-6">
+          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-light-900 via-light-700 to-light-500 
+                         dark:from-dark-950 dark:via-dark-800 dark:to-dark-600 bg-clip-text text-transparent mb-4 animate-fadeInLeft pb-2">
             Blogs & Articles
           </h1>
-          <p className="text-lg text-dark-700 dark:text-light-300 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 mx-auto mt-4 rounded-full" />
+          <p className="text-lg text-light-700 dark:text-dark-800 max-w-2xl mx-auto pt-4">
             Discover my latest thoughts on web development, technology trends, and programming insights.
           </p>
         </div>
@@ -97,36 +99,39 @@ function Blogs() {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Currently Reading Section */}
           <div className="lg:col-span-1">
-            <div className="bg-light-100 dark:bg-dark-100 rounded-2xl p-8 shadow-sm border border-light-300 dark:border-dark-300">
-              <h2 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-6">
+            <div className="bg-light-100 dark:bg-dark-100/90 backdrop-blur-md rounded-2xl p-8 shadow-md border border-light-300 dark:border-dark-300 hover:shadow-lg transition">
+              <h2 className="text-2xl font-bold text-light-900 dark:text-dark-950 mb-6">
                 Currently Reading
               </h2>
               <div className="space-y-6">
                 {readingBlogs.map((blog, index) => (
                   <div
                     key={index}
-                    className="group relative bg-light-50 dark:bg-dark-50 rounded-xl p-4 hover:shadow-md transition-all duration-300 border border-light-300 dark:border-dark-300 hover:border-dark-400 dark:hover:border-light-400"
+                    className="group relative bg-light-50 dark:bg-dark-50 rounded-xl p-4 
+                               hover:scale-[1.02] hover:shadow-lg transition-all duration-300 
+                               border border-light-300 dark:border-dark-300 
+                               hover:border-primary-300 dark:hover:border-primary-400"
                   >
-                    <h3 className="text-sm font-semibold text-dark-900 dark:text-light-50 mb-2 line-clamp-2 group-hover:text-dark-700 dark:group-hover:text-light-300 transition-colors">
+                    <h3 className="text-sm font-semibold text-light-900 dark:text-dark-950 mb-2 line-clamp-2 group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
                       {blog.title}
                     </h3>
-                    <p className="text-xs text-dark-600 dark:text-light-400 mb-2">
+                    <p className="text-xs text-light-600 dark:text-dark-700 mb-2">
                       By {blog.author}
                     </p>
-                    <p className="text-xs text-dark-500 dark:text-light-500 mb-3">
+                    <p className="text-xs text-light-500 dark:text-dark-700 mb-3">
                       {blog.date}
                     </p>
                     <a
                       href={blog.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-dark-700 dark:text-light-300 hover:text-dark-900 dark:hover:text-light-50 font-medium transition-colors"
+                      className="text-xs font-medium text-primary-600 dark:text-primary-300 hover:underline"
                     >
-                      Read Article â†’
+                      Read Article →
                     </a>
 
                     {/* Hover gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-light-200/50 to-light-300/50 dark:from-dark-200/50 dark:to-dark-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-light-200/30 to-light-300/30 dark:from-dark-200/30 dark:to-dark-300/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none" />
                   </div>
                 ))}
               </div>
@@ -135,26 +140,29 @@ function Blogs() {
 
           {/* My Blog Posts Section */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-dark-900 dark:text-light-50 mb-8">
+            <h2 className="text-3xl font-bold text-light-900 dark:text-dark-950 mb-8">
               My Blog Posts
             </h2>
             <div className="grid gap-8">
               {myBlogs.map((blog, index) => (
                 <article
                   key={index}
-                  className="group relative bg-light-100 dark:bg-dark-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-light-300 dark:border-dark-300 hover:border-dark-400 dark:hover:border-light-400"
+                  className="group relative bg-light-100 dark:bg-dark-100/90 backdrop-blur-md rounded-2xl overflow-hidden shadow-md hover:shadow-xl 
+                             transition-all duration-300 border border-light-300 dark:border-dark-300 
+                             hover:border-primary-300 dark:hover:border-primary-400 hover:scale-[1.02]"
                 >
                   <div className="md:flex">
                     {/* Blog image */}
                     {blog.image && !errorImages[index] && (
-                      <div className="md:w-1/3 relative">
+                      <div className="md:w-1/3 relative overflow-hidden">
                         {loadingImages[index] && (
                           <div className="absolute inset-0 bg-light-300 dark:bg-dark-300 animate-pulse rounded-tl-2xl md:rounded-bl-2xl md:rounded-tr-none rounded-tr-2xl" />
                         )}
                         <img
                           src={blog.image}
                           alt={blog.title}
-                          className="w-full h-48 md:h-full object-cover rounded-tl-2xl md:rounded-bl-2xl md:rounded-tr-none rounded-tr-2xl"
+                          className="w-full h-48 md:h-full object-cover rounded-tl-2xl md:rounded-bl-2xl md:rounded-tr-none rounded-tr-2xl 
+                                     transition-transform duration-500 group-hover:scale-105"
                           onLoadStart={() => handleImageLoadStart(index)}
                           onLoad={() => handleImageLoad(index)}
                           onError={() => handleImageError(index)}
@@ -164,10 +172,10 @@ function Blogs() {
 
                     {/* Blog content */}
                     <div className="md:w-2/3 p-8">
-                      <h3 className="text-xl font-bold text-dark-900 dark:text-light-50 mb-4 group-hover:text-dark-700 dark:group-hover:text-light-300 transition-colors">
+                      <h3 className="text-xl font-bold text-light-900 dark:text-dark-950 mb-4 group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
                         {blog.title}
                       </h3>
-                      <p className="text-dark-700 dark:text-light-300 mb-6 leading-relaxed">
+                      <p className="text-light-700 dark:text-dark-800 mb-6 leading-relaxed">
                         {blog.description}
                       </p>
                       {blog.link && (
@@ -175,7 +183,9 @@ function Blogs() {
                           href={blog.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-6 py-3 bg-dark-900 dark:bg-light-50 text-light-50 dark:text-dark-900 rounded-lg hover:bg-dark-700 dark:hover:bg-light-200 transition-colors font-medium"
+                          className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-500 
+                                     text-light-50 rounded-lg dark:bg-primary-400 dark:hover:bg-primary-300 
+                                     dark:text-dark-900 transition-colors font-medium"
                         >
                           Read More
                           <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +206,7 @@ function Blogs() {
 
         {/* Footnote */}
         <div className="text-center mt-16 pt-8 border-t border-light-300 dark:border-dark-300">
-          <p className="text-dark-600 dark:text-light-400">
+          <p className="text-light-600 dark:text-dark-700">
             More articles coming soon! Follow me on social media for updates.
           </p>
         </div>

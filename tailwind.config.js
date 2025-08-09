@@ -29,6 +29,7 @@ export default {
           850: '#5f5f5f', // new
           900: '#424242',
           950: '#2e2e2e', // deepest
+          1000: '#1a1a1a', // darkest
         },
         // Dark theme
         dark: {
@@ -51,6 +52,7 @@ export default {
           850: '#bfbfbf', // new
           900: '#d4d4d4',
           950: '#eaeaea', // lightest text
+          1000: '#ffffff', // pure white
         },
 
         // Accent colors (works for both light/dark themes)

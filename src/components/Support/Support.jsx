@@ -259,8 +259,10 @@ export default function Support() {
           <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 bg-clip-text text-transparent mb-6">
             Support My Work
           </h1>
+          
+          <div className="w-24 h-1 bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 mx-auto mt-4 rounded-full" />
 
-          <p className="text-xl text-dark-700 dark:text-light-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-dark-700 dark:text-light-300 max-w-3xl mx-auto leading-relaxed pt-4">
             Your contribution helps me build open-source projects, write in-depth tech articles,
             and share knowledge with the developer community. Every support counts!
           </p>
