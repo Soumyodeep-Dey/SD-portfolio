@@ -55,8 +55,8 @@ function Home() {
 
           {/* Main heading */}
           <div className="space-y-4 mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-900 dark:text-light-950 animate-fadeInLeft">
-              Hi, I'm <span className="text-dark-950 dark:text-light-950">Soumyodeep Dey</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 animate-fadeInLeft">
+              Hi, I'm <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
             </h1>
 
             {/* Location */}
@@ -91,11 +91,11 @@ function Home() {
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300">
             <p className="text-base md:text-lg leading-relaxed text-dark-800 dark:text-light-800 mb-6">
               Final-year Computer Science Engineering student with hands-on experience in{' '}
-              <strong className="text-dark-950 dark:text-light-950 font-bold">software development</strong>,{' '}
-              <strong className="text-dark-950 dark:text-light-950 font-bold">web development</strong>,{' '}
-              <strong className="text-dark-950 dark:text-light-950 font-bold">content writing</strong>,{' '}
-              <strong className="text-dark-950 dark:text-light-950 font-bold">market research</strong>, and{' '}
-              <strong className="text-dark-950 dark:text-light-950 font-bold">data analysis</strong>.
+              <strong className="text-dark-550 dark:text-light-550 font-bold">software development</strong>,{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">web development</strong>,{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">content writing</strong>,{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">market research</strong>, and{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">data analysis</strong>.
               Adept at creating intuitive, scalable web applications using modern frameworks and engineering principles.
               Successfully led a six-member team in Smart India Hackathon 2024. Seeking a Software Development internship to leverage modern tech expertise and team leadership.
             </p>
@@ -133,7 +133,7 @@ function Home() {
           {/* Content panels */}
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-12 shadow-sm border border-light-300 dark:border-dark-300 min-h-[500px]">
             {activeSection === 'skills' && (
-              <div className="space-y-6 text-dark-800 dark:text-light-800">
+              <div className="space-y-6 text-dark-600 dark:text-light-600">
                 {[
                   { category: 'Programming Languages', items: 'JavaScript | TypeScript | C++ | HTML | CSS' },
                   { category: 'Web Development', items: 'React.js | Next.js | Tailwind CSS | Node.js | Express.js | MongoDB | REST APIs' },
@@ -141,7 +141,7 @@ function Home() {
                   { category: 'Content & SEO', items: 'WordPress | Technical Writing | SEO Optimization' },
                 ].map(({ category, items }) => (
                   <div key={category} className="flex flex-col lg:flex-row lg:items-start gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200">
-                    <strong className="text-dark-950 dark:text-light-950 font-bold min-w-fit lg:w-56 text-base">
+                    <strong className="text-dark-450 dark:text-light-450 font-bold min-w-fit lg:w-56 text-base">
                       {category}:
                     </strong>
                     <span className="flex-1 text-base leading-relaxed">{items}</span>
@@ -151,7 +151,7 @@ function Home() {
             )}
 
             {activeSection === 'experience' && (
-              <div className="space-y-8 text-dark-800 dark:text-light-800">
+              <div className="space-y-8 text-dark-750 dark:text-light-750">
                 {[
                   {
                     title: 'Software Development Intern',
@@ -197,7 +197,7 @@ function Home() {
                 ].map((job, index) => (
                   <div key={index} className="p-8 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 hover:shadow-md transition-all duration-300">
                     <div className="mb-6">
-                      <h3 className="font-bold text-dark-950 dark:text-light-950 text-xl mb-2">
+                      <h3 className="font-bold text-dark-450 dark:text-light-450 text-xl mb-2">
                         {job.title} · {job.company}
                       </h3>
                       <p className="text-base text-dark-600 dark:text-light-600 font-medium">
@@ -218,7 +218,7 @@ function Home() {
             )}
 
             {activeSection === 'education' && (
-              <div className="space-y-6 text-dark-800 dark:text-light-800">
+              <div className="space-y-6 text-dark-600 dark:text-light-600">
                 {[
                   { degree: 'B.Tech, Computer Science & Engineering', institution: 'Surtech · MAKAUT', year: '(2022-2026)' },
                   { degree: 'Higher Secondary Exam', institution: 'Kodalia Agapur H.S.', year: '2022' },
@@ -226,7 +226,7 @@ function Home() {
                   { degree: 'Certifications', institution: 'Delta Full-Stack (Apna College) · Google UX Design · TCS ION Soft Skills', year: '' }
                 ].map((edu, index) => (
                   <div key={index} className="flex flex-col lg:flex-row lg:items-center gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200">
-                    <strong className="text-dark-950 dark:text-light-950 font-bold min-w-fit lg:w-56 text-base">
+                    <strong className="text-dark-450 dark:text-light-450 font-bold min-w-fit lg:w-56 text-base">
                       {edu.degree}:
                     </strong>
                     <span className="flex-1 text-base leading-relaxed">{edu.institution} {edu.year}</span>
@@ -238,15 +238,15 @@ function Home() {
 
           {/* Social profiles - clean and minimal */}
           <section className="space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-dark-950 dark:text-light-950">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-dark-550 dark:text-light-550">
               My Profiles
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               {[
-                { href: 'https://www.linkedin.com/in/soumyodeep-dey-s-d-2a125b1a7/', icon: <FaLinkedin className="text-dark-900 dark:text-light-900" />, label: 'LinkedIn' },
-                { href: 'https://twitter.com/Soumyodeep2003', icon: <FaTwitter className="text-dark-900 dark:text-light-900" />, label: 'Twitter' },
-                { href: 'https://github.com/Soumyodeep-Dey', icon: <FaGithub className="text-dark-900 dark:text-light-900" />, label: 'GitHub' },
-                { href: 'https://leetcode.com/u/SOUMYODEEP_DEY/', icon: <SiLeetcode className="text-dark-900 dark:text-light-900" />, label: 'LeetCode' }
+                { href: 'https://www.linkedin.com/in/soumyodeep-dey-s-d-2a125b1a7/', icon: <FaLinkedin className="text-dark-500 dark:text-light-500" />, label: 'LinkedIn' },
+                { href: 'https://twitter.com/Soumyodeep2003', icon: <FaTwitter className="text-dark-500 dark:text-light-500" />, label: 'Twitter' },
+                { href: 'https://github.com/Soumyodeep-Dey', icon: <FaGithub className="text-dark-500 dark:text-light-500" />, label: 'GitHub' },
+                { href: 'https://leetcode.com/u/SOUMYODEEP_DEY/', icon: <SiLeetcode className="text-dark-500 dark:text-light-500" />, label: 'LeetCode' }
               ].map(({ href, icon, label }) => (
                 <a
                   key={label}
@@ -258,7 +258,7 @@ function Home() {
                   <span className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                     {icon}
                   </span>
-                  <span className="text-base font-semibold text-dark-900 dark:text-light-900">
+                  <span className="text-base font-semibold text-dark-800 dark:text-light-800">
                     {label}
                   </span>
                 </a>
