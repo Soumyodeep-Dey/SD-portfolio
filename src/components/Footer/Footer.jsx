@@ -72,14 +72,17 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="p-3 rounded-full bg-light-50 dark:bg-dark-50 border border-light-300 dark:border-dark-300 shadow-sm 
-                           text-dark-600 dark:text-light-400 hover:text-dark-900 dark:hover:text-light-50 
-                           hover:shadow-lg hover:border-dark-400 dark:hover:border-light-400 transform hover:-translate-y-1 transition-all duration-300"
+                className="p-3 rounded-full bg-light-50 dark:bg-dark-50 border border-light-300 dark:border-dark-300 shadow-sm text-dark-600 dark:text-light-400 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-lg hover:border-primary-600 dark:hover:border-primary-400 transform hover:-translate-y-1 transition-all duration-300"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-6 h-6 transition-colors duration-300"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d={social.svgPath} />
                 </svg>
               </a>
+
             ))}
           </div>
 

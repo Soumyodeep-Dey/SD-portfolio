@@ -1,9 +1,7 @@
-// Support.jsx – Upgraded to match Blogs theme & palette
+// Support.jsx – Upgraded to match Home.jsx theme & palette
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  FaHeart, FaGithub, FaLinkedin, FaTwitter, FaCheck, FaShieldAlt
-} from 'react-icons/fa';
+import { FaHeart, FaCheck, FaShieldAlt } from 'react-icons/fa';
 import { SiBuymeacoffee, SiGooglepay } from 'react-icons/si';
 import { MdVerified, MdClose, MdInfo } from 'react-icons/md';
 import { HiSparkles, HiLightningBolt } from 'react-icons/hi';
@@ -47,10 +45,9 @@ const QRModal = ({ isOpen, onClose, title, qrImage, description }) => (
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
         >
-          <div className="bg-light-50 dark:bg-dark-100 backdrop-blur-md rounded-2xl shadow-lg 
-                         border border-light-300 dark:border-dark-300 p-8 max-w-md w-full">
+          <div className="bg-light-50 dark:bg-dark-100 rounded-3xl shadow-lg border border-light-300 dark:border-dark-300 p-8 max-w-md w-full">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50">{title}</h3>
+              <h3 className="text-2xl font-bold text-dark-950 dark:text-light-950">{title}</h3>
               <button
                 onClick={onClose}
                 className="p-2 rounded-full hover:bg-light-200 dark:hover:bg-dark-200 transition-colors"
@@ -59,15 +56,14 @@ const QRModal = ({ isOpen, onClose, title, qrImage, description }) => (
               </button>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-64 h-64 mb-4 rounded-2xl border-2 border-light-300 dark:border-dark-300 
-                             bg-light-50 dark:bg-dark-200 p-4 shadow-inner">
+              <div className="w-64 h-64 mb-4 rounded-2xl border-2 border-light-300 dark:border-dark-300 bg-light-50 dark:bg-dark-200 p-4 shadow-inner">
                 <img
                   src={qrImage}
                   alt={`${title} QR Code`}
                   className="w-full h-full object-contain rounded-lg"
                 />
               </div>
-              <p className="text-center text-dark-700 dark:text-light-300 text-sm mb-4">
+              <p className="text-center text-dark-800 dark:text-light-300 text-sm mb-4">
                 {description}
               </p>
               <div className="flex items-center space-x-2 text-dark-600 dark:text-light-400 text-sm">
@@ -114,32 +110,25 @@ const PaymentCard = ({
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay, duration: 0.6, ease: "easeOut" }}
-        whileHover={{ y: -8, scale: 1.02 }}
-        className="group relative rounded-2xl bg-light-100 dark:bg-dark-100 backdrop-blur-md 
-                   shadow-sm border border-light-300 dark:border-dark-300 p-8 
-                   hover:shadow-lg hover:border-dark-400 dark:hover:border-light-400 transition-all duration-500"
+        whileHover={{ y: -8, scale: 1.03 }}
+        className="group relative rounded-3xl bg-light-100 dark:bg-dark-100 shadow-sm border border-light-300 dark:border-dark-300 p-8 hover:shadow-lg transition-all duration-300"
       >
-        {/* Hover overlay */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-light-200/10 to-light-300/10 dark:from-dark-200/10 dark:to-dark-300/10 
-                       opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-light-200/10 to-light-300/10 dark:from-dark-200/10 dark:to-dark-300/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         <div className="relative z-10 flex flex-col items-center text-center">
           <div className="mb-4 text-5xl">{icon}</div>
-
-          <h3 className="text-xl font-bold text-dark-900 dark:text-light-50 mb-2">
+          <h3 className="text-xl font-bold text-dark-950 dark:text-light-950 mb-2">
             {title}
           </h3>
-          <p className="text-dark-700 dark:text-light-300 text-sm mb-6 leading-relaxed">
+          <p className="text-dark-800 dark:text-light-300 text-sm mb-6 leading-relaxed">
             {description}
           </p>
-
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleAction}
             disabled={isLoading}
-            className="w-full py-3 px-6 rounded-lg bg-dark-900 dark:bg-light-50 text-light-50 dark:text-dark-900 font-semibold text-lg shadow-md 
-                       hover:bg-dark-700 dark:hover:bg-light-200 transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full py-3 px-6 rounded-xl bg-primary-600 hover:bg-primary-700 text-light-50 font-semibold text-lg shadow-md transition-all duration-300 flex items-center justify-center space-x-2"
           >
             {isLoading ? (
               <>
@@ -154,13 +143,13 @@ const PaymentCard = ({
             )}
           </motion.button>
 
-          <div className="flex items-center justify-center space-x-4 mt-4 text-xs text-dark-500 dark:text-light-400">
+          <div className="flex items-center justify-center space-x-4 mt-4 text-xs text-dark-600 dark:text-light-400">
             <div className="flex items-center space-x-1">
-              <FaShieldAlt className="text-dark-600 dark:text-light-400" />
+              <FaShieldAlt />
               <span>Secure</span>
             </div>
             <div className="flex items-center space-x-1">
-              <MdVerified className="text-dark-600 dark:text-light-400" />
+              <MdVerified />
               <span>Verified</span>
             </div>
           </div>
@@ -216,27 +205,14 @@ export default function Support() {
   };
 
   return (
-    <div className="relative overflow-hidden bg-light-50 dark:bg-dark-50 min-h-screen">
-      {/* Blobs */}
-      <motion.div
-        variants={blobVariants}
-        animate="animate"
-        className="absolute -top-40 -left-40 w-96 h-96 bg-light-300 dark:bg-dark-300 rounded-full filter blur-3xl opacity-20"
-      />
-      <motion.div
-        variants={blobVariants}
-        animate="animate"
-        style={{ animationDelay: '2s' }}
-        className="absolute -top-32 -right-32 w-80 h-80 bg-light-300 dark:bg-dark-300 rounded-full filter blur-3xl opacity-20"
-      />
-      <motion.div
-        variants={blobVariants}
-        animate="animate"
-        style={{ animationDelay: '4s' }}
-        className="absolute bottom-0 left-1/2 w-96 h-96 bg-light-300 dark:bg-dark-300 rounded-full filter blur-3xl opacity-20 -translate-x-1/2"
-      />
+    <main className="relative overflow-hidden bg-light-50 dark:bg-dark-50 min-h-screen py-20">
+      {/* Background blobs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <motion.div variants={blobVariants} animate="animate" className="absolute top-20 right-20 w-72 h-72 bg-light-200 dark:bg-dark-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
+        <motion.div variants={blobVariants} animate="animate" style={{ animationDelay: '2s' }} className="absolute bottom-32 left-20 w-80 h-80 bg-light-250 dark:bg-dark-250 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
+      </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -248,21 +224,17 @@ export default function Support() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-            className="inline-flex items-center justify-center w-20 h-20 rounded-full 
-                       bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 
-                       text-light-50 dark:text-dark-900 shadow-lg mb-6 relative"
+            className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-primary-500 to-primary-700 text-light-50 shadow-lg mb-6 relative"
           >
             <FaHeart className="text-3xl" />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 animate-ping opacity-20" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-primary-700 animate-ping opacity-20" />
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-950 dark:text-light-950 mb-4">
             Support My Work
           </h1>
-          
-          <div className="w-24 h-1 bg-gradient-to-r from-dark-900 via-dark-700 to-dark-500 dark:from-light-50 dark:via-light-300 dark:to-light-400 mx-auto mt-4 rounded-full" />
-
-          <p className="text-xl text-dark-700 dark:text-light-300 max-w-3xl mx-auto leading-relaxed pt-4">
+          <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+          <p className="text-lg md:text-xl text-dark-800 dark:text-light-800 max-w-3xl mx-auto leading-relaxed pt-4">
             Your contribution helps me build open-source projects, write in-depth tech articles,
             and share knowledge with the developer community. Every support counts!
           </p>
@@ -307,49 +279,15 @@ export default function Support() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full 
-                         bg-gradient-to-r from-light-200/40 to-light-300/40 dark:from-dark-200/40 dark:to-dark-300/40
-                         border border-light-300 dark:border-dark-300">
-            <HiSparkles className="text-dark-900 dark:text-light-50" />
-            <span className="text-dark-900 dark:text-light-50 font-medium">
+          <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-light-150 dark:bg-dark-150 border border-light-300 dark:border-dark-300">
+            <HiSparkles className="text-primary-500" />
+            <span className="text-dark-950 dark:text-light-950 font-medium">
               Every contribution keeps the creativity flowing!
             </span>
-            <HiSparkles className="text-dark-900 dark:text-light-50" />
+            <HiSparkles className="text-primary-500" />
           </div>
         </motion.div>
 
-        {/* Social links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="text-center"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-dark-900 dark:text-light-50">
-            Connect with me
-          </h3>
-          <div className="flex justify-center space-x-6">
-            {[
-              { icon: FaGithub, url: "https://github.com/Soumyodeep-Dey" },
-              { icon: FaLinkedin, url: "https://www.linkedin.com/in/soumyodeep-dey-s-d-2a125b1a7/" },
-              { icon: FaTwitter, url: "https://twitter.com/Soumyodeep2003" }
-            ].map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -4 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-4 rounded-full bg-light-100 dark:bg-dark-100 backdrop-blur-md
-                           shadow-sm border border-light-300 dark:border-dark-300
-                           text-2xl text-dark-900 dark:text-light-50 hover:shadow-lg hover:border-dark-400 dark:hover:border-light-400 transition-all duration-300"
-              >
-                <social.icon />
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       {/* Toast */}
@@ -362,6 +300,6 @@ export default function Support() {
           />
         )}
       </AnimatePresence>
-    </div>
+    </main>
   );
 }
