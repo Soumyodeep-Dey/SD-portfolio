@@ -1,10 +1,10 @@
-/* Blogs.jsx – Clean white/black theme implementation */
+/* Blogs.jsx â€“ Clean white/black theme implementation */
 
 import { useState } from 'react';
 
 const myBlogs = [
   {
-    title: "BeautyMatch: A Privacy‑First Chrome Extension for Skincare",
+    title: "BeautyMatch: A Privacyâ€‘First Chrome Extension for Skincare",
     description: "Smart skincare verdicts on Amazon, Nykaa, and Sephora with zero tracking.",
     link: "https://dev.to/soumyodeepdey/beautymatch-a-privacyfirst-chrome-extension-for-smarter-skincare-1b45",
     image: "/Images/BeautyMatch Blog.png",
@@ -43,7 +43,7 @@ const readingBlogs = [
     date: "June 5, 2025"
   },
   {
-    title: "I Built an MCP Server for DevTo (100% Open Source)🎉",
+    title: "I Built an MCP Server for DevTo (100% Open Source)ðŸŽ‰",
     author: "Arindam Majumdar",
     link: "https://dev.to/arindam_1729/i-built-an-mcp-server-for-devto-100-open-source-4f6n",
     date: "June 3, 2025"
@@ -122,7 +122,7 @@ function Blogs() {
                       rel="noopener noreferrer"
                       className="text-xs text-dark-700 dark:text-light-300 hover:text-dark-900 dark:hover:text-light-50 font-medium transition-colors"
                     >
-                      Read Article →
+                      Read Article â†’
                     </a>
 
                     {/* Hover gradient overlay */}
