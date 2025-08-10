@@ -110,7 +110,7 @@ function Projects() {
   const getStatusColor = (status) => {
     switch (status) {
       case 'developing': return 'bg-warning-500';
-      case 'published': return 'bg-success-500';
+      case 'completed': return 'bg-success-500';
       case 'published': return 'bg-primary-500';
       case 'planning': return 'bg-light-600 dark:bg-dark-600';
       default: return 'bg-light-600 dark:bg-dark-600';
