@@ -136,6 +136,7 @@ function Projects() {
             My Projects
           </h1>
           <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+          <br />
           <p className="text-lg text-dark-700 dark:text-light-700 max-w-2xl mx-auto leading-relaxed">
             A collection of projects showcasing my journey in web development, from simple utilities to complex full-stack applications.
           </p>

@@ -48,11 +48,13 @@ function Header() {
 
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <ThemeBtn />
+            <div className="w-8 h-8 md:w-auto md:h-auto flex items-center pr-4">
+              <ThemeBtn />
+            </div>
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-dark-700 dark:text-light-300 hover:text-dark-900 dark:hover:text-light-50 hover:bg-light-200 dark:hover:bg-dark-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+                className="inline-flex items-center justify-center p-2 rounded-md text-dark-700 dark:text-light-300 hover:text-dark-900 dark:hover:text-light-50 hover:bg-light-200 dark:hover:bg-dark-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 ml-4"
                 aria-controls="mobile-menu"
                 aria-expanded={isMenuOpen}
               >

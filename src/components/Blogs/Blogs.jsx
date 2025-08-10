@@ -117,6 +117,7 @@ function Blogs() {
             Blogs & Articles
           </h1>
           <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+          <br />
           <p className="text-lg text-dark-700 dark:text-light-700 max-w-2xl mx-auto leading-relaxed">
             Discover my latest thoughts on web development, technology trends, and programming insights.
           </p>
