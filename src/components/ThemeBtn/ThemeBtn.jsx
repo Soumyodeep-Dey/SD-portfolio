@@ -19,12 +19,12 @@ export default function ThemeBtn() {
             />
             <label
                 htmlFor="theme-toggle"
-                className="flex items-center cursor-pointer w-14 h-8 bg-light-300 dark:bg-dark-400 rounded-full p-1 duration-300 ease-in-out"
+                className="flex items-center cursor-pointer w-16 h-9 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-400 dark:via-dark-600 dark:to-dark-700 rounded-full p-1 shadow-lg border-2 border-light-300 dark:border-dark-400 transition-all duration-300 ease-in-out"
                 aria-label="Toggle Theme"
             >
                 {/* Sun Icon */}
                 <svg
-                    className={`w-4 h-4 text-light-800 transition-opacity duration-300 ${themeMode === 'dark' ? 'opacity-0' : 'opacity-100'
+                    className={`w-5 h-5 text-yellow-400 drop-shadow-md transition-opacity duration-300 ${themeMode === 'dark' ? 'opacity-0' : 'opacity-100'
                         }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -38,13 +38,14 @@ export default function ThemeBtn() {
 
                 {/* Toggle Circle */}
                 <div
-                    className={`absolute w-6 h-6 bg-light-50 dark:bg-dark-50 rounded-full shadow-md transform transition-transform duration-300 ease-in-out ${themeMode === 'dark' ? 'translate-x-6' : 'translate-x-0'
+                    className={`absolute w-7 h-7 bg-gradient-to-br from-light-50 via-light-200 to-light-100 dark:from-dark-50 dark:via-dark-200 dark:to-dark-100 rounded-full shadow-lg border border-light-300 dark:border-dark-400 transform transition-transform duration-300 ease-in-out ${themeMode === 'dark' ? 'translate-x-7' : 'translate-x-0'
                         }`}
+                    style={{ boxShadow: themeMode === 'dark' ? '0 0 8px #6366f1' : '0 0 8px #fbbf24' }}
                 />
 
                 {/* Moon Icon */}
                 <svg
-                    className={`w-4 h-4 text-dark-800 ml-auto transition-opacity duration-300 ${themeMode === 'dark' ? 'opacity-100' : 'opacity-0'
+                    className={`w-5 h-5 text-indigo-400 ml-auto drop-shadow-md transition-opacity duration-300 ${themeMode === 'dark' ? 'opacity-100' : 'opacity-0'
                         }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
