@@ -116,6 +116,7 @@ function Blogs() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-500 dark:text-light-550 animate-fadeInLeft mb-4">
             Blogs & Articles
           </h1>
+          <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
           <p className="text-lg text-dark-700 dark:text-light-700 max-w-2xl mx-auto leading-relaxed">
             Discover my latest thoughts on web development, technology trends, and programming insights.
           </p>

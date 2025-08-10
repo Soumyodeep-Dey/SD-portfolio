@@ -28,55 +28,87 @@ const Toast = ({ message, type, onClose }) => (
 );
 
 // QR Modal
-const QRModal = ({ isOpen, onClose, title, qrImage, description }) => (
-  <AnimatePresence>
-    {isOpen && (
-      <>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
-          onClick={onClose}
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-        >
-          <div className="bg-light-50 dark:bg-dark-100 rounded-3xl shadow-lg border border-light-300 dark:border-dark-300 p-8 max-w-md w-full">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-bold text-dark-950 dark:text-light-950">{title}</h3>
-              <button
-                onClick={onClose}
-                className="p-2 rounded-full hover:bg-light-200 dark:hover:bg-dark-200 transition-colors"
-              >
-                <MdClose className="text-xl" />
-              </button>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-64 h-64 mb-4 rounded-2xl border-2 border-light-300 dark:border-dark-300 bg-light-50 dark:bg-dark-200 p-4 shadow-inner">
-                <img
-                  src={qrImage}
-                  alt={`${title} QR Code`}
-                  className="w-full h-full object-contain rounded-lg"
-                />
+const QRModal = ({ isOpen, onClose, title, qrImage, description }) => {
+  // Add ESC key and browser back support
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'Backspace') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Push state to history for back button
+    window.history.pushState({ qrOpen: true }, '');
+    const handlePopState = () => onClose();
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('popstate', handlePopState);
+      // Remove the pushed state when modal closes
+      if (window.history.state && window.history.state.qrOpen) window.history.back();
+    };
+  }, [isOpen, onClose]);
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+            onClick={onClose}
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          >
+            <div className="bg-light-50 dark:bg-dark-100 rounded-3xl shadow-lg border border-light-300 dark:border-dark-300 p-8 max-w-md w-full relative">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-dark-950 dark:text-light-950">{title}</h3>
+                <button
+                  onClick={onClose}
+                  className="p-2 rounded-full hover:bg-light-200 dark:hover:bg-dark-200 transition-colors"
+                  aria-label="Close"
+                >
+                  <MdClose className="text-xl" />
+                </button>
               </div>
-              <p className="text-center text-dark-800 dark:text-light-300 text-sm mb-4">
-                {description}
-              </p>
-              <div className="flex items-center space-x-2 text-dark-600 dark:text-light-400 text-sm">
-                <MdVerified />
-                <span>Verified and secure</span>
+              <div className="flex flex-col items-center">
+                <div className="w-64 h-64 mb-4 rounded-2xl border-2 border-light-300 dark:border-dark-300 bg-light-50 dark:bg-dark-200 p-4 shadow-inner">
+                  <img
+                    src={qrImage}
+                    alt={`${title} QR Code`}
+                    className="w-full h-full object-contain rounded-lg"
+                  />
+                </div>
+                <p className="text-center text-dark-800 dark:text-light-300 text-sm mb-4">
+                  {description}
+                </p>
+                <div className="flex items-center space-x-2 text-dark-600 dark:text-light-400 text-sm mb-4">
+                  <MdVerified />
+                  <span>Verified and secure</span>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="mt-2 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-light-50 rounded-xl font-semibold shadow transition-all duration-200"
+                  aria-label="Back to Support"
+                >
+                  Back
+                </button>
               </div>
             </div>
-          </div>
-        </motion.div>
-      </>
-    )}
-  </AnimatePresence>
-);
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+};
 
 // Payment Card
 const PaymentCard = ({
