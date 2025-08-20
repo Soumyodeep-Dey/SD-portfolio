@@ -56,7 +56,7 @@ function Home() {
           {/* Main heading */}
           <div className="space-y-4 mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 animate-fadeInLeft">
-              Hi, I'm <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
+              Hi, I&apos;m <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
             </h1>
 
             {/* Location */}

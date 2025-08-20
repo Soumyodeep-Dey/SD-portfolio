@@ -1,4 +1,3 @@
-/* Projects.jsx – Enhanced to match Home.jsx design patterns with improved UX */
 import { useState } from 'react';
 
 const projectList = [
@@ -7,7 +6,7 @@ const projectList = [
     description: "Watchly is an e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system (developing).",
     link: "https://github.com/Soumyodeep-Dey/Watchly",
     live: "https://watchly-frontend.onrender.com/",
-    video: "/Videos/WatchLy.mp4",
+    video: "https://youtu.be/gk9jWvhMBXg",
     tags: ["React", "E-commerce", "Frontend", "Recommendation System"],
     status: "developing"
   },
@@ -16,17 +15,44 @@ const projectList = [
     description: "BeautyMatch is a privacy-first Chrome extension that shows whether a beauty product is suitable for your skin tone, type, and allergies while browsing Nykaa, Amazon.in, or Sephora. It works 100% locally, with no tracking or data sharing. Built with React, Tailwind, and CRXJS.",
     link: "https://github.com/Soumyodeep-Dey/BeautyMatch",
     live: "https://chromewebstore.google.com/detail/beautymatch/kongfkfcoganehdeiiaffpmmedmkbjho",
-    video: "/Videos/BeautyMatch.mp4",
+    video: "https://youtu.be/7M6hI5qbFKQ?si=M7AoGdfQFw6fFKR8",
     tags: ["Chrome Extension", "React", "Privacy-First", "AI"],
     status: "published",
     badge: "Chrome Store"
+  },
+  {
+    title: "Persona AI",
+    description: "A web application built with React + Vite + Tailwind CSS and OpenAI API that mimics the conversational tone of two well-known tech creators — Hitesh Choudhary and Piyush Garg — based on reference tones from their YouTube and Twitter content. Features seamless persona switching and real-time chat.",
+    link: "https://github.com/yourusername/persona-ai",
+    live: "https://persona-ai-ebon.vercel.app/",
+    video: "https://youtu.be/TfOZjq-XN-s", // Replace with your YouTube link
+    tags: ["React", "Vite", "OpenAI API", "AI Personas", "Tailwind CSS"],
+    status: "published"
+  },
+  {
+    title: "Clone-X",
+    description: "AI-powered website cloner with live 'AI thinking' stream. Enter any website URL and locally clone its main page and assets. Features real-time AI orchestration, live thinking stream UI, one-click clone with preview and download capabilities. Built with Next.js 15, OpenAI, and Puppeteer.",
+    link: "https://github.com/yourusername/clone-x",
+    live: "https://youtu.be/N4JuUbHbMgE",
+    video: "https://youtu.be/N4JuUbHbMgE",
+    tags: ["Next.js 15", "OpenAI", "Puppeteer", "AI Agent", "Website Cloning"],
+    status: "published"
+  },
+  {
+    title: "Context Bot (RAG Application)",
+    description: "A Next.js RAG (Retrieval-Augmented Generation) application using OpenAI, Qdrant, and LangChain. Upload and index PDFs, CSVs, text files, and websites. Features context-aware chat interface, vector embeddings storage, and modern UI with theme support.",
+    link: "https://github.com/yourusername/context-bot",
+    live: "https://youtu.be/Zi-qxFximXI",
+    video: "https://youtu.be/Zi-qxFximXI",
+    tags: ["Next.js", "RAG", "OpenAI", "Qdrant", "LangChain", "Vector DB"],
+    status: "published"
   },
   {
     title: "Prime Minister Special Scholarship Scheme",
     description: "Developed as part of Smart India Hackathon 2024, this project aims to create a paperless scholarship disbursement system for PMSSS. My primary role in this group project was designing and implementing the frontend using React and Tailwind CSS.",
     link: "https://github.com/Soumyodeep-Dey/Scholarship",
     live: "https://pmsss-scholarship.vercel.app/",
-    video: "/Videos/PMSSS.mp4",
+    video: "https://youtu.be/dbvPCNYCd0g",
     tags: ["React", "Hackathon", "Government", "Team Project"],
     status: "published",
     badge: "Hackathon Winner"
@@ -41,6 +67,15 @@ const projectList = [
     status: "published"
   },
   {
+    title: "Movie App Demo (v0.1)",
+    description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design. Special thanks to JavaScript Mastery for guidance.",
+    link: "https://github.com/Soumyodeep-Dey/Mobile_Movie_App",
+    live: "https://www.linkedin.com/posts/soumyodeep-dey-s-d-2a125b1a7_100daysofcode-buildinpublic-appdevelopment-activity-7352362240777322503-VppU",
+    video: "https://youtube.com/shorts/IO00VJYuBUI?si=Z0KNMtnG5bff1Fwo",
+    tags: ["React Native", "Mobile App", "TMDB API", "Appwrite"],
+    status: "completed"
+  },
+  {
     title: "Next.js Authentication System",
     description: "A production-ready authentication app built with Next.js, TypeScript, MongoDB, and Tailwind CSS. It includes features like JWT-based auth, protected routes, and a clean, responsive UI. Built as a hands-on project after learning advanced authentication patterns.",
     link: "https://github.com/Soumyodeep-Dey/auth_next_js",
@@ -48,15 +83,6 @@ const projectList = [
     video: "/Videos/NextAuthApp.mp4",
     tags: ["Next.js", "TypeScript", "MongoDB", "Authentication"],
     status: "published"
-  },
-  {
-    title: "Movie App Demo (v0.1)",
-    description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design. Special thanks to JavaScript Mastery for guidance.",
-    link: "https://github.com/Soumyodeep-Dey/Mobile_Movie_App",
-    live: "https://www.linkedin.com/posts/soumyodeep-dey-s-d-2a125b1a7_100daysofcode-buildinpublic-appdevelopment-activity-7352362240777322503-VppU",
-    video: "/Videos/MovieAppDemo.mp4",
-    tags: ["React Native", "Mobile App", "TMDB API", "Appwrite"],
-    status: "completed"
   },
   {
     title: "MemEconomy",
@@ -101,6 +127,35 @@ function Projects() {
   const handleMediaError = (index, type) => {
     setErrorMedia(prev => ({ ...prev, [`${index}-${type}`]: true }));
     setLoadingMedia(prev => ({ ...prev, [`${index}-${type}`]: false }));
+  };
+
+  // Function to check if a video is a YouTube link
+  const isYouTubeLink = (url) => {
+    return url && (url.includes('youtube.com') || url.includes('youtu.be'));
+  };
+
+  // Function to convert YouTube URL to embed URL
+  const getYouTubeEmbedUrl = (url) => {
+    if (!url) return '';
+
+    // Handle youtu.be links
+    if (url.includes('youtu.be/')) {
+      const videoId = url.split('youtu.be/')[1].split('?')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // Handle youtube.com watch links
+    if (url.includes('youtube.com/watch?v=')) {
+      const videoId = url.split('v=')[1].split('&')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // If it's already an embed link, return as is
+    if (url.includes('youtube.com/embed/')) {
+      return url;
+    }
+
+    return url;
   };
 
   const filteredProjects = filter === 'all'
@@ -244,19 +299,35 @@ function Projects() {
                         </div>
                       </div>
                     )}
-                    <video
-                      controls
-                      className="w-full h-48 object-cover rounded-xl shadow-inner group-hover:scale-105 transition-transform duration-500"
-                      preload="metadata"
-                      onLoadStart={() => handleMediaLoadStart(index, 'video')}
-                      onLoadedData={() => handleMediaLoad(index, 'video')}
-                      onError={() => handleMediaError(index, 'video')}
-                    >
-                      <source src={project.video} type="video/mp4" />
-                      <p className="text-dark-700 dark:text-light-700 text-sm p-4">
-                        Your browser does not support the video tag.
-                      </p>
-                    </video>
+
+                    {isYouTubeLink(project.video) ? (
+                      // YouTube iframe embed
+                      <iframe
+                        src={getYouTubeEmbedUrl(project.video)}
+                        title={`${project.title} demo video`}
+                        className="w-full h-64 rounded-xl shadow-inner group-hover:scale-105 transition-transform duration-500"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        onLoad={() => handleMediaLoad(index, 'video')}
+                        onError={() => handleMediaError(index, 'video')}
+                      />
+                    ) : (
+                      // Regular video element for local files
+                      <video
+                        controls
+                        className="w-full h-64 object-cover rounded-xl shadow-inner group-hover:scale-105 transition-transform duration-500"
+                        preload="metadata"
+                        onLoadStart={() => handleMediaLoadStart(index, 'video')}
+                        onLoadedData={() => handleMediaLoad(index, 'video')}
+                        onError={() => handleMediaError(index, 'video')}
+                      >
+                        <source src={project.video} type="video/mp4" />
+                        <p className="text-dark-700 dark:text-light-700 text-sm p-4">
+                          Your browser does not support the video tag.
+                        </p>
+                      </video>
+                    )}
                   </figure>
                 )}
               </div>
@@ -274,7 +345,7 @@ function Projects() {
               Interested in collaborating?
             </h2>
             <p className="text-dark-700 dark:text-light-700 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              If you're looking for a passionate developer to collaborate with, I'd love to hear from you.
+              If you&apos;re looking for a passionate developer to collaborate with, I&apos;d love to hear from you.
             </p>
             <a
               href="mailto:soumyodeepdey2003@gmail.com"
@@ -283,7 +354,7 @@ function Projects() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>Let's Connect</span>
+              <span>Let&apos;s Connect</span>
             </a>
           </div>
         </footer>

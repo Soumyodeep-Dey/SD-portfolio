@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // Support.jsx – Upgraded to match Home.jsx theme & palette
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -5,8 +6,9 @@ import { FaHeart, FaCheck, FaShieldAlt } from 'react-icons/fa';
 import { SiBuymeacoffee, SiGooglepay } from 'react-icons/si';
 import { MdVerified, MdClose, MdInfo } from 'react-icons/md';
 import { HiSparkles, HiLightningBolt } from 'react-icons/hi';
-
 // Toast Component
+import PropTypes from 'prop-types';
+ 
 const Toast = ({ message, type, onClose }) => (
   <motion.div
     initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -26,6 +28,12 @@ const Toast = ({ message, type, onClose }) => (
     </div>
   </motion.div>
 );
+
+Toast.propTypes = {
+  message: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  onClose: PropTypes.func.isRequired,
+};
 
 // QR Modal
 const QRModal = ({ isOpen, onClose, title, qrImage, description }) => {
@@ -108,6 +116,14 @@ const QRModal = ({ isOpen, onClose, title, qrImage, description }) => {
       )}
     </AnimatePresence>
   );
+};
+
+QRModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  qrImage: PropTypes.string,
+  description: PropTypes.string
 };
 
 // Payment Card
