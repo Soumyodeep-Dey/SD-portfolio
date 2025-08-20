@@ -3,31 +3,76 @@ import { useState } from 'react';
 
 const myBlogs = [
   {
+    title: "Troubleshooting RAG: Typical Issues and Easy Remedies",
+    description: "Understanding RAG Issues: Common Failures and Simple Solutions",
+    link: "#", // Add your actual link when available
+    readTime: "3 min read"
+  },
+  {
+    title: "RAGs Explained: Your Simple Introduction",
+    description: "A comprehensive beginner's guide to Retrieval-Augmented Generation systems",
+    link: "#", // Add your actual link when available
+    readTime: "5 min read"
+  },
+  {
+    title: "Beginner's Guide to Agentic AI with JavaScript: A Practical Approach",
+    description: "Learn how to build intelligent agents using JavaScript with hands-on examples",
+    link: "#", // Add your actual link when available
+    readTime: "7 min read"
+  },
+  {
+    title: "How to Turn a Non-Thinking Model into a Thinking Model: A Starter's Guide",
+    description: "Transform basic AI models into reasoning systems with practical techniques",
+    link: "#", // Add your actual link when available
+    readTime: "5 min read"
+  },
+  {
+    title: "Elevate Your Skills: An Intermediate User's Guide to System Prompts & Prompting Types",
+    description: "Master advanced prompting techniques to get better results from AI systems",
+    link: "#", // Add your actual link when available
+    readTime: "8 min read"
+  },
+  {
+    title: "Vector Embeddings: An Easy Explanation for Everyone",
+    description: "Demystifying vector embeddings with simple explanations and practical examples",
+    link: "#", // Add your actual link when available
+    readTime: "4 min read"
+  },
+  {
+    title: "Tokenization 101: A Beginner's Guide",
+    description: "Understanding how text is processed by AI models through tokenization",
+    link: "#", // Add your actual link when available
+    readTime: "2 min read"
+  },
+  {
+    title: "How to Explain GPT to Young Kids",
+    description: "A simple, kid-friendly explanation of how GPT and language models work",
+    link: "#", // Add your actual link when available
+    readTime: "3 min read"
+  },
+  {
     title: "BeautyMatch: A Privacy-First Chrome Extension for Skincare",
     description: "Smart skincare verdicts on Amazon, Nykaa, and Sephora with zero tracking.",
     link: "https://dev.to/soumyodeep_dey_c6cb5e8c97/beautymatch-smart-skin-compatibility-for-beauty-products-2fbg",
-    image: "/Images/BeautyMatch Blog.png",
-    tags: ["Chrome Extension", "Privacy", "Skincare", "React"],
-    platform: "dev.to",
     readTime: "5 min read"
   },
   {
     title: "Step-by-Step Guide to Creating a ToDo App with Complete CRUD Functionality",
     description: "Building a ToDo App with HTML, CSS, JavaScript, and Local Storage",
     link: "https://hashnode.com/post/cmas1h2tg000509lbe8flaetj",
-    image: "/Images/ToDo App Blog.png",
-    tags: ["JavaScript", "HTML", "CSS", "CRUD"],
-    platform: "hashnode",
     readTime: "8 min read"
   },
   {
     title: "A Beginners Guide to LinkedIn",
     description: "Effective Strategies for Expanding Your LinkedIn Network (most useful for Beginners)",
     link: "https://hashnode.com/post/cm02l0eje000408mhbmv61h6f",
-    image: "/Images/LinkedIn Blog.png",
-    tags: ["Career", "Networking", "LinkedIn", "Professional"],
-    platform: "hashnode",
     readTime: "6 min read"
+  },
+  {
+    title: "New blogs are coming Soon",
+    description: "A hands-on demo blog is coming soon. Stay tuned for practical walkthroughs and live examples!",
+    link: "#",
+    readTime: "Demo - Coming Soon"
   },
 ];
 
@@ -37,66 +82,29 @@ const readingBlogs = [
     author: "Tanmoy Ganguly",
     link: "https://xanmoy.hashnode.dev/mastering-git-commit-types-a-comprehensive-example-in-convention",
     date: "July 27, 2025",
-    category: "Development"
   },
   {
     title: "Everything I know about good system design",
     author: "sean goedecke",
     link: "https://www.seangoedecke.com/good-system-design/?ref=dailydev",
     date: "June 30, 2025",
-    category: "Architecture"
   },
   {
     title: "Don't Let Your Best Ideas Die in Silence",
     author: "Arpit Bhayani",
     link: "https://arpitbhayani.me/blogs/dont-let-your-best-ideas-die-in-silenc",
     date: "June 5, 2025",
-    category: "Career"
   },
   {
     title: "I Built an MCP Server for DevTo (100% Open Source)🎉",
     author: "Arindam Majumdar",
     link: "https://dev.to/arindam_1729/i-built-an-mcp-server-for-devto-100-open-source-4f6n",
     date: "June 3, 2025",
-    category: "Open Source"
   },
 ];
 
 function Blogs() {
-  const [loadingImages, setLoadingImages] = useState({});
-  const [errorImages, setErrorImages] = useState({});
   const [activeTab, setActiveTab] = useState('my-blogs');
-
-  const handleImageLoad = (blogIndex) => {
-    setLoadingImages(prev => ({ ...prev, [blogIndex]: false }));
-  };
-
-  const handleImageError = (blogIndex) => {
-    setErrorImages(prev => ({ ...prev, [blogIndex]: true }));
-    setLoadingImages(prev => ({ ...prev, [blogIndex]: false }));
-  };
-
-  const handleImageLoadStart = (blogIndex) => {
-    setLoadingImages(prev => ({ ...prev, [blogIndex]: true }));
-  };
-
-  const getPlatformColor = (platform) => {
-    switch (platform) {
-      case 'dev.to': return 'bg-success-500';
-      case 'hashnode': return 'bg-primary-500';
-      default: return 'bg-light-600 dark:bg-dark-600';
-    }
-  };
-
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'Development': return 'bg-primary-500';
-      case 'Architecture': return 'bg-secondary-500';
-      case 'Career': return 'bg-warning-500';
-      case 'Open Source': return 'bg-success-500';
-      default: return 'bg-light-600 dark:bg-dark-600';
-    }
-  };
 
   return (
     <main
@@ -134,8 +142,8 @@ function Blogs() {
               type="button"
               onClick={() => setActiveTab(key)}
               className={`relative font-bold text-xl md:text-2xl transition-all duration-300 hover:scale-105 ${activeTab === key
-                  ? 'text-dark-950 dark:text-light-950'
-                  : 'text-dark-600 dark:text-light-600 hover:text-dark-850 dark:hover:text-light-850'
+                ? 'text-dark-950 dark:text-light-950'
+                : 'text-dark-600 dark:text-light-600 hover:text-dark-850 dark:hover:text-light-850'
                 }`}
             >
               {label}
@@ -159,87 +167,37 @@ function Blogs() {
                 </p>
               </div>
 
-              <div className="grid gap-8">
+              <div className="grid md:grid-cols-2 gap-6">
                 {myBlogs.map((blog, index) => (
                   <article
                     key={index}
-                    className="group relative bg-light-150 dark:bg-dark-150 rounded-2xl overflow-hidden shadow-sm border border-light-250 dark:border-dark-250 hover:shadow-lg hover:scale-[1.02] transition-all duration-500"
+                    className="group relative bg-light-150 dark:bg-dark-150 rounded-2xl p-6 border border-light-250 dark:border-dark-250 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
                   >
-                    <div className="lg:flex">
-                      {/* Blog image */}
-                      {blog.image && !errorImages[index] && (
-                        <figure className="lg:w-1/3 relative overflow-hidden">
-                          {loadingImages[index] && (
-                            <div className="absolute inset-0 bg-light-300 dark:bg-dark-300 animate-pulse" />
-                          )}
-                          <img
-                            src={blog.image}
-                            alt={blog.title}
-                            className="w-full h-48 lg:h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            onLoadStart={() => handleImageLoadStart(index)}
-                            onLoad={() => handleImageLoad(index)}
-                            onError={() => handleImageError(index)}
-                          />
-
-                          {/* Platform badge */}
-                          <div className="absolute top-4 right-4">
-                            <span className={`${getPlatformColor(blog.platform)} text-light-50 text-xs font-semibold py-1.5 px-3 rounded-full shadow-lg capitalize`}>
-                              {blog.platform}
-                            </span>
-                          </div>
-                        </figure>
-                      )}
-
-                      {/* Blog content */}
-                      <div className="lg:w-2/3 p-8">
-                        <header className="mb-6">
-                          <h3 className="text-xl md:text-2xl font-bold text-dark-650 dark:text-light-650 mb-3 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                            {blog.title}
-                          </h3>
-
-                          {/* Tags */}
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {blog.tags?.map((tag, tagIndex) => (
-                              <span
-                                key={tagIndex}
-                                className="bg-light-200 dark:bg-dark-200 text-dark-700 dark:text-light-700 text-xs font-medium py-1 px-3 rounded-full border border-light-300 dark:border-dark-300"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-
-                          {/* Read time */}
-                          <div className="flex items-center gap-2 text-sm text-dark-600 dark:text-light-600 mb-4">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>{blog.readTime}</span>
-                          </div>
-                        </header>
-
-                        <p className="text-dark-800 dark:text-light-800 leading-relaxed text-base mb-8">
-                          {blog.description}
-                        </p>
-
-                        {blog.link && (
-                          <a
-                            href={blog.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-light-50 font-semibold rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                          >
-                            <span>Read Article</span>
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </a>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Hover overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" />
+                    <header className="mb-4">
+                      <h3 className="text-lg font-bold text-dark-650 dark:text-light-650 mb-2 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        {blog.title}
+                      </h3>
+                      <span className="block text-xs text-dark-600 dark:text-light-600 font-medium mb-2">
+                        {blog.readTime}
+                      </span>
+                      <p className="text-sm text-dark-700 dark:text-light-700">
+                        {blog.description}
+                      </p>
+                    </header>
+                    {blog.link && (
+                      <a
+                        href={blog.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200"
+                      >
+                        <span>Read Article</span>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </a>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-primary-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
                   </article>
                 ))}
               </div>
@@ -253,26 +211,25 @@ function Blogs() {
                   Currently Reading
                 </h2>
                 <p className="text-dark-700 dark:text-light-700">
-                  Articles and resources I'm exploring to expand my knowledge
+                  Articles and resources I&apos;m exploring to expand my knowledge
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                {readingBlogs.map((blog, index) => (
+                {(
+                  readingBlogs.filter(blog => blog.category !== 'Development').length > 0
+                    ? readingBlogs.filter(blog => blog.category !== 'Development')
+                    : readingBlogs
+                ).map((blog, index) => (
                   <article
                     key={index}
                     className="group relative bg-light-150 dark:bg-dark-150 rounded-2xl p-6 border border-light-250 dark:border-dark-250 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
                   >
-                    {/* Category badge */}
                     <div className="flex justify-between items-start mb-4">
-                      <span className={`${getCategoryColor(blog.category)} text-light-50 text-xs font-semibold py-1.5 px-3 rounded-full`}>
-                        {blog.category}
-                      </span>
                       <span className="text-xs text-dark-600 dark:text-light-600 font-medium">
                         {blog.date}
                       </span>
                     </div>
-
                     <header className="mb-4">
                       <h3 className="text-lg font-bold text-dark-650 dark:text-light-650 mb-2 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                         {blog.title}
@@ -284,7 +241,6 @@ function Blogs() {
                         By {blog.author}
                       </p>
                     </header>
-
                     <a
                       href={blog.link}
                       target="_blank"
@@ -296,8 +252,6 @@ function Blogs() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
-
-                    {/* Hover overlay effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-primary-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
                   </article>
                 ))}
