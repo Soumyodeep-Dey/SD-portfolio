@@ -5,49 +5,49 @@ const myBlogs = [
   {
     title: "Troubleshooting RAG: Typical Issues and Easy Remedies",
     description: "Understanding RAG Issues: Common Failures and Simple Solutions",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/troubleshooting-rag-typical-issues-and-easy-remedies",
     readTime: "3 min read"
   },
   {
     title: "RAGs Explained: Your Simple Introduction",
     description: "A comprehensive beginner's guide to Retrieval-Augmented Generation systems",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/rags-explained-your-simple-introduction",
     readTime: "5 min read"
   },
   {
     title: "Beginner's Guide to Agentic AI with JavaScript: A Practical Approach",
     description: "Learn how to build intelligent agents using JavaScript with hands-on examples",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/beginners-guide-to-agentic-ai-with-javascript-a-practical-approach",
     readTime: "7 min read"
   },
   {
     title: "How to Turn a Non-Thinking Model into a Thinking Model: A Starter's Guide",
     description: "Transform basic AI models into reasoning systems with practical techniques",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/how-to-turn-a-non-thinking-model-into-a-thinking-model-a-starters-guide",
     readTime: "5 min read"
   },
   {
     title: "Elevate Your Skills: An Intermediate User's Guide to System Prompts & Prompting Types",
     description: "Master advanced prompting techniques to get better results from AI systems",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/elevate-your-skills-an-intermediate-users-guide-to-system-prompts-and-prompting-types",
     readTime: "8 min read"
   },
   {
     title: "Vector Embeddings: An Easy Explanation for Everyone",
     description: "Demystifying vector embeddings with simple explanations and practical examples",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/vector-embeddings-explained-for-beginners",
     readTime: "4 min read"
   },
   {
     title: "Tokenization 101: A Beginner's Guide",
     description: "Understanding how text is processed by AI models through tokenization",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/tokenization-explained-for-beginners",
     readTime: "2 min read"
   },
   {
     title: "How to Explain GPT to Young Kids",
     description: "A simple, kid-friendly explanation of how GPT and language models work",
-    link: "#", // Add your actual link when available
+    link: "https://soumyodeep09.hashnode.dev/how-to-explain-gpt-to-young-kids",
     readTime: "3 min read"
   },
   {
