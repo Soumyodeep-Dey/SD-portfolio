@@ -62,7 +62,7 @@ const projectList = [
     description: "A smart job recommendation system built using React and the Google AI API. It allows users to input their profile and preferences, and then generates personalized job suggestions powered by AI. It includes category-based filtering and role-specific insights.",
     link: "https://github.com/Soumyodeep-Dey/Ai_Job_Recommendation_System",
     live: "https://ai-job-recommendation-system-eight.vercel.app/",
-    video: "/Videos/AIJobRecommender.mp4",
+    video: "https://youtu.be/quQOQjZ2sVs",
     tags: ["React", "AI API", "Machine Learning", "Job Search"],
     status: "published"
   },
@@ -71,7 +71,7 @@ const projectList = [
     description: "Built using React Native, NativeWind, TMDB API, and Appwrite (BAAS), this is my first complete mobile app demo. The v0.1 version showcases the core features and design. Special thanks to JavaScript Mastery for guidance.",
     link: "https://github.com/Soumyodeep-Dey/Mobile_Movie_App",
     live: "https://www.linkedin.com/posts/soumyodeep-dey-s-d-2a125b1a7_100daysofcode-buildinpublic-appdevelopment-activity-7352362240777322503-VppU",
-    video: "https://youtube.com/shorts/IO00VJYuBUI?si=Z0KNMtnG5bff1Fwo",
+    video: "https://youtube.com/shorts/IO00VJYuBUI",
     tags: ["React Native", "Mobile App", "TMDB API", "Appwrite"],
     status: "completed"
   },
@@ -80,7 +80,7 @@ const projectList = [
     description: "A production-ready authentication app built with Next.js, TypeScript, MongoDB, and Tailwind CSS. It includes features like JWT-based auth, protected routes, and a clean, responsive UI. Built as a hands-on project after learning advanced authentication patterns.",
     link: "https://github.com/Soumyodeep-Dey/auth_next_js",
     live: "https://auth-next-js-zeta.vercel.app/login",
-    video: "/Videos/NextAuthApp.mp4",
+    video: "https://youtu.be/OLEbTjutflw",
     tags: ["Next.js", "TypeScript", "MongoDB", "Authentication"],
     status: "published"
   },
@@ -89,7 +89,7 @@ const projectList = [
     description: "MemEconomy is a Hackathon project designed for BRAINROT Hackathon. I was responsible for developing the frontend, ensuring a seamless and responsive UI.",
     link: "https://github.com/Soumyodeep-Dey/memeconomy",
     live: "https://meme-economy-black.vercel.app/",
-    video: "/Videos/memeconomy.mp4",
+    video: "https://youtu.be/QEqiUw1c9Rk",
     tags: ["React", "Hackathon", "Frontend", "Creative"],
     status: "published"
   },
@@ -98,7 +98,7 @@ const projectList = [
     description: "A TODO app built with HTML, CSS, and JavaScript. Users can add, edit, and delete tasks with local storage persistence.",
     link: "https://github.com/Soumyodeep-Dey/TO-DO-LIST",
     live: "https://soumyodeep-dey.github.io/TO-DO-LIST/",
-    video: "/Videos/ToDoApp.mp4",
+    video: "https://youtu.be/8cHfIrP9ciI",
     tags: ["HTML", "CSS", "JavaScript", "Local Storage"],
     status: "published"
   },
@@ -238,7 +238,7 @@ function Projects() {
               <div className="relative z-10">
                 <header className="mb-6">
                   <h2 className="text-xl md:text-2xl font-bold text-dark-550 dark:text-light-550 mb-3 leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                    {project.title}
+                    <span className="block min-h-[4.5rem] flex items-center justify-center text-center">{project.title}</span>
                   </h2>
 
                   {/* Tags */}
