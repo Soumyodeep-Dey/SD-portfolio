@@ -40,7 +40,7 @@ function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-300 dark:via-dark-400 dark:to-dark-500 rounded-full blur opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
               <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
                 <img
-                  src="/Images/MY photo.jpg"
+                  src="/Images/LOGO.webp"
                   alt="Soumyodeep Dey"
                   className="w-full h-full object-cover rounded-full shadow-xl border-2 border-light-300 dark:border-dark-300 group-hover:scale-105 transition-all duration-500"
                 />
