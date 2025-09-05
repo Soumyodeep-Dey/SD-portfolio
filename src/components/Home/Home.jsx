@@ -90,14 +90,21 @@ function Home() {
           {/* Summary */}
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300">
             <p className="text-base md:text-lg leading-relaxed text-dark-800 dark:text-light-800 mb-6">
-              Final-year Computer Science Engineering student with hands-on experience in{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">software development</strong>,{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">web development</strong>,{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">content writing</strong>,{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">market research</strong>, and{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">data analysis</strong>.
-              Adept at creating intuitive, scalable web applications using modern frameworks and engineering principles.
-              Successfully led a six-member team in Smart India Hackathon 2024. Seeking a Software Development internship to leverage modern tech expertise and team leadership.
+              Aspiring <strong className="text-dark-550 dark:text-light-550 font-bold">Software Engineer</strong> with experience in{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">full-stack development</strong> and{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">Generative AI applications</strong>.
+              Skilled in building scalable web platforms using{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">React.js</strong>,{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">Node.js</strong>, and{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">LangChain</strong>.
+              Hands-on with{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">LLM integration</strong>,{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">RAG pipelines</strong>,{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">vector databases</strong>, and{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">AI agents</strong>.
+              Successfully led a six-member team in{' '}
+              <strong className="text-dark-550 dark:text-light-550 font-bold">Smart India Hackathon 2024</strong>, applying Agile practices.
+              Eager to leverage expertise in web engineering and GenAI to deliver intelligent systems.
             </p>
             <a
               href={RESUME_LINK}
@@ -135,12 +142,16 @@ function Home() {
             {activeSection === 'skills' && (
               <div className="space-y-6 text-dark-600 dark:text-light-600">
                 {[
-                  { category: 'Programming Languages', items: 'JavaScript | TypeScript | C++ | HTML | CSS' },
-                  { category: 'Web Development', items: 'React.js | Next.js | Tailwind CSS | Node.js | Express.js | MongoDB | REST APIs' },
-                  { category: 'Development Tools & Methods', items: 'Git | GitHub | Testing | Debugging | Agile' },
-                  { category: 'Content & SEO', items: 'WordPress | Technical Writing | SEO Optimization' },
+                  { category: 'Generative AI & LLMs', items: 'Prompt Engineering | RAG | HyDE | LangChain | LangSmith | Qdrant DB | AI Agents | OpenAI/Anthropic APIs' },
+                  { category: 'Frontend', items: 'React.js | Next.js | Vite | Tailwind CSS | JavaScript | TypeScript | HTML | CSS' },
+                  { category: 'Backend', items: 'Node.js | Express.js | REST APIs | MongoDB | SQL' },
+                  { category: 'Tools & Methods', items: 'Git | GitHub | CI/CD | Agile | Testing | Debugging' },
+                  { category: 'Other', items: 'WordPress | SEO | Data Analysis | Excel | PowerPoint' },
                 ].map(({ category, items }) => (
-                  <div key={category} className="flex flex-col lg:flex-row lg:items-start gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200">
+                  <div
+                    key={category}
+                    className="flex flex-col lg:flex-row lg:items-start gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200"
+                  >
                     <strong className="text-dark-450 dark:text-light-450 font-bold min-w-fit lg:w-56 text-base">
                       {category}:
                     </strong>
@@ -148,6 +159,7 @@ function Home() {
                   </div>
                 ))}
               </div>
+
             )}
 
             {activeSection === 'experience' && (
