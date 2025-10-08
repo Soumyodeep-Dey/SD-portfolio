@@ -167,7 +167,7 @@ function Home() {
                 {[
                   {
                     title: 'Software Development Intern',
-                    company: 'SplitMate',
+                    company: 'Cenvexa',
                     period: 'Aug 2025 – Present',
                     location: 'Remote & Kolkata',
                     achievements: [
