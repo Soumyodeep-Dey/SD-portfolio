@@ -125,8 +125,8 @@ function Home() {
                 type="button"
                 onClick={() => setActiveSection(section)}
                 className={`relative font-bold capitalize text-xl md:text-2xl transition-all duration-300 hover:scale-105 ${activeSection === section
-                    ? 'text-dark-950 dark:text-light-950'
-                    : 'text-dark-600 dark:text-light-600 hover:text-dark-850 dark:hover:text-light-850'
+                  ? 'text-dark-950 dark:text-light-950'
+                  : 'text-dark-600 dark:text-light-600 hover:text-dark-850 dark:hover:text-light-850'
                   }`}
               >
                 {section}
@@ -255,17 +255,17 @@ function Home() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               {[
-                { href: 'https://www.linkedin.com/in/soumyodeep-dey/', icon: <FaLinkedin className="text-dark-500 dark:text-light-500" />, label: 'LinkedIn' },
-                { href: 'https://twitter.com/Soumyodeep2003', icon: <FaTwitter className="text-dark-500 dark:text-light-500" />, label: 'Twitter' },
-                { href: 'https://github.com/Soumyodeep-Dey', icon: <FaGithub className="text-dark-500 dark:text-light-500" />, label: 'GitHub' },
-                { href: 'https://leetcode.com/u/SOUMYODEEP_DEY/', icon: <SiLeetcode className="text-dark-500 dark:text-light-500" />, label: 'LeetCode' }
+                { href: 'https://www.linkedin.com/in/soumyodeep-dey/', icon: <FaLinkedin className="text-blue-600 dark:text-blue-400" />, label: 'LinkedIn' },
+                { href: 'https://twitter.com/Soumyodeep2003', icon: <FaTwitter className="text-sky-500 dark:text-sky-400" />, label: 'Twitter' },
+                { href: 'https://github.com/Soumyodeep-Dey', icon: <FaGithub className="text-gray-700 dark:text-gray-300" />, label: 'GitHub' },
+                { href: 'https://leetcode.com/u/SOUMYODEEP_DEY/', icon: <SiLeetcode className="text-orange-500 dark:text-orange-400" />, label: 'LeetCode' }
               ].map(({ href, icon, label }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col items-center p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 hover:shadow-md hover:scale-105 transition-all duration-300"
+                  className="group flex flex-col items-center p-6 rounded-2xl bg-light-200 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-300 dark:hover:bg-dark-200 hover:shadow-md hover:scale-105 transition-all duration-300"
                 >
                   <span className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                     {icon}
