@@ -36,8 +36,7 @@ function Header() {
                 SD
               </div>
               <div className="leading-tight">
-                <p className="text-sm text-dark-600 dark:text-light-300 group-hover:text-dark-900 dark:group-hover:text-light-50 transition-colors">Soumyodeep Dey</p>
-                <p className="text-base font-semibold text-dark-900 dark:text-light-50 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Software Developer</p>
+                <p className="text-xl font-bold text-dark-900 dark:text-light-50 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Software Developer</p>
               </div>
             </NavLink>
           </div>

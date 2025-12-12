@@ -1,5 +1,6 @@
 /* Home.jsx – Clean UI with subtle improvements and repositioned image */
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   FaLinkedin,
   FaTwitter,
@@ -88,33 +89,47 @@ function Home() {
         {/* Content section */}
         <section className="max-w-4xl mx-auto space-y-12">
           {/* Summary */}
-          <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300">
-            <p className="text-base md:text-lg leading-relaxed text-dark-800 dark:text-light-800 mb-6">
-              Aspiring <strong className="text-dark-550 dark:text-light-550 font-bold">Software Engineer</strong> with experience in{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">full-stack development</strong> and{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">Generative AI applications</strong>.
-              Skilled in building scalable web platforms using{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">React.js</strong>,{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">Node.js</strong>, and{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">LangChain</strong>.
-              Hands-on with{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">LLM integration</strong>,{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">RAG pipelines</strong>,{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">vector databases</strong>, and{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">AI agents</strong>.
-              Successfully led a six-member team in{' '}
-              <strong className="text-dark-550 dark:text-light-550 font-bold">Smart India Hackathon 2024</strong>, applying Agile practices.
-              Eager to leverage expertise in web engineering and GenAI to deliver intelligent systems.
-            </p>
-            <a
-              href={RESUME_LINK}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-light-50 font-semibold rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
-            >
-              <span>View My Resume</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
+          <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300 space-y-6">
+            <div className="space-y-3">
+              <p className="text-lg md:text-xl font-semibold text-dark-900 dark:text-light-50">
+                Software Developer crafting clean, AI-forward web apps.
+              </p>
+              <p className="text-base md:text-lg leading-relaxed text-dark-800 dark:text-light-800">
+                I build fast React/Node experiences, plug in LLMs when they solve real problems, and keep interfaces simple so people get value quickly.
+              </p>
+            </div>
+            <div className="grid gap-3 md:grid-cols-3 text-sm text-dark-750 dark:text-light-750">
+              {[
+                'Full-stack: React, Next.js, Node, Express, MongoDB, SQL',
+                'GenAI: LangChain, RAG, vector DBs, agents, OpenAI/Anthropic',
+                'Tools: Git, GitHub, CI/CD, Agile, Testing, Debugging',
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 p-4 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250"
+                >
+                  <span className="mt-1 h-2 w-2 rounded-full bg-primary-600" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href={RESUME_LINK}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-light-50 font-semibold rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              >
+                <span>View My Resume</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <NavLink
+                to="/projects"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-primary-200 text-primary-700 dark:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-950/30 transition-colors duration-200 font-semibold"
+              >
+                View Projects
+              </NavLink>
+            </div>
           </div>
 
           {/* Navigation tabs */}
