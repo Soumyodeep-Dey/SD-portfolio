@@ -35,8 +35,8 @@ function Home() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Header section with text left and image right */}
         <header className="mb-10">
-          <div className="grid lg:grid-cols-2 gap-4 items-center">
-            <div className="space-y-3 lg:text-left text-center">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
+            <div className="space-y-3 lg:text-left text-center lg:pl-20">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 animate-fadeInLeft">
                 Hi, I&apos;m <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
               </h1>
@@ -63,7 +63,7 @@ function Home() {
             </div>
 
             {/* Profile image on the right */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-center">
               <figure className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-300 dark:via-dark-400 dark:to-dark-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
                 <div className="relative w-36 h-48 md:w-44 md:h-56 lg:w-56 lg:h-72">
