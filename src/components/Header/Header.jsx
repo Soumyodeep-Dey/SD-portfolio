@@ -35,7 +35,7 @@ function Header() {
               <div className="h-10 w-10 rounded-2xl bg-primary-600 text-light-50 font-semibold flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
                 SD
               </div>
-              <div className="leading-tight">
+              <div className="hidden md:block leading-tight">
                 <p className="text-xl font-bold text-dark-900 dark:text-light-50 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Software Developer</p>
               </div>
             </NavLink>
