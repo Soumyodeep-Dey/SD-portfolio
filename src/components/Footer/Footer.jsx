@@ -32,15 +32,15 @@ function Footer() {
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-light-200/40 to-transparent dark:from-dark-200/40 dark:to-transparent pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex flex-col items-center justify-center space-y-6">
-          {/* Main Footer Content */}
-          <div className="text-center">
-            <h3 className="text-lg font-bold text-dark-900 dark:text-light-50 mb-2">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col items-center space-y-4">
+          {/* Identity */}
+          <div className="text-center space-y-1">
+            <h3 className="text-lg font-bold text-dark-900 dark:text-light-50">
               Soumyodeep Dey
             </h3>
-            <p className="text-dark-700 dark:text-light-300 max-w-md">
-              Final Year CSE Student | Software Developer
+            <p className="text-sm text-primary-700 dark:text-primary-300 font-semibold">
+              Software Developer · Final Year CSE
             </p>
           </div>
 

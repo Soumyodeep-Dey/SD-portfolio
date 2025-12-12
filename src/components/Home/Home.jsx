@@ -86,14 +86,14 @@ function Home() {
           {/* Summary */}
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300 space-y-6">
             <div className="space-y-3">
-              <p className="text-lg md:text-xl font-semibold text-dark-900 dark:text-light-50">
+              <p className="text-lg md:text-xl font-semibold text-dark-200 dark:text-light-50">
                 Software Developer crafting clean, AI-forward web apps.
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-dark-800 dark:text-light-800">
+              <p className="text-base md:text-lg leading-relaxed text-dark-450 dark:text-light-800">
                 I build fast React/Node experiences, plug in LLMs when they solve real problems, and keep interfaces simple so people get value quickly.
               </p>
             </div>
-            <div className="grid gap-3 md:grid-cols-3 text-sm text-dark-750 dark:text-light-750">
+            <div className="grid gap-3 md:grid-cols-3 text-sm text-dark-400 dark:text-light-750">
               {[
                 'Full-stack: React, Next.js, Node, Express, MongoDB, SQL',
                 'GenAI: LangChain, RAG, vector DBs, agents, OpenAI/Anthropic',
@@ -152,7 +152,7 @@ function Home() {
             {activeSection === 'skills' && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-500 dark:text-light-50 mb-2">
                     Technical Skills
                   </h2>
                   <p className="text-lg text-dark-700 dark:text-light-300">
@@ -205,7 +205,7 @@ function Home() {
             {activeSection === 'experience' && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-500 dark:text-light-50 mb-2">
                     Professional Experience
                   </h2>
                   <p className="text-lg text-dark-700 dark:text-light-300">
@@ -284,7 +284,7 @@ function Home() {
             {activeSection === 'education' && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-500 dark:text-light-50 mb-2">
                     Education
                   </h2>
                   <p className="text-lg text-dark-700 dark:text-light-300">
@@ -327,8 +327,9 @@ function Home() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col items-center p-6 rounded-2xl bg-light-200 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-300 dark:hover:bg-dark-200 hover:shadow-md hover:scale-105 transition-all duration-300"
+                  className="group relative flex flex-col items-center p-6 rounded-2xl bg-light-200 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-300 dark:hover:bg-dark-200 hover:shadow-md hover:scale-105 transition-all duration-300 overflow-hidden"
                 >
+                  <span className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent group-hover:border-primary-300 dark:group-hover:border-primary-500 group-hover:shadow-[0_0_0_6px_rgba(59,130,246,0.15)] dark:group-hover:shadow-[0_0_0_6px_rgba(59,130,246,0.25)] transition-all duration-300" />
                   <span className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                     {icon}
                   </span>
