@@ -33,55 +33,47 @@ function Home() {
       </div>
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        {/* Header section with centered image */}
-        <header className="text-center mb-16">
-          {/* Profile image - smaller and centered */}
-          <div className="flex justify-center mb-8">
-            <figure className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-300 dark:via-dark-400 dark:to-dark-500 rounded-full blur opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
-              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
-                <img
-                  src="/Images/LOGO.webp"
-                  alt="Soumyodeep Dey"
-                  className="w-full h-full object-cover rounded-full shadow-xl border-2 border-light-300 dark:border-dark-300 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-light-50 text-xs font-semibold py-1.5 px-4 rounded-full shadow-lg">
-                    #OpenToWork
-                  </span>
-                </div>
+        {/* Header section with text left and image right */}
+        <header className="mb-10">
+          <div className="grid lg:grid-cols-2 gap-4 items-center">
+            <div className="space-y-3 lg:text-left text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 animate-fadeInLeft">
+                Hi, I&apos;m <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
+              </h1>
+              <p className="text-lg text-dark-700 dark:text-light-700">
+                Kolkata, West Bengal, India
+              </p>
+              <div className="inline-flex flex-col sm:flex-row items-center gap-6 text-sm bg-light-100 dark:bg-dark-100 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-light-300 dark:border-dark-300">
+                <a
+                  href="mailto:soumyodeepdey2003@gmail.com"
+                  className="flex items-center gap-2 text-dark-800 dark:text-light-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                >
+                  <MdEmail className="w-5 h-5" />
+                  <span>Email</span>
+                </a>
+                <span className="hidden sm:block text-dark-400 dark:text-light-400">|</span>
+                <a
+                  href="tel:+919836545284"
+                  className="flex items-center gap-2 text-dark-800 dark:text-light-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                >
+                  <MdPhone className="w-5 h-5" />
+                  <span>+91 9836545284</span>
+                </a>
               </div>
-            </figure>
-          </div>
+            </div>
 
-          {/* Main heading */}
-          <div className="space-y-4 mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 animate-fadeInLeft">
-              Hi, I&apos;m <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
-            </h1>
-
-            {/* Location */}
-            <p className="text-lg text-dark-700 dark:text-light-700">
-              New Barrackpore, Kolkata, West Bengal, India
-            </p>
-
-            {/* Contact info */}
-            <div className="inline-flex flex-col sm:flex-row items-center gap-6 text-sm bg-light-100 dark:bg-dark-100 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-light-300 dark:border-dark-300">
-              <a
-                href="mailto:soumyodeepdey2003@gmail.com"
-                className="flex items-center gap-2 text-dark-800 dark:text-light-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
-              >
-                <MdEmail className="w-5 h-5" />
-                <span>Email</span>
-              </a>
-              <span className="hidden sm:block text-dark-400 dark:text-light-400">|</span>
-              <a
-                href="tel:+919836545284"
-                className="flex items-center gap-2 text-dark-800 dark:text-light-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
-              >
-                <MdPhone className="w-5 h-5" />
-                <span>+91 9836545284</span>
-              </a>
+            {/* Profile image on the right */}
+            <div className="flex justify-center lg:justify-end">
+              <figure className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-300 dark:via-dark-400 dark:to-dark-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
+                <div className="relative w-36 h-48 md:w-44 md:h-56 lg:w-56 lg:h-72">
+                  <img
+                    src="/Images/LOGO.webp"
+                    alt="Soumyodeep Dey"
+                    className="w-full h-full object-cover rounded-2xl shadow-xl border-2 border-light-300 dark:border-dark-300 group-hover:scale-105 transition-all duration-500"
+                  />
+                </div>
+              </figure>
             </div>
           </div>
         </header>
@@ -155,110 +147,162 @@ function Home() {
           {/* Content panels */}
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-12 shadow-sm border border-light-300 dark:border-dark-300 min-h-[500px]">
             {activeSection === 'skills' && (
-              <div className="space-y-6 text-dark-600 dark:text-light-600">
-                {[
-                  { category: 'Generative AI & LLMs', items: 'Prompt Engineering | RAG | HyDE | LangChain | LangSmith | Qdrant DB | AI Agents | OpenAI/Anthropic APIs' },
-                  { category: 'Frontend', items: 'React.js | Next.js | Vite | Tailwind CSS | JavaScript | TypeScript | HTML | CSS' },
-                  { category: 'Backend', items: 'Node.js | Express.js | REST APIs | MongoDB | SQL' },
-                  { category: 'Tools & Methods', items: 'Git | GitHub | CI/CD | Agile | Testing | Debugging' },
-                  { category: 'Other', items: 'WordPress | SEO | Data Analysis | Excel | PowerPoint' },
-                ].map(({ category, items }) => (
-                  <div
-                    key={category}
-                    className="flex flex-col lg:flex-row lg:items-start gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200"
-                  >
-                    <strong className="text-dark-450 dark:text-light-450 font-bold min-w-fit lg:w-56 text-base">
-                      {category}:
-                    </strong>
-                    <span className="flex-1 text-base leading-relaxed">{items}</span>
-                  </div>
-                ))}
+              <div className="space-y-6">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                    Technical Skills
+                  </h2>
+                  <p className="text-lg text-dark-700 dark:text-light-300">
+                    Technologies I work with to build modern applications
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    {
+                      title: 'Web & UI',
+                      gradient: 'from-blue-500 to-cyan-500',
+                      items: ['React/Next.js', 'Tailwind CSS', 'TypeScript', 'Animations & UX polish']
+                    },
+                    {
+                      title: 'Backend',
+                      gradient: 'from-green-500 to-emerald-500',
+                      items: ['Node.js + Express', 'REST APIs', 'MongoDB & SQL', 'Auth & performance basics']
+                    },
+                    {
+                      title: 'GenAI',
+                      gradient: 'from-purple-500 to-pink-500',
+                      items: ['LangChain + RAG', 'Vector DBs', 'Agents & tooling', 'OpenAI / Anthropic']
+                    },
+                    {
+                      title: 'Delivery',
+                      gradient: 'from-orange-500 to-red-500',
+                      items: ['Git/GitHub + CI/CD', 'Testing & debugging', 'Agile teamwork']
+                    }
+                  ].map(({ title, gradient, items }) => (
+                    <div
+                      key={title}
+                      className="group relative overflow-hidden rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 shadow-sm hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-light-200/80 dark:hover:bg-dark-200/80"
+                    >
+                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${gradient} rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                      <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-6 transition-colors duration-200 group-hover:text-primary-700 dark:group-hover:text-primary-300">{title}</h3>
+                      <ul className="space-y-3">
+                        {items.map((item) => (
+                          <li key={item} className="flex items-center gap-3 text-lg text-dark-700 dark:text-light-300 transition-colors duration-200 group-hover:text-dark-900 dark:group-hover:text-light-50">
+                            <span className={`h-2 w-2 rounded-full bg-gradient-to-r ${gradient} flex-shrink-0`} />
+                            <span className="font-medium">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
-
             )}
 
             {activeSection === 'experience' && (
-              <div className="space-y-8 text-dark-750 dark:text-light-750">
-                {[
-                  {
-                    title: 'Software Development Intern',
-                    company: 'Cenvexa',
-                    period: 'Aug 2025 – Present',
-                    location: 'Remote & Kolkata',
-                    achievements: [
-                      'Building scalable web and mobile applications, contributing to 30% of the frontend codebase using modern frameworks like React and React Native.',
-                      'Implemented core features that improved user flow and reduced onboarding time by 20%.',
-                      'Collaborated with a team of 6 developers to ship weekly product updates and handle bug fixes, resulting in a 40% faster release cycle.'
-                    ]
-                  },
-                  {
-                    title: 'Web Content Writer Intern',
-                    company: 'NaukriSafar',
-                    period: 'Jan 2025 – Mar 2025',
-                    location: 'Remote',
-                    achievements: [
-                      'Delivered 100+ optimized job-related blogs (SEO 70+).',
-                      'Improved organic reach by 40% via best-practice SEO.'
-                    ]
-                  },
-                  {
-                    title: 'Research Intern',
-                    company: 'DrMudhiwalla & The We Foundation',
-                    period: 'Nov 2023 – Aug 2024',
-                    location: 'Remote & Kolkata',
-                    achievements: [
-                      'Analyzed 35+ sector-diverse market research reports.',
-                      'Increased client engagement 25% through visual reports.'
-                    ]
-                  },
-                  {
-                    title: 'Team Lead',
-                    company: 'Smart India Hackathon 2024',
-                    period: 'Sep – Nov 2024',
-                    location: '',
-                    achievements: [
-                      'Led 6-member Agile team through full dev lifecycle.',
-                      'Built "E-Scholar" PMSSS scholarship system (React + Tailwind).'
-                    ]
-                  }
-                ].map((job, index) => (
-                  <div key={index} className="p-8 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 hover:shadow-md transition-all duration-300">
-                    <div className="mb-6">
-                      <h3 className="font-bold text-dark-450 dark:text-light-450 text-xl mb-2">
-                        {job.title} · {job.company}
-                      </h3>
-                      <p className="text-base text-dark-600 dark:text-light-600 font-medium">
-                        {job.period}{job.location && ` · ${job.location}`}
-                      </p>
+              <div className="space-y-6">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                    Professional Experience
+                  </h2>
+                  <p className="text-lg text-dark-700 dark:text-light-300">
+                    Roles and projects that shaped my development journey
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: 'Software Development Intern',
+                      company: 'Cenvexa',
+                      period: 'Aug 2025 – Oct 2025',
+                      location: 'Remote & Kolkata',
+                      achievements: [
+                        'Built React/React Native features that shipped weekly.',
+                        'Improved onboarding flow; time-to-complete down ~20%.'
+                      ]
+                    },
+                    {
+                      title: 'Web Content Writer Intern',
+                      company: 'NaukriSafar',
+                      period: 'Jan 2025 – Mar 2025',
+                      location: 'Remote',
+                      achievements: [
+                        'Shipped 100+ SEO-first job blogs (avg score 70+).',
+                        'Lifted organic reach ~40% using on-page best practices.'
+                      ]
+                    },
+                    {
+                      title: 'Research Intern',
+                      company: 'DrMudhiwalla & The We Foundation',
+                      period: 'Nov 2023 – Aug 2024',
+                      location: 'Remote & Kolkata',
+                      achievements: [
+                        'Analyzed 35+ market reports; distilled insights for clients.',
+                        'Raised engagement ~25% with concise visual summaries.'
+                      ]
+                    },
+                    {
+                      title: 'Team Lead',
+                      company: 'Smart India Hackathon 2024',
+                      period: 'Sep – Nov 2024',
+                      location: '',
+                      achievements: [
+                        'Led 6-person Agile team end-to-end.',
+                        'Built "E-Scholar" PMSSS scholarship system (React + Tailwind).'
+                      ]
+                    }
+                  ].map((job, index) => (
+                    <div key={index} className="group relative rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="mb-6">
+                        <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                          {job.title}
+                        </h3>
+                        <p className="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-1">
+                          {job.company}
+                        </p>
+                        <p className="text-base text-dark-600 dark:text-light-600 font-medium">
+                          {job.period}{job.location && ` · ${job.location}`}
+                        </p>
+                      </div>
+                      <ul className="space-y-3">
+                        {job.achievements.map((achievement, i) => (
+                          <li key={i} className="flex items-start gap-3 text-lg text-dark-700 dark:text-light-300">
+                            <span className="h-2 w-2 rounded-full bg-primary-600 mt-2 flex-shrink-0" />
+                            <span className="font-medium leading-relaxed">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="space-y-4">
-                      {job.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-4">
-                          <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0" />
-                          <span className="leading-relaxed text-base">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
 
             {activeSection === 'education' && (
-              <div className="space-y-6 text-dark-600 dark:text-light-600">
-                {[
-                  { degree: 'B.Tech, Computer Science & Engineering', institution: 'Surtech · MAKAUT', year: '(2022-2026)' },
-                  { degree: 'Higher Secondary Exam', institution: 'Kodalia Agapur H.S.', year: '2022' },
-                  { degree: 'Secondary Exam', institution: 'Kodalia Agapur H.S.', year: '2020' },
-                  { degree: 'Certifications', institution: 'Delta Full-Stack (Apna College) · Google UX Design · TCS ION Soft Skills', year: '' }
-                ].map((edu, index) => (
-                  <div key={index} className="flex flex-col lg:flex-row lg:items-center gap-4 p-6 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-200 dark:hover:bg-dark-200 transition-all duration-200">
-                    <strong className="text-dark-450 dark:text-light-450 font-bold min-w-fit lg:w-56 text-base">
-                      {edu.degree}:
-                    </strong>
-                    <span className="flex-1 text-base leading-relaxed">{edu.institution} {edu.year}</span>
-                  </div>
-                ))}
+              <div className="space-y-6">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                    Education
+                  </h2>
+                  <p className="text-lg text-dark-700 dark:text-light-300">
+                    Academic background and qualifications
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    { degree: 'B.Tech · CSE (2022-2026)', institution: 'Surtech · MAKAUT' },
+                    { degree: 'Higher Secondary', institution: 'Kodalia Agapur H.S. · 2022' },
+                    { degree: 'Secondary', institution: 'Kodalia Agapur H.S. · 2020' },
+                  ].map((edu, index) => (
+                    <div
+                      key={index}
+                      className="group relative rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                      <p className="text-xl font-bold text-dark-900 dark:text-light-50 mb-2">{edu.degree}</p>
+                      <p className="text-lg text-dark-700 dark:text-light-300 leading-relaxed">{edu.institution}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
