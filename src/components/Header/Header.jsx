@@ -30,9 +30,15 @@ function Header() {
           <div className="flex-shrink-0">
             <NavLink
               to="/"
-              className="text-2xl font-bold text-dark-900 dark:text-light-50 hover:text-dark-700 dark:hover:text-light-300 transition-colors"
+              className="flex items-center gap-3 group"
             >
-              Portfolio
+              <div className="h-10 w-10 rounded-2xl bg-primary-600 text-light-50 font-semibold flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
+                SD
+              </div>
+              <div className="leading-tight">
+                <p className="text-sm text-dark-600 dark:text-light-300 group-hover:text-dark-900 dark:group-hover:text-light-50 transition-colors">Soumyodeep Dey</p>
+                <p className="text-base font-semibold text-dark-900 dark:text-light-50 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Software Developer</p>
+              </div>
             </NavLink>
           </div>
 
