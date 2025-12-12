@@ -36,11 +36,14 @@ function Home() {
         {/* Header section with text left and image right */}
         <header className="mb-10">
           <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
-            <div className="space-y-3 lg:text-left text-center lg:pl-20">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 animate-fadeInLeft">
-                Hi, I&apos;m <span className="text-dark-650 dark:text-light-750">Soumyodeep Dey</span>
+            <div className="space-y-3 lg:text-left text-center lg:pl-24 lg:translate-x-2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 drop-shadow-sm animate-fadeInLeft">
+                Hi, I&apos;m <span className="text-dark-650 dark:text-light-750 whitespace-nowrap">Soumyodeep Dey</span>
               </h1>
-              <p className="text-lg text-dark-700 dark:text-light-700">
+              <p className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400 drop-shadow-sm">
+                Software Developer
+              </p>
+              <p className="text-lg md:text-xl text-dark-700 dark:text-light-700 drop-shadow-sm">
                 Kolkata, West Bengal, India
               </p>
               <div className="inline-flex flex-col sm:flex-row items-center gap-6 text-sm bg-light-100 dark:bg-dark-100 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-light-300 dark:border-dark-300">
@@ -63,7 +66,7 @@ function Home() {
             </div>
 
             {/* Profile image on the right */}
-            <div className="flex justify-center lg:justify-center">
+            <div className="flex justify-center lg:justify-center lg:translate-x-12">
               <figure className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-300 dark:via-dark-400 dark:to-dark-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
                 <div className="relative w-36 h-48 md:w-44 md:h-56 lg:w-56 lg:h-72">
