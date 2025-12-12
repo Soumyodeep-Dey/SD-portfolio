@@ -215,9 +215,19 @@ function Home() {
                 <div className="space-y-6">
                   {[
                     {
+                      title: 'Team Lead',
+                      company: 'Final Year Project & Smart India Hackathon 2024',
+                      period: 'Sep 2024 - Present',
+                      location: '',
+                      achievements: [
+                        'Currently leading final year project team.',
+                        'Previously led 6-person Agile team for SIH 2024.'
+                      ]
+                    },
+                    {
                       title: 'Software Development Intern',
                       company: 'Cenvexa',
-                      period: 'Aug 2025 – Oct 2025',
+                      period: 'Aug 2025 - Oct 2025',
                       location: 'Remote & Kolkata',
                       achievements: [
                         'Built React/React Native features that shipped weekly.',
@@ -227,7 +237,7 @@ function Home() {
                     {
                       title: 'Web Content Writer Intern',
                       company: 'NaukriSafar',
-                      period: 'Jan 2025 – Mar 2025',
+                      period: 'Jan 2025 - Mar 2025',
                       location: 'Remote',
                       achievements: [
                         'Shipped 100+ SEO-first job blogs (avg score 70+).',
@@ -237,21 +247,11 @@ function Home() {
                     {
                       title: 'Research Intern',
                       company: 'DrMudhiwalla & The We Foundation',
-                      period: 'Nov 2023 – Aug 2024',
+                      period: 'Nov 2023 - Aug 2024',
                       location: 'Remote & Kolkata',
                       achievements: [
                         'Analyzed 35+ market reports; distilled insights for clients.',
                         'Raised engagement ~25% with concise visual summaries.'
-                      ]
-                    },
-                    {
-                      title: 'Team Lead',
-                      company: 'Smart India Hackathon 2024',
-                      period: 'Sep – Nov 2024',
-                      location: '',
-                      achievements: [
-                        'Led 6-person Agile team end-to-end.',
-                        'Built "E-Scholar" PMSSS scholarship system (React + Tailwind).'
                       ]
                     }
                   ].map((job, index) => (
