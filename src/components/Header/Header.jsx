@@ -8,11 +8,11 @@ function Header() {
   const navLinkClasses = ({ isActive }) =>
     `relative block py-3 px-4 text-lg font-medium transition-all duration-300 transform
      ${isActive
-      ? 'text-dark-900 dark:text-light-50 scale-105'
-      : 'text-dark-700 dark:text-light-300 hover:text-dark-900 dark:hover:text-light-50 hover:scale-105'
+      ? 'text-primary-700 dark:text-primary-300 scale-105'
+      : 'text-dark-700 dark:text-light-300 hover:text-primary-700 dark:hover:text-primary-300 hover:scale-105'
     }
      after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-3/4 after:h-0.5
-     after:bg-dark-900 dark:after:bg-light-50 after:rounded-full
+     after:bg-primary-600 dark:after:bg-primary-300 after:rounded-full
      after:transform after:scale-x-0 after:origin-center after:-translate-x-1/2
      hover:after:scale-x-100 after:transition-transform after:duration-300
      ${isActive ? 'after:scale-x-100' : ''}
