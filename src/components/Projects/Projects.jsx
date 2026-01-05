@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const projectList = [
   {
-    title: "Watchly (Developing)",
+    title: "Watchly 2.0 (Developing)",
     description: "Watchly is an e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system (developing).",
     link: "https://github.com/Soumyodeep-Dey/Watchly",
     live: "https://watchly-frontend.onrender.com/",
@@ -63,6 +63,15 @@ const projectList = [
     link: "https://github.com/Soumyodeep-Dey/Ai_Job_Recommendation_System",
     live: "https://ai-job-recommendation-system-eight.vercel.app/",
     video: "https://youtu.be/quQOQjZ2sVs",
+    tags: ["React", "AI API", "Machine Learning", "Job Search"],
+    status: "published"
+  },
+  {
+    title: "Job Board App",
+    description: "Modern Job Board App using Next.js, Prisma, PostgreSQL, and TailwindCSS. With real-world database relations, complex queries, and a complete CRUD workflow, and implement dynamic search filters and user applications.",
+    link: "https://github.com/Soumyodeep-Dey/job-posting-website",
+    live: "https://youtu.be/Mf4ZYI0_wn0?si=ttOPI1WQv_RM3BuD",
+    video: "https://youtu.be/Mf4ZYI0_wn0?si=ttOPI1WQv_RM3BuD",
     tags: ["React", "AI API", "Machine Learning", "Job Search"],
     status: "published"
   },
