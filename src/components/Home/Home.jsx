@@ -226,6 +226,18 @@ function Home() {
                       ]
                     },
                     {
+                      title: 'Customer Service Representative',
+                      company: 'TTEC Ahmedabad',
+                      period: 'Jan 2025 - Present',
+                      location: 'Ahmedabad',
+                      achievements: [
+                        'Developed strong corporate communication skills, including drafting clear, professional, and effective emails.',
+                        'Gained hands-on experience interacting with customers in a corporate environment.',
+                        'Worked consistently outside my comfort zone, improving adaptability, confidence, and problem-solving skills.',
+                        'Learned to handle real-time customer queries with professionalism and empathy.'
+                      ]
+                    }, 
+                    {
                       title: 'Software Development Intern',
                       company: 'Cenvexa',
                       period: 'Aug 2025 - Oct 2025',
@@ -235,6 +247,7 @@ function Home() {
                         'Improved onboarding flow; time-to-complete down ~20%.'
                       ]
                     },
+                    
                     {
                       title: 'Web Content Writer Intern',
                       company: 'NaukriSafar',
