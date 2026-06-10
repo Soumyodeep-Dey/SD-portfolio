@@ -226,9 +226,9 @@ function Home() {
                       ]
                     },
                     {
-                      title: 'Customer Service Representative',
+                      title: 'Customer Service Representative I',
                       company: 'TTEC Ahmedabad',
-                      period: 'Jan 2025 - Present',
+                      period: 'Jan 2025 - June 2025',
                       location: 'Ahmedabad',
                       achievements: [
                         'Developed strong corporate communication skills, including drafting clear, professional, and effective emails.',
