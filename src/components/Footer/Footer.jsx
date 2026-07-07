@@ -40,7 +40,7 @@ function Footer() {
               Soumyodeep Dey
             </h3>
             <p className="text-sm text-primary-700 dark:text-primary-300 font-semibold">
-              Software Developer · Final Year CSE
+              Software Developer · CSE 2022 - 2026
             </p>
           </div>
 
