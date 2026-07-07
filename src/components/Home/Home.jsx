@@ -236,7 +236,7 @@ function Home() {
                         'Worked consistently outside my comfort zone, improving adaptability, confidence, and problem-solving skills.',
                         'Learned to handle real-time customer queries with professionalism and empathy.'
                       ]
-                    }, 
+                    },
                     {
                       title: 'Software Development Intern',
                       company: 'Cenvexa',
@@ -247,7 +247,7 @@ function Home() {
                         'Improved onboarding flow; time-to-complete down ~20%.'
                       ]
                     },
-                    
+
                     {
                       title: 'Web Content Writer Intern',
                       company: 'NaukriSafar',
@@ -305,18 +305,30 @@ function Home() {
                     Academic background and qualifications
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-6 max-w-3xl mx-auto">
                   {[
-                    { degree: 'B.Tech · CSE (2022-2026)', institution: 'Surtech · MAKAUT' },
-                    { degree: 'Higher Secondary', institution: 'Kodalia Agapur H.S. · 2022' },
-                    { degree: 'Secondary', institution: 'Kodalia Agapur H.S. · 2020' },
+                    { label: 'Graduation', degree: 'B.Tech · CSE', institution: 'Surtech · MAKAUT', period: '2022 - 2026' },
+                    { label: '12th Board', degree: 'Higher Secondary', institution: 'Kodalia Agapur H.S.', period: '2022' },
+                    { label: '10th Board', degree: 'Secondary', institution: 'Kodalia Agapur H.S.', period: '2020' },
                   ].map((edu, index) => (
                     <div
                       key={index}
                       className="group relative rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                     >
-                      <p className="text-xl font-bold text-dark-900 dark:text-light-50 mb-2">{edu.degree}</p>
-                      <p className="text-lg text-dark-700 dark:text-light-300 leading-relaxed">{edu.institution}</p>
+                      <div className="mb-6">
+                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400 mb-3">
+                          {edu.label}
+                        </p>
+                        <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-2">
+                          {edu.degree}
+                        </h3>
+                        <p className="text-lg text-dark-700 dark:text-light-300 leading-relaxed mb-2">
+                          {edu.institution}
+                        </p>
+                        <p className="text-base text-dark-600 dark:text-light-600 font-medium">
+                          {edu.period}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
