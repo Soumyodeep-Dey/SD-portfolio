@@ -42,7 +42,10 @@ function Home() {
                 Hi, I&apos;m <span className="text-dark-650 dark:text-light-750 whitespace-nowrap">Soumyodeep Dey</span>
               </h1>
               <p className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400 drop-shadow-sm">
-                Software Developer
+                Software Engineer
+              </p>
+              <p className="text-base md:text-lg font-semibold text-dark-650 dark:text-light-750">
+                AI · Security · Forward Deployment
               </p>
               <p className="text-lg md:text-xl text-dark-700 dark:text-light-700 drop-shadow-sm">
                 Kolkata, West Bengal, India
@@ -88,17 +91,17 @@ function Home() {
           <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300 space-y-6">
             <div className="space-y-3">
               <p className="text-lg md:text-xl font-semibold text-dark-200 dark:text-light-50">
-                Software Developer crafting clean, AI-forward web apps.
+                Software engineer building secure, deployable AI systems.
               </p>
               <p className="text-base md:text-lg leading-relaxed text-dark-450 dark:text-light-800">
-                I build fast React/Node experiences, plug in LLMs when they solve real problems, and keep interfaces simple so people get value quickly.
+                I ship production software where AI meets real constraints — threat-aware design, reliable delivery, and systems that work in the field, not just in demos. I lean into LLMs, RAG, and agents when they solve real problems, and I care about how code gets deployed and defended.
               </p>
             </div>
             <div className="grid gap-3 md:grid-cols-3 text-sm text-dark-400 dark:text-light-750">
               {[
-                'Full-stack: React, Next.js, Node, Express, MongoDB, SQL',
-                'GenAI: LangChain, RAG, vector DBs, agents, OpenAI/Anthropic',
-                'Tools: Git, GitHub, CI/CD, Agile, Testing, Debugging',
+                'AI systems: LLMs, RAG, agents, vector DBs, LangChain, OpenAI/Anthropic',
+                'Security: auth, secure APIs, privacy-first design, threat awareness',
+                'Forward deployment: CI/CD, Docker, cloud deploy, production-ready delivery',
               ].map((item) => (
                 <div
                   key={item}
@@ -157,30 +160,30 @@ function Home() {
                     Technical Skills
                   </h2>
                   <p className="text-lg text-dark-700 dark:text-light-300">
-                    Technologies I work with to build modern applications
+                    Technologies and practices I use to build secure, deployable systems
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   {[
                     {
-                      title: 'Web & UI',
-                      gradient: 'from-blue-500 to-cyan-500',
-                      items: ['React/Next.js', 'Tailwind CSS', 'TypeScript', 'Animations & UX polish']
-                    },
-                    {
-                      title: 'Backend',
-                      gradient: 'from-green-500 to-emerald-500',
-                      items: ['Node.js + Express', 'REST APIs', 'MongoDB & SQL', 'Auth & performance basics']
-                    },
-                    {
-                      title: 'GenAI',
+                      title: 'AI & ML Systems',
                       gradient: 'from-purple-500 to-pink-500',
-                      items: ['LangChain + RAG', 'Vector DBs', 'Agents & tooling', 'OpenAI / Anthropic']
+                      items: ['LangChain + RAG', 'Vector DBs & embeddings', 'Agents & tool use', 'OpenAI / Anthropic']
                     },
                     {
-                      title: 'Delivery',
+                      title: 'Security & Privacy',
+                      gradient: 'from-blue-500 to-cyan-500',
+                      items: ['Auth & access control', 'Secure API design', 'Privacy-first architecture', 'Threat-aware development']
+                    },
+                    {
+                      title: 'Forward Deployment',
                       gradient: 'from-orange-500 to-red-500',
-                      items: ['Git/GitHub + CI/CD', 'Testing & debugging', 'Agile teamwork']
+                      items: ['Docker & cloud deploy', 'CI/CD pipelines', 'Production monitoring', 'Customer-facing delivery']
+                    },
+                    {
+                      title: 'Software Engineering',
+                      gradient: 'from-green-500 to-emerald-500',
+                      items: ['Python & TypeScript/Node', 'System design basics', 'Testing & debugging', 'Git, Agile, code review']
                     }
                   ].map(({ title, gradient, items }) => (
                     <div
@@ -210,7 +213,7 @@ function Home() {
                     Professional Experience
                   </h2>
                   <p className="text-lg text-dark-700 dark:text-light-300">
-                    Roles and projects that shaped my development journey
+                    Roles and projects that shaped my engineering journey
                   </p>
                 </div>
                 <div className="space-y-6">
@@ -243,8 +246,8 @@ function Home() {
                       period: 'Aug 2025 - Oct 2025',
                       location: 'Remote & Kolkata',
                       achievements: [
-                        'Built React/React Native features that shipped weekly.',
-                        'Improved onboarding flow; time-to-complete down ~20%.'
+                        'Shipped production features weekly across web and mobile stacks.',
+                        'Improved onboarding flow; time-to-complete down ~20% through iterative delivery.'
                       ]
                     },
 

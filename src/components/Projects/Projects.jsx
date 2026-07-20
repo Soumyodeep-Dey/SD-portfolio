@@ -202,7 +202,7 @@ function Projects() {
           <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
           <br />
           <p className="text-lg text-dark-700 dark:text-light-700 max-w-2xl mx-auto leading-relaxed">
-            A collection of projects showcasing my journey in web development, from simple utilities to complex full-stack applications.
+            A collection of projects across AI systems, security-minded software, and production deployments — from RAG pipelines to privacy-first tools.
           </p>
         </header>
 
@@ -354,7 +354,7 @@ function Projects() {
               Interested in collaborating?
             </h2>
             <p className="text-dark-700 dark:text-light-700 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              If you&apos;re looking for a passionate developer to collaborate with, I&apos;d love to hear from you.
+              If you&apos;re building AI, security, or deployment-heavy systems and want to collaborate, I&apos;d love to hear from you.
             </p>
             <a
               href="mailto:soumyodeepdey2003@gmail.com"
