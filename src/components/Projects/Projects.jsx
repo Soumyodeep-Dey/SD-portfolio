@@ -2,6 +2,16 @@ import { useState } from 'react';
 
 const projectList = [
   {
+    title: "Ghar Nishchit",
+    description: "A web-based rental platform for urban India, connecting small landlords with tenants in a simple, transparent, and direct way. Full-stack platform with role-based auth for tenants, landlords, and admin — featuring property management, maintenance tracking, contracts, payments, messaging, notifications, and an AI chatbot. Built with Razorpay, JWT auth, REST APIs, MongoDB, PostgreSQL, and background workers. Team project with Tamaghno Ghosh, Avik Jana, and Chandrasekher Chakraborty.",
+    link: "https://github.com/Soumyodeep-Dey/Ghar_Nishchit",
+    live: "https://ghar-nishchit-frontend.onrender.com/",
+    video: "https://youtu.be/AjrwLDHsxWU",
+    tags: ["Full-Stack", "AI Chatbot", "Razorpay", "MongoDB", "Team Project"],
+    status: "published",
+    badge: "Team Project"
+  },
+  {
     title: "Watchly 2.0 (Developing)",
     description: "Watchly is an e-commerce platform specializing in wristwatches. It provides a seamless shopping experience for users with advanced features such as search, sorting, filtering, infinite scroll, and a sophisticated recommendation system (developing).",
     link: "https://github.com/Soumyodeep-Dey/Watchly",
@@ -23,7 +33,7 @@ const projectList = [
   {
     title: "Persona AI",
     description: "A web application built with React + Vite + Tailwind CSS and OpenAI API that mimics the conversational tone of two well-known tech creators — Hitesh Choudhary and Piyush Garg — based on reference tones from their YouTube and Twitter content. Features seamless persona switching and real-time chat.",
-    link: "https://github.com/yourusername/persona-ai",
+    link: "https://github.com/Soumyodeep-Dey/persona_AI",
     live: "https://persona-ai-ebon.vercel.app/",
     video: "https://youtu.be/TfOZjq-XN-s", // Replace with your YouTube link
     tags: ["React", "Vite", "OpenAI API", "AI Personas", "Tailwind CSS"],
@@ -72,7 +82,7 @@ const projectList = [
     link: "https://github.com/Soumyodeep-Dey/job-posting-website",
     live: "https://youtu.be/Mf4ZYI0_wn0?si=ttOPI1WQv_RM3BuD",
     video: "https://youtu.be/Mf4ZYI0_wn0?si=ttOPI1WQv_RM3BuD",
-    tags: ["React", "AI API", "Machine Learning", "Job Search"],
+    tags: ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS", "Job Search"],
     status: "published"
   },
   {
@@ -110,15 +120,6 @@ const projectList = [
     video: "https://youtu.be/8cHfIrP9ciI",
     tags: ["HTML", "CSS", "JavaScript", "Local Storage"],
     status: "published"
-  },
-  {
-    title: "Coming Soon...",
-    description: "This project is under development. Stay tuned for more updates!",
-    link: "https://github.com/Soumyodeep-Dey",
-    live: "https://github.com/Soumyodeep-Dey",
-    video: "/Videos/XYZ.mp4",
-    tags: ["Coming Soon"],
-    status: "planning"
   },
 ];
 
