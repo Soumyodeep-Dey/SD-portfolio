@@ -347,7 +347,7 @@ function Home() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
               {[
                 { href: 'https://www.linkedin.com/in/soumyodeep-dey/', icon: <FaLinkedin className="text-blue-600 dark:text-blue-400" />, label: 'LinkedIn' },
-                { href: 'https://twitter.com/Soumyodeep2003', icon: <FaTwitter className="text-sky-500 dark:text-sky-400" />, label: 'Twitter' },
+                { href: 'https://x.com/Soumyodeep2003', icon: <FaTwitter className="text-sky-500 dark:text-sky-400" />, label: 'Twitter' },
                 { href: 'https://github.com/Soumyodeep-Dey', icon: <FaGithub className="text-gray-700 dark:text-gray-300" />, label: 'GitHub' },
                 { href: 'https://leetcode.com/u/SOUMYODEEP_DEY/', icon: <SiLeetcode className="text-orange-500 dark:text-orange-400" />, label: 'LeetCode' },
                 { href: 'https://youtube.com/@soumyodeepdey8070?si=5bYtHFsV1ObIPzh5', icon: <FaYoutube className="text-red-600 dark:text-red-500" />, label: 'YouTube' }
