@@ -1,6 +1,8 @@
-import { FaArrowRight, FaGithub, FaLinkedin, FaDownload, FaShieldAlt } from 'react-icons/fa';
+import { FaArrowRight, FaGithub, FaLinkedin, FaDownload, FaShieldAlt, FaCalendarAlt } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import { SiLeetcode } from 'react-icons/si';
 
 const resumeLink = import.meta.env.VITE_RESUME_LINK;
 const github = 'https://github.com/Soumyodeep-Dey';
@@ -71,6 +73,8 @@ function Home() {
           <div className="social-links" aria-label="Contact links">
             <a href={github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
             <a href={linkedin} target="_blank" rel="noreferrer"><FaLinkedin /> LinkedIn</a>
+            <a href="https://x.com/Soumyodeep2003" target="_blank" rel="noreferrer"><FaXTwitter /> X</a>
+            <a href="https://leetcode.com/u/SOUMYODEEP_DEY/" target="_blank" rel="noreferrer"><SiLeetcode /> LeetCode</a>
             <a href="mailto:soumyodeepdey2003@gmail.com"><MdEmail /> Email</a>
           </div>
         </div>
@@ -109,7 +113,7 @@ function Home() {
 
       <section className="page-section" id="experience"><SectionTitle eyebrow="Experience" title="Professional context that shaped how I work." /><div className="experience-list">{experiences.map((experience) => <article className="experience-card" key={`${experience.company}-${experience.role}`}><p className="project-type">{experience.period}</p><h3>{experience.role}</h3><h4>{experience.company}</h4><p>{experience.description}</p>{experience.note && <small>{experience.note}</small>}</article>)}</div></section>
 
-      <section className="contact-section" id="contact"><p className="eyebrow">Let’s connect</p><h2>Interested in building thoughtful software and AI systems?</h2><p>I’m open to software engineering, backend, AI engineering, and security-focused opportunities.</p><div className="hero-actions"><a href="mailto:soumyodeepdey2003@gmail.com" className="button button-primary">Send an email <FaArrowRight /></a><a href={github} target="_blank" rel="noreferrer" className="button button-secondary">Explore GitHub</a></div></section>
+      <section className="contact-section" id="contact"><p className="eyebrow">Let’s connect</p><h2>Interested in building thoughtful software and AI systems?</h2><p>I’m open to software engineering, backend, AI engineering, and security-focused opportunities. Choose an available time and Google Calendar will send a booking confirmation.</p><div className="hero-actions"><a href="https://calendar.app.google/1BqyLsDaGxehCVri7" target="_blank" rel="noreferrer" className="button button-primary"><FaCalendarAlt /> Book a call</a><a href="mailto:soumyodeepdey2003@gmail.com" className="button button-secondary">Send an email <FaArrowRight /></a><a href={github} target="_blank" rel="noreferrer" className="button button-secondary">Explore GitHub</a></div></section>
     </main>
   );
 }
