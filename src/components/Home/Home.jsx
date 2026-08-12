@@ -19,7 +19,7 @@ const featuredProjects = [
     problem: 'Making uploaded documents and web content useful in a focused AI conversation.',
     engineering: 'Built a retrieval workflow that indexes PDFs, CSVs, text, and web sources for context-aware chat using OpenAI, Qdrant, and LangChain.',
     stack: 'Next.js · OpenAI · Qdrant · LangChain',
-    github: null,
+    github: 'https://github.com/Soumyodeep-Dey/context_bot',
     demo: 'https://youtu.be/Zi-qxFximXI',
   },
   {
@@ -40,6 +40,14 @@ const featuredProjects = [
     github: 'https://github.com/Soumyodeep-Dey/BeautyMatch',
     demo: 'https://chromewebstore.google.com/detail/beautymatch/kongfkfcoganehdeiiaffpmmedmkbjho',
   },
+];
+
+const experiences = [
+  { period: 'Sep 2024 – Present', company: 'Final Year Project & Smart India Hackathon', role: 'Team Lead', description: 'Leading a final-year project team and previously led a six-person Agile team for Smart India Hackathon 2024.' },
+  { period: 'Jan 2025 – Jun 2025', company: 'TTEC · Ahmedabad', role: 'Technical Support Specialist I', description: 'Corporate email and chat operations experience that strengthened clear communication, structured problem solving, customer interaction, and collaboration within established processes.', note: 'This was not a software engineering role; it is part of the professional foundation I bring to engineering work.' },
+  { period: 'Aug 2025 – Oct 2025', company: 'Cenvexa · Remote & Kolkata', role: 'Software Development Intern', description: 'Contributed to web and mobile development work, including iterative feature delivery and onboarding-flow improvements.' },
+  { period: 'Jan 2025 – Mar 2025', company: 'NaukriSafar · Remote', role: 'Web Content Writer Intern', description: 'Created SEO-focused job content and applied on-page writing practices to support organic discoverability.' },
+  { period: 'Nov 2023 – Aug 2024', company: 'DrMudhiwalla & The We Foundation · Remote & Kolkata', role: 'Research Intern', description: 'Analysed market reports and turned findings into concise visual summaries for stakeholders.' },
 ];
 
 function SectionTitle({ eyebrow, title, children }) {
@@ -99,7 +107,7 @@ function Home() {
         <div className="detail-list"><div><b>Building with</b><p>Python, JavaScript, TypeScript, React, Next.js, Node.js, Express, MongoDB, PostgreSQL, and REST APIs.</p></div><div><b>Learning deeply</b><p>RAG, agents, MCP, vector databases, Linux, networking, application security, Docker, GitOps, and ArgoCD.</p></div><div><b>Background</b><p>B.Tech in Computer Science. Smart India Hackathon participant in 2024 and 2025.</p></div></div>
       </section>
 
-      <section className="page-section" id="experience"><SectionTitle eyebrow="Experience" title="Professional context that shaped how I work." /><article className="experience-card"><p className="project-type">TTEC · Ahmedabad · 2025</p><h3>Customer Service Representative I</h3><p>Corporate email and chat operations experience that strengthened clear communication, structured problem solving, customer interaction, and collaboration within established processes.</p><small>This was not a software engineering role; it is part of the professional foundation I bring to engineering work.</small></article></section>
+      <section className="page-section" id="experience"><SectionTitle eyebrow="Experience" title="Professional context that shaped how I work." /><div className="experience-list">{experiences.map((experience) => <article className="experience-card" key={`${experience.company}-${experience.role}`}><p className="project-type">{experience.period}</p><h3>{experience.role}</h3><h4>{experience.company}</h4><p>{experience.description}</p>{experience.note && <small>{experience.note}</small>}</article>)}</div></section>
 
       <section className="contact-section" id="contact"><p className="eyebrow">Let’s connect</p><h2>Interested in building thoughtful software and AI systems?</h2><p>I’m open to software engineering, backend, AI engineering, and security-focused opportunities.</p><div className="hero-actions"><a href="mailto:soumyodeepdey2003@gmail.com" className="button button-primary">Send an email <FaArrowRight /></a><a href={github} target="_blank" rel="noreferrer" className="button button-secondary">Explore GitHub</a></div></section>
     </main>
