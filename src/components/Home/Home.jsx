@@ -1,377 +1,107 @@
-/* Home.jsx – Clean UI with subtle improvements and repositioned image */
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import {
-  FaLinkedin,
-  FaTwitter,
-  FaGithub,
-  FaYoutube
-} from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
-import { MdEmail, MdPhone } from 'react-icons/md';
+import { FaArrowRight, FaGithub, FaLinkedin, FaDownload, FaShieldAlt } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
-const RESUME_LINK = import.meta.env.VITE_RESUME_LINK;
+const resumeLink = import.meta.env.VITE_RESUME_LINK;
+const github = 'https://github.com/Soumyodeep-Dey';
+const linkedin = 'https://www.linkedin.com/in/soumyodeep-dey/';
+
+const focusAreas = [
+  ['Software engineering', 'Full-stack applications, API design, authentication, databases, and maintainable interfaces.'],
+  ['AI engineering', 'LLM applications, retrieval-augmented generation, prompt design, agents, and vector search.'],
+  ['Security & systems', 'Linux, networking, secure software concepts, containers, and infrastructure fundamentals.'],
+];
+
+const featuredProjects = [
+  {
+    name: 'Context Bot',
+    type: 'RAG application',
+    problem: 'Making uploaded documents and web content useful in a focused AI conversation.',
+    engineering: 'Built a retrieval workflow that indexes PDFs, CSVs, text, and web sources for context-aware chat using OpenAI, Qdrant, and LangChain.',
+    stack: 'Next.js · OpenAI · Qdrant · LangChain',
+    github: null,
+    demo: 'https://youtu.be/Zi-qxFximXI',
+  },
+  {
+    name: 'Ghar Nishchit',
+    type: 'Full-stack rental platform',
+    problem: 'Giving tenants and small landlords a more direct way to manage rental workflows.',
+    engineering: 'Contributed to a team platform with role-based access, property workflows, payments, contracts, maintenance tracking, messaging, and notifications.',
+    stack: 'REST APIs · JWT · MongoDB · PostgreSQL · Razorpay',
+    github: 'https://github.com/Soumyodeep-Dey/Ghar_Nishchit',
+    demo: 'https://ghar-nishchit-frontend.onrender.com/',
+  },
+  {
+    name: 'BeautyMatch',
+    type: 'Privacy-first browser extension',
+    problem: 'Helping shoppers assess product suitability while keeping personal skincare preferences local.',
+    engineering: 'Built a Chrome extension for Nykaa, Amazon.in, and Sephora that works locally without tracking or data sharing.',
+    stack: 'React · Tailwind · CRXJS',
+    github: 'https://github.com/Soumyodeep-Dey/BeautyMatch',
+    demo: 'https://chromewebstore.google.com/detail/beautymatch/kongfkfcoganehdeiiaffpmmedmkbjho',
+  },
+];
+
+function SectionTitle({ eyebrow, title, children }) {
+  return <header className="max-w-2xl mb-10"><p className="eyebrow">{eyebrow}</p><h2 className="section-title">{title}</h2>{children && <p className="section-copy">{children}</p>}</header>;
+}
+
+SectionTitle.propTypes = { eyebrow: PropTypes.string.isRequired, title: PropTypes.string.isRequired, children: PropTypes.node };
 
 function Home() {
-  const [activeSection, setActiveSection] = useState('skills');
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Tab') {
-      document.body.classList.add('user-is-tabbing');
-    }
-  };
-
   return (
-    <main
-      id="about"
-      onKeyDown={handleKeyDown}
-      className="bg-light-50 dark:bg-dark-50 py-20 min-h-screen relative overflow-hidden"
-    >
-      {/* Subtle background elements */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-light-200 dark:bg-dark-200 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-30" />
-        <div className="absolute bottom-32 left-20 w-80 h-80 bg-light-250 dark:bg-dark-250 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-20" />
-      </div>
-
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        {/* Header section with text left and image right */}
-        <header className="mb-10">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
-            <div className="space-y-3 lg:text-left text-center lg:pl-24 lg:translate-x-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-light-950 drop-shadow-sm animate-fadeInLeft">
-                Hi, I&apos;m <span className="text-dark-650 dark:text-light-750 whitespace-nowrap">Soumyodeep Dey</span>
-              </h1>
-              <p className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400 drop-shadow-sm">
-                Software Engineer
-              </p>
-              <p className="text-base md:text-lg font-semibold text-dark-650 dark:text-light-750">
-                AI · Security · Forward Deployment
-              </p>
-              <p className="text-lg md:text-xl text-dark-700 dark:text-light-700 drop-shadow-sm">
-                Kolkata, West Bengal, India
-              </p>
-              <div className="inline-flex flex-col sm:flex-row items-center gap-6 text-sm bg-light-100 dark:bg-dark-100 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-light-300 dark:border-dark-300">
-                <a
-                  href="mailto:soumyodeepdey2003@gmail.com"
-                  className="flex items-center gap-2 text-dark-800 dark:text-light-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
-                >
-                  <MdEmail className="w-5 h-5" />
-                  <span>Email</span>
-                </a>
-                <span className="hidden sm:block text-dark-400 dark:text-light-400">|</span>
-                <a
-                  href="tel:+919836545284"
-                  className="flex items-center gap-2 text-dark-800 dark:text-light-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
-                >
-                  <MdPhone className="w-5 h-5" />
-                  <span>+91 9836545284</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Profile image on the right */}
-            <div className="flex justify-center lg:justify-center lg:translate-x-12">
-              <figure className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-light-300 via-light-400 to-light-500 dark:from-dark-300 dark:via-dark-400 dark:to-dark-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
-                <div className="relative w-36 h-48 md:w-44 md:h-56 lg:w-56 lg:h-72">
-                  <img
-                    src="/Images/LOGO.webp"
-                    alt="Soumyodeep Dey"
-                    className="w-full h-full object-cover rounded-2xl shadow-xl border-2 border-light-300 dark:border-dark-300 group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-              </figure>
-            </div>
+    <main>
+      <section className="hero-grid" id="home">
+        <div className="hero-copy">
+          <p className="eyebrow">Soumyodeep Dey · Kolkata, India</p>
+          <h1>Software Engineer building <span>AI-powered and secure systems.</span></h1>
+          <p className="hero-lede">I build full-stack software, AI applications, and backend systems while developing deeper expertise in cybersecurity, Linux, networking, and secure AI.</p>
+          <div className="hero-actions">
+            <a href="#projects" className="button button-primary">Explore selected work <FaArrowRight /></a>
+            <a href={resumeLink} target="_blank" rel="noreferrer" className="button button-secondary"><FaDownload /> View resume</a>
           </div>
-        </header>
-
-        {/* Content section */}
-        <section className="max-w-4xl mx-auto space-y-12">
-          {/* Summary */}
-          <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-10 shadow-sm border border-light-300 dark:border-dark-300 space-y-6">
-            <div className="space-y-3">
-              <p className="text-lg md:text-xl font-semibold text-dark-200 dark:text-light-50">
-                Software engineer building secure, deployable AI systems.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed text-dark-450 dark:text-light-800">
-                I ship production software where AI meets real constraints — threat-aware design, reliable delivery, and systems that work in the field, not just in demos. I lean into LLMs, RAG, and agents when they solve real problems, and I care about how code gets deployed and defended.
-              </p>
-            </div>
-            <div className="grid gap-3 md:grid-cols-3 text-sm text-dark-400 dark:text-light-750">
-              {[
-                'AI systems: LLMs, RAG, agents, vector DBs, LangChain, OpenAI/Anthropic',
-                'Security: auth, secure APIs, privacy-first design, threat awareness',
-                'Forward deployment: CI/CD, Docker, cloud deploy, production-ready delivery',
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-3 p-4 rounded-2xl bg-light-150 dark:bg-dark-150 border border-light-250 dark:border-dark-250"
-                >
-                  <span className="mt-1 h-2 w-2 rounded-full bg-primary-600" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href={RESUME_LINK}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-light-50 font-semibold rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              >
-                <span>View My Resume</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-              <NavLink
-                to="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-primary-200 text-primary-700 dark:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-950/30 transition-colors duration-200 font-semibold"
-              >
-                View Projects
-              </NavLink>
-            </div>
+          <div className="social-links" aria-label="Contact links">
+            <a href={github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
+            <a href={linkedin} target="_blank" rel="noreferrer"><FaLinkedin /> LinkedIn</a>
+            <a href="mailto:soumyodeepdey2003@gmail.com"><MdEmail /> Email</a>
           </div>
+        </div>
+        <aside className="hero-panel" aria-label="Engineering direction">
+          <FaShieldAlt className="panel-icon" aria-hidden="true" />
+          <p className="eyebrow">Engineering direction</p>
+          <h2>Software engineering → AI systems → AI security</h2>
+          <p>Building practical foundations across software, AI, systems, and security—without claiming expertise before it is earned.</p>
+          <dl><div><dt>Primary focus</dt><dd>AI Engineering & Backend Systems</dd></div><div><dt>Long-term goal</dt><dd>AI Security Engineering</dd></div></dl>
+        </aside>
+      </section>
 
-          {/* Navigation tabs */}
-          <nav className="flex flex-wrap justify-center gap-8 md:gap-12">
-            {['skills', 'experience', 'education'].map((section) => (
-              <button
-                key={section}
-                type="button"
-                onClick={() => setActiveSection(section)}
-                className={`relative font-bold capitalize text-xl md:text-2xl transition-all duration-300 hover:scale-105 ${activeSection === section
-                  ? 'text-dark-950 dark:text-light-950'
-                  : 'text-dark-600 dark:text-light-600 hover:text-dark-850 dark:hover:text-light-850'
-                  }`}
-              >
-                {section}
-                {activeSection === section && (
-                  <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary-600 rounded-full" />
-                )}
-              </button>
-            ))}
-          </nav>
+      <section className="page-section" id="projects">
+        <SectionTitle eyebrow="Selected projects" title="Proof through systems I’ve built.">Each project starts with a problem and focuses on the engineering behind the solution.</SectionTitle>
+        <div className="project-grid">
+          {featuredProjects.map((project) => <article className="project-card" key={project.name}>
+            <p className="project-type">{project.type}</p><h3>{project.name}</h3>
+            <div><strong>Problem</strong><p>{project.problem}</p></div>
+            <div><strong>Engineering</strong><p>{project.engineering}</p></div>
+            <p className="project-stack">{project.stack}</p>
+            <div className="project-links">{project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub <FaArrowRight /></a>}<a href={project.demo} target="_blank" rel="noreferrer">{project.github ? 'Live demo' : 'Watch demo'} <FaArrowRight /></a></div>
+          </article>)}
+        </div>
+        <a className="text-link" href="/projects">View all projects <FaArrowRight /></a>
+      </section>
 
-          {/* Content panels */}
-          <div className="bg-light-100 dark:bg-dark-100 rounded-3xl p-8 md:p-12 shadow-sm border border-light-300 dark:border-dark-300 min-h-[500px]">
-            {activeSection === 'skills' && (
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-500 dark:text-light-50 mb-2">
-                    Technical Skills
-                  </h2>
-                  <p className="text-lg text-dark-700 dark:text-light-300">
-                    Technologies and practices I use to build secure, deployable systems
-                  </p>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {[
-                    {
-                      title: 'AI & ML Systems',
-                      gradient: 'from-purple-500 to-pink-500',
-                      items: ['LangChain + RAG', 'Vector DBs & embeddings', 'Agents & tool use', 'OpenAI / Anthropic']
-                    },
-                    {
-                      title: 'Security & Privacy',
-                      gradient: 'from-blue-500 to-cyan-500',
-                      items: ['Auth & access control', 'Secure API design', 'Privacy-first architecture', 'Threat-aware development']
-                    },
-                    {
-                      title: 'Forward Deployment',
-                      gradient: 'from-orange-500 to-red-500',
-                      items: ['Docker & cloud deploy', 'CI/CD pipelines', 'Production monitoring', 'Customer-facing delivery']
-                    },
-                    {
-                      title: 'Software Engineering',
-                      gradient: 'from-green-500 to-emerald-500',
-                      items: ['Python & TypeScript/Node', 'System design basics', 'Testing & debugging', 'Git, Agile, code review']
-                    }
-                  ].map(({ title, gradient, items }) => (
-                    <div
-                      key={title}
-                      className="group relative overflow-hidden rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 shadow-sm hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-light-200/80 dark:hover:bg-dark-200/80"
-                    >
-                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${gradient} rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                      <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-6 transition-colors duration-200 group-hover:text-primary-700 dark:group-hover:text-primary-300">{title}</h3>
-                      <ul className="space-y-3">
-                        {items.map((item) => (
-                          <li key={item} className="flex items-center gap-3 text-lg text-dark-700 dark:text-light-300 transition-colors duration-200 group-hover:text-dark-900 dark:group-hover:text-light-50">
-                            <span className={`h-2 w-2 rounded-full bg-gradient-to-r ${gradient} flex-shrink-0`} />
-                            <span className="font-medium">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+      <section className="page-section muted-section" id="focus">
+        <SectionTitle eyebrow="Technical focus" title="A deliberate stack, not a long list.">My work is grounded in software engineering; AI and security are the directions I am actively deepening.</SectionTitle>
+        <div className="focus-grid">{focusAreas.map(([title, text], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </section>
 
-            {activeSection === 'experience' && (
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-500 dark:text-light-50 mb-2">
-                    Professional Experience
-                  </h2>
-                  <p className="text-lg text-dark-700 dark:text-light-300">
-                    Roles and projects that shaped my engineering journey
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    {
-                      title: 'Team Lead',
-                      company: 'Final Year Project & Smart India Hackathon 2024',
-                      period: 'Sep 2024 - Present',
-                      location: '',
-                      achievements: [
-                        'Currently leading final year project team.',
-                        'Previously led 6-person Agile team for SIH 2024.'
-                      ]
-                    },
-                    {
-                      title: 'Customer Service Representative I',
-                      company: 'TTEC Ahmedabad',
-                      period: 'Jan 2025 - June 2025',
-                      location: 'Ahmedabad',
-                      achievements: [
-                        'Developed strong corporate communication skills, including drafting clear, professional, and effective emails.',
-                        'Gained hands-on experience interacting with customers in a corporate environment.',
-                        'Worked consistently outside my comfort zone, improving adaptability, confidence, and problem-solving skills.',
-                        'Learned to handle real-time customer queries with professionalism and empathy.'
-                      ]
-                    },
-                    {
-                      title: 'Software Development Intern',
-                      company: 'Cenvexa',
-                      period: 'Aug 2025 - Oct 2025',
-                      location: 'Remote & Kolkata',
-                      achievements: [
-                        'Shipped production features weekly across web and mobile stacks.',
-                        'Improved onboarding flow; time-to-complete down ~20% through iterative delivery.'
-                      ]
-                    },
+      <section className="page-section two-column" id="about">
+        <div><SectionTitle eyebrow="About" title="An intentional engineering path."><span>I began with full-stack development, then moved deeper into AI application development. Alongside that work, Linux, networking, and cybersecurity became central interests. I’m now connecting these disciplines toward a long-term focus on AI security.</span></SectionTitle></div>
+        <div className="detail-list"><div><b>Building with</b><p>Python, JavaScript, TypeScript, React, Next.js, Node.js, Express, MongoDB, PostgreSQL, and REST APIs.</p></div><div><b>Learning deeply</b><p>RAG, agents, MCP, vector databases, Linux, networking, application security, Docker, GitOps, and ArgoCD.</p></div><div><b>Background</b><p>B.Tech in Computer Science. Smart India Hackathon participant in 2024 and 2025.</p></div></div>
+      </section>
 
-                    {
-                      title: 'Web Content Writer Intern',
-                      company: 'NaukriSafar',
-                      period: 'Jan 2025 - Mar 2025',
-                      location: 'Remote',
-                      achievements: [
-                        'Shipped 100+ SEO-first job blogs (avg score 70+).',
-                        'Lifted organic reach ~40% using on-page best practices.'
-                      ]
-                    },
-                    {
-                      title: 'Research Intern',
-                      company: 'DrMudhiwalla & The We Foundation',
-                      period: 'Nov 2023 - Aug 2024',
-                      location: 'Remote & Kolkata',
-                      achievements: [
-                        'Analyzed 35+ market reports; distilled insights for clients.',
-                        'Raised engagement ~25% with concise visual summaries.'
-                      ]
-                    }
-                  ].map((job, index) => (
-                    <div key={index} className="group relative rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="mb-6">
-                        <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-2">
-                          {job.title}
-                        </h3>
-                        <p className="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-1">
-                          {job.company}
-                        </p>
-                        <p className="text-base text-dark-600 dark:text-light-600 font-medium">
-                          {job.period}{job.location && ` · ${job.location}`}
-                        </p>
-                      </div>
-                      <ul className="space-y-3">
-                        {job.achievements.map((achievement, i) => (
-                          <li key={i} className="flex items-start gap-3 text-lg text-dark-700 dark:text-light-300">
-                            <span className="h-2 w-2 rounded-full bg-primary-600 mt-2 flex-shrink-0" />
-                            <span className="font-medium leading-relaxed">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+      <section className="page-section" id="experience"><SectionTitle eyebrow="Experience" title="Professional context that shaped how I work." /><article className="experience-card"><p className="project-type">TTEC · Ahmedabad · 2025</p><h3>Customer Service Representative I</h3><p>Corporate email and chat operations experience that strengthened clear communication, structured problem solving, customer interaction, and collaboration within established processes.</p><small>This was not a software engineering role; it is part of the professional foundation I bring to engineering work.</small></article></section>
 
-            {activeSection === 'education' && (
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-500 dark:text-light-50 mb-2">
-                    Education
-                  </h2>
-                  <p className="text-lg text-dark-700 dark:text-light-300">
-                    Academic background and qualifications
-                  </p>
-                </div>
-                <div className="flex flex-col gap-6 max-w-3xl mx-auto">
-                  {[
-                    { label: 'Graduation', degree: 'B.Tech · CSE', institution: 'Surtech · MAKAUT', period: '2022 - 2026' },
-                    { label: '12th Board', degree: 'Higher Secondary', institution: 'Kodalia Agapur H.S.', period: '2022' },
-                    { label: '10th Board', degree: 'Secondary', institution: 'Kodalia Agapur H.S.', period: '2020' },
-                  ].map((edu, index) => (
-                    <div
-                      key={index}
-                      className="group relative rounded-3xl bg-light-150 dark:bg-dark-150 border-2 border-light-250 dark:border-dark-250 p-8 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                    >
-                      <div className="mb-6">
-                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400 mb-3">
-                          {edu.label}
-                        </p>
-                        <h3 className="text-2xl font-bold text-dark-900 dark:text-light-50 mb-2">
-                          {edu.degree}
-                        </h3>
-                        <p className="text-lg text-dark-700 dark:text-light-300 leading-relaxed mb-2">
-                          {edu.institution}
-                        </p>
-                        <p className="text-base text-dark-600 dark:text-light-600 font-medium">
-                          {edu.period}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Social profiles - clean and minimal */}
-          <section className="space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-dark-550 dark:text-light-550">
-              My Profiles
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-              {[
-                { href: 'https://www.linkedin.com/in/soumyodeep-dey/', icon: <FaLinkedin className="text-blue-600 dark:text-blue-400" />, label: 'LinkedIn' },
-                { href: 'https://x.com/Soumyodeep2003', icon: <FaTwitter className="text-sky-500 dark:text-sky-400" />, label: 'Twitter' },
-                { href: 'https://github.com/Soumyodeep-Dey', icon: <FaGithub className="text-gray-700 dark:text-gray-300" />, label: 'GitHub' },
-                { href: 'https://leetcode.com/u/SOUMYODEEP_DEY/', icon: <SiLeetcode className="text-orange-500 dark:text-orange-400" />, label: 'LeetCode' },
-                { href: 'https://youtube.com/@soumyodeepdey8070?si=5bYtHFsV1ObIPzh5', icon: <FaYoutube className="text-red-600 dark:text-red-500" />, label: 'YouTube' }
-              ].map(({ href, icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex flex-col items-center p-6 rounded-2xl bg-light-200 dark:bg-dark-150 border border-light-250 dark:border-dark-250 hover:bg-light-300 dark:hover:bg-dark-200 hover:shadow-md hover:scale-105 transition-all duration-300 overflow-hidden"
-                >
-                  <span className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent group-hover:border-primary-300 dark:group-hover:border-primary-500 group-hover:shadow-[0_0_0_6px_rgba(59,130,246,0.15)] dark:group-hover:shadow-[0_0_0_6px_rgba(59,130,246,0.25)] transition-all duration-300" />
-                  <span className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    {icon}
-                  </span>
-                  <span className="text-base font-semibold text-dark-800 dark:text-light-800">
-                    {label}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </section>
-        </section>
-      </div>
+      <section className="contact-section" id="contact"><p className="eyebrow">Let’s connect</p><h2>Interested in building thoughtful software and AI systems?</h2><p>I’m open to software engineering, backend, AI engineering, and security-focused opportunities.</p><div className="hero-actions"><a href="mailto:soumyodeepdey2003@gmail.com" className="button button-primary">Send an email <FaArrowRight /></a><a href={github} target="_blank" rel="noreferrer" className="button button-secondary">Explore GitHub</a></div></section>
     </main>
   );
 }
