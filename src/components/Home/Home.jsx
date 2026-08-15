@@ -3,10 +3,12 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import PropTypes from 'prop-types';
 import { SiLeetcode } from 'react-icons/si';
+import { useRef, useState } from 'react';
 
 const resumeLink = import.meta.env.VITE_RESUME_LINK;
 const github = 'https://github.com/Soumyodeep-Dey';
 const linkedin = 'https://www.linkedin.com/in/soumyodeep-dey/';
+const email = 'soumyodeepdey2003@gmail.com';
 
 const focusAreas = [
   ['Software engineering', 'Full-stack applications, API design, authentication, databases, and maintainable interfaces.'],
@@ -59,6 +61,34 @@ function SectionTitle({ eyebrow, title, children }) {
 SectionTitle.propTypes = { eyebrow: PropTypes.string.isRequired, title: PropTypes.string.isRequired, children: PropTypes.node };
 
 function Home() {
+  const [copiedLabel, setCopiedLabel] = useState('');
+  const copyTimerRef = useRef(null);
+
+  const handleCopyKeyDown = (event, label, value) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleCopy(label, value);
+    }
+  };
+
+  const handleCopy = async (label, value) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopiedLabel(`${label} copied`);
+    } catch {
+      setCopiedLabel('Copy failed');
+    }
+
+    if (copyTimerRef.current) {
+      clearTimeout(copyTimerRef.current);
+    }
+
+    copyTimerRef.current = setTimeout(() => {
+      setCopiedLabel('');
+      copyTimerRef.current = null;
+    }, 1800);
+  };
+
   return (
     <main>
       <section className="hero-grid" id="home">
@@ -69,14 +99,18 @@ function Home() {
           <div className="hero-actions">
             <a href="#projects" className="button button-primary">Explore selected work <FaArrowRight /></a>
             <a href={resumeLink} target="_blank" rel="noreferrer" className="button button-secondary"><FaDownload /> View resume</a>
+            <span role="button" tabIndex={0} className="contact-copy contact-copy-inline" onClick={() => handleCopy('Email', email)} onKeyDown={(event) => handleCopyKeyDown(event, 'Email', email)}><MdEmail /> {email}</span>
           </div>
-          <div className="social-links" aria-label="Contact links">
-            <a href={github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
-            <a href={linkedin} target="_blank" rel="noreferrer"><FaLinkedin /> LinkedIn</a>
-            <a href="https://x.com/Soumyodeep2003" target="_blank" rel="noreferrer"><FaXTwitter /> X</a>
-            <a href="https://leetcode.com/u/SOUMYODEEP_DEY/" target="_blank" rel="noreferrer"><SiLeetcode /> LeetCode</a>
-            <a href="mailto:soumyodeepdey2003@gmail.com"><MdEmail /> Email</a>
+          <div className="social-links-block" aria-label="Other profiles">
+            <p className="social-links-title">Other profiles</p>
+            <div className="social-links">
+              <a href={github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
+              <a href={linkedin} target="_blank" rel="noreferrer"><FaLinkedin /> LinkedIn</a>
+              <a href="https://x.com/Soumyodeep2003" target="_blank" rel="noreferrer"><FaXTwitter /> X</a>
+              <a href="https://leetcode.com/u/SOUMYODEEP_DEY/" target="_blank" rel="noreferrer"><SiLeetcode /> LeetCode</a>
+            </div>
           </div>
+          {copiedLabel && <p className="copy-feedback" role="status" aria-live="polite">{copiedLabel}</p>}
         </div>
         <aside className="hero-panel" aria-label="Engineering direction">
           <FaShieldAlt className="panel-icon" aria-hidden="true" />
@@ -113,7 +147,7 @@ function Home() {
 
       <section className="page-section" id="experience"><SectionTitle eyebrow="Experience" title="Professional context that shaped how I work." /><div className="experience-list">{experiences.map((experience) => <article className="experience-card" key={`${experience.company}-${experience.role}`}><p className="project-type">{experience.period}</p><h3>{experience.role}</h3><h4>{experience.company}</h4><p>{experience.description}</p>{experience.note && <small>{experience.note}</small>}</article>)}</div></section>
 
-      <section className="contact-section" id="contact"><p className="eyebrow">Let’s connect</p><h2>Interested in building thoughtful software and AI systems?</h2><p>I’m open to software engineering, backend, AI engineering, and security-focused opportunities. Choose an available time and Google Calendar will send a booking confirmation.</p><div className="hero-actions"><a href="https://calendar.app.google/1BqyLsDaGxehCVri7" target="_blank" rel="noreferrer" className="button button-primary"><FaCalendarAlt /> Book a call</a><a href="mailto:soumyodeepdey2003@gmail.com" className="button button-secondary">Send an email <FaArrowRight /></a><a href={github} target="_blank" rel="noreferrer" className="button button-secondary">Explore GitHub</a></div></section>
+      <section className="contact-section" id="contact"><p className="eyebrow">Let’s connect</p><h2>Interested in building thoughtful software and AI systems?</h2><p>I’m open to software engineering, backend, AI engineering, and security-focused opportunities. Choose an available time and Google Calendar will send a booking confirmation.</p><div className="hero-actions"><a href="https://calendar.app.google/1BqyLsDaGxehCVri7" target="_blank" rel="noreferrer" className="button button-primary"><FaCalendarAlt /> Book a call</a><a href={github} target="_blank" rel="noreferrer" className="button button-secondary">Explore GitHub</a></div><div className="contact-copy-list" aria-label="Direct contact details"><span role="button" tabIndex={0} className="contact-copy contact-copy-line" onClick={() => handleCopy('Email', email)} onKeyDown={(event) => handleCopyKeyDown(event, 'Email', email)}><MdEmail /> {email}</span></div></section>
     </main>
   );
 }
